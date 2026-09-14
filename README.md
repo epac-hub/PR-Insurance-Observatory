@@ -145,3 +145,18 @@ users can reach the same insurer choices. The additional visualizations and
 tables live under a closed-by-default View details disclosure and initialize
 only when opened. Q1 2026 explicitly lacks insurer financial statements; its
 market KPIs and coverage chart use actual quarterly values.
+
+## Institutional visual briefing (September 2026)
+
+The English-language opening view now exposes market structure, premium/claims comparisons, insurer rankings, profit/loss contributions, scatter analysis and the expense heatmap. FY2024, FY2025 and Q1 2026 use the same section order. Quarterly insurer charts explicitly report unavailable data. Quarterly amounts are not annualized. The paid claims ratio is not statutory MLR.
+
+### Design and chart system
+- `assets/design-tokens.css`: canvas, foreground, borders and semantic series colors.
+- `assets/briefing.css`: layout, mobile behavior and print brief.
+- `assets/echarts-observatory.js`: shared `palette`, `base` and `axis` chart theme functions; real ECharts SVG rendering.
+- `assets/briefing.js`: selected-period CSV, chart PNG, print and keyboard navigation (`/`, `Esc`, `j`, `k`).
+
+Art direction: an institutional reading surface with near-black canvas, restrained sea-glass emphasis, neutral comparison series and crimson losses. Large figures establish the question; direct chart labels and nearby source notes supply the evidence. Keep source scope explicit and preserve room for labels. Avoid decorative imagery, multicolor palettes, complex menus and invented time series.
+
+### Replacing the data
+Update the existing `D` and `PLANILLA` source objects in `index.html`, retaining their schemas and source URLs. `PLANILLA.market` and `.coverage` use `FY24`, `FY25`, `Q1_2026`; `D` contains annual insurer fields such as `p24`, `p25`, `ni24`, `ni25`, `tm24`, `a24` and corresponding filing links. Preserve missing observations as missing, not zero. Reconcile coverage totals against market totals and separately reconcile statutory insurer totals. Do not combine the two scopes. Add quarterly insurer support only with matched quarterly filings. The data currently do not support monthly sparklines or a 24-point history; none is fabricated.
