@@ -344,39 +344,6 @@ OCS/NAIC Annual Statement mcsl,2025,Non-A&H premium (mcsLifeAdj),3207288,3207289
 OCS/NAIC Annual Statement mcsl,2025,Total admitted assets,214902457,214902457,2,MATCH,2026-09-14T13:58:32Z
 OCS/NAIC Annual Statement mcsl,2025,Total liabilities,119308944,119308944,3,MATCH,2026-09-14T13:58:32Z
 OCS/NAIC Annual Statement mcsl,2025,Total capital and surplus,95593513,95593513,3,MATCH,2026-09-14T13:58:32Z
-CMS MA enrollment Aug 2026,,H5577 enrollment (sum numeric PR rows),"358,392","358,392",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5577 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5577 organization name,"MCS ADVANTAGE, INC.","MCS ADVANTAGE, INC.",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5577 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5774 enrollment (sum numeric PR rows),"119,380","119,380",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5774 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5774 organization name,"TRIPLE S ADVANTAGE, INC.","TRIPLE S ADVANTAGE, INC.",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5774 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4004 enrollment (sum numeric PR rows),"101,734","101,734",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4004 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4004 organization name,"MMM HEALTHCARE, LLC","MMM HEALTHCARE, LLC",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4004 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4003 enrollment (sum numeric PR rows),"95,126","95,126",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4003 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4003 organization name,"MMM HEALTHCARE, LLC","MMM HEALTHCARE, LLC",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4003 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4005 enrollment (sum numeric PR rows),"6,456","6,456",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4005 numeric counties / PR rows,62/78,62/78,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4005 organization name,"TRIPLE S ADVANTAGE, INC.","TRIPLE S ADVANTAGE, INC.",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H4005 plan type label,Local PPO,Local PPO,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H2001 enrollment (sum numeric PR rows),15,15,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H2001 numeric counties / PR rows,1/78,1/78,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H2001 organization name,"SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.","SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H2001 plan type label,Local PPO,Local PPO,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5522 enrollment (sum numeric PR rows),13,13,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5522 numeric counties / PR rows,1/78,1/78,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5522 organization name,AETNA LIFE INSURANCE COMPANY,AETNA LIFE INSURANCE COMPANY,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,H5522 plan type label,Local PPO,Local PPO,enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,Total reported numeric PR enrollment (all contracts),"681,116","681,116",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,Principal PR orgs (MCS+MMM+Triple-S) enrollment,"681,088","681,088",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),YES,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,Suppression token for <=10 enrollees,'*','.' (readme text says '* = 10 or less' but every suppressed cell in the file is '.'; zero '*' cells in file),enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),NO,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,Humana PR contract rows,(not stated),"YES - 10 Humana contracts have PR rows, all suppressed: H2029 HUMANA INSURANCE OF PUERTO RICO, INC. Local PPO (78 rows), H1036, H5216, H6622, H5525, H7284, H3533, H0473, H1468, X0001 LI NET",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),N/A,2026-09-14T13:58:50Z
-CMS MA enrollment Aug 2026,,Other PR contracts omitted by site,none listed,"202 other contracts appear in PR rows; ALL have zero numeric cells (every row '.'), so their reportable enrollment is 0 (omission does not change totals)",enroll: SCC_Enrollment_MA_2026_08.csv (State=PR),OMISSION (0 enrollment),2026-09-14T13:58:50Z
 CMS 2026 Star Ratings,,H5577 Part C / Part D summary,5/5,5/5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,YES,2026-09-14T13:58:50Z
 CMS 2026 Star Ratings,,H5577 Overall,(not stated),5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,N/A,2026-09-14T13:58:50Z
 CMS 2026 Star Ratings,,H5774 Part C / Part D summary,4.5/4.5,4.5/4.5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,YES,2026-09-14T13:58:50Z
@@ -458,3 +425,36 @@ Live link check,,https://www.sec.gov/Archives/edgar/data/1156039/000115603926000
 Live link check,,https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/hum-20251231.htm,,200,text/html,LIVE,2026-09-14T13:52:00Z
 Live link check,,https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm,,200,text/html,LIVE,2026-09-14T13:52:00Z
 Live link check,,https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm,,200,text/html,LIVE,2026-09-14T13:52:00Z
+CMS MA enrollment Sep 2026,,H5577 enrollment (sum numeric PR rows),"359,424","359,424",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5577 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5577 organization name,"MCS ADVANTAGE, INC.","MCS ADVANTAGE, INC.",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5577 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5774 enrollment (sum numeric PR rows),"119,738","119,738",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5774 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5774 organization name,"TRIPLE S ADVANTAGE, INC.","TRIPLE S ADVANTAGE, INC.",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5774 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4004 enrollment (sum numeric PR rows),"101,337","101,337",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4004 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4004 organization name,"MMM HEALTHCARE, LLC","MMM HEALTHCARE, LLC",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4004 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4003 enrollment (sum numeric PR rows),"94,708","94,708",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4003 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4003 organization name,"MMM HEALTHCARE, LLC","MMM HEALTHCARE, LLC",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4003 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4005 enrollment (sum numeric PR rows),"6,438","6,438",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4005 numeric counties / PR rows,62/78,62/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4005 organization name,"TRIPLE S ADVANTAGE, INC.","TRIPLE S ADVANTAGE, INC.",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4005 plan type label,Local PPO,Local PPO,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H2001 enrollment (sum numeric PR rows),14,14,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H2001 numeric counties / PR rows,1/78,1/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H2001 organization name,"SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.","SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H2001 plan type label,Local PPO,Local PPO,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5522 enrollment (sum numeric PR rows),13,13,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5522 numeric counties / PR rows,1/78,1/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5522 organization name,AETNA LIFE INSURANCE COMPANY,AETNA LIFE INSURANCE COMPANY,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5522 plan type label,Local PPO,Local PPO,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,Total reported numeric PR enrollment (all contracts),"681,672","681,672",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:21:02Z
+CMS MA enrollment Sep 2026,,Principal PR orgs (MCS+MMM+Triple-S) enrollment,"681,645","681,645",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:21:02Z
+CMS MA enrollment Sep 2026,,Suppression token for <=10 enrollees,'*','.' (readme text says '* = 10 or less' but every suppressed cell in the file is '.'; zero '*' cells in file),enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),NO,2026-09-14T16:21:02Z
+CMS MA enrollment Sep 2026,,Humana PR contract rows,(not stated),"YES - 11 Humana contracts have PR rows, all suppressed: H2029 HUMANA INSURANCE OF PUERTO RICO, INC. Local PPO (78 rows), H1036, H5216, H6622, H5525, H7284, H3533, H0473, H1468, H4141, X0001 LI NET",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),N/A,2026-09-14T16:21:02Z
+CMS MA enrollment Sep 2026,,Other PR contracts omitted by site,none listed,"192 other contracts appear in PR rows; ALL have zero numeric cells (every row '.'), so their reportable enrollment is 0 (omission does not change totals)",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),OMISSION (0 enrollment),2026-09-14T16:21:02Z

@@ -775,6 +775,10 @@
    "hrsa": "https://data.hrsa.gov/Default/GenerateHPSAQuarterlyReport",
    "edgar": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=10-K",
    "nyse": "https://www.nyse.com/quote/XNYS:UNH"
+  },
+  "cms_september_refresh": {
+   "refreshed_at": "2026-09-14T16:20:16Z",
+   "note": "September 2026 SCC full-version file replaced August; seven contract totals, county counts and island total recomputed from SCC_Enrollment_MA_2026_09.csv and matched."
   }
  },
  "log": [
@@ -4229,336 +4233,6 @@
    "validated_at": "2026-09-14T13:58:32Z"
   },
   {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5577 enrollment (sum numeric PR rows)",
-   "website_value": "358,392",
-   "source_value": "358,392",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5577 numeric counties / PR rows",
-   "website_value": "78/78",
-   "source_value": "78/78",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5577 organization name",
-   "website_value": "MCS ADVANTAGE, INC.",
-   "source_value": "MCS ADVANTAGE, INC.",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5577 plan type label",
-   "website_value": "HMO/HMOPOS",
-   "source_value": "HMO/HMOPOS",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5774 enrollment (sum numeric PR rows)",
-   "website_value": "119,380",
-   "source_value": "119,380",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5774 numeric counties / PR rows",
-   "website_value": "78/78",
-   "source_value": "78/78",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5774 organization name",
-   "website_value": "TRIPLE S ADVANTAGE, INC.",
-   "source_value": "TRIPLE S ADVANTAGE, INC.",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5774 plan type label",
-   "website_value": "HMO/HMOPOS",
-   "source_value": "HMO/HMOPOS",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4004 enrollment (sum numeric PR rows)",
-   "website_value": "101,734",
-   "source_value": "101,734",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4004 numeric counties / PR rows",
-   "website_value": "78/78",
-   "source_value": "78/78",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4004 organization name",
-   "website_value": "MMM HEALTHCARE, LLC",
-   "source_value": "MMM HEALTHCARE, LLC",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4004 plan type label",
-   "website_value": "HMO/HMOPOS",
-   "source_value": "HMO/HMOPOS",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4003 enrollment (sum numeric PR rows)",
-   "website_value": "95,126",
-   "source_value": "95,126",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4003 numeric counties / PR rows",
-   "website_value": "78/78",
-   "source_value": "78/78",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4003 organization name",
-   "website_value": "MMM HEALTHCARE, LLC",
-   "source_value": "MMM HEALTHCARE, LLC",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4003 plan type label",
-   "website_value": "HMO/HMOPOS",
-   "source_value": "HMO/HMOPOS",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4005 enrollment (sum numeric PR rows)",
-   "website_value": "6,456",
-   "source_value": "6,456",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4005 numeric counties / PR rows",
-   "website_value": "62/78",
-   "source_value": "62/78",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4005 organization name",
-   "website_value": "TRIPLE S ADVANTAGE, INC.",
-   "source_value": "TRIPLE S ADVANTAGE, INC.",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H4005 plan type label",
-   "website_value": "Local PPO",
-   "source_value": "Local PPO",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H2001 enrollment (sum numeric PR rows)",
-   "website_value": "15",
-   "source_value": "15",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H2001 numeric counties / PR rows",
-   "website_value": "1/78",
-   "source_value": "1/78",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H2001 organization name",
-   "website_value": "SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.",
-   "source_value": "SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H2001 plan type label",
-   "website_value": "Local PPO",
-   "source_value": "Local PPO",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5522 enrollment (sum numeric PR rows)",
-   "website_value": "13",
-   "source_value": "13",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5522 numeric counties / PR rows",
-   "website_value": "1/78",
-   "source_value": "1/78",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5522 organization name",
-   "website_value": "AETNA LIFE INSURANCE COMPANY",
-   "source_value": "AETNA LIFE INSURANCE COMPANY",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "H5522 plan type label",
-   "website_value": "Local PPO",
-   "source_value": "Local PPO",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "Total reported numeric PR enrollment (all contracts)",
-   "website_value": "681,116",
-   "source_value": "681,116",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "Principal PR orgs (MCS+MMM+Triple-S) enrollment",
-   "website_value": "681,088",
-   "source_value": "681,088",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "YES",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "Suppression token for <=10 enrollees",
-   "website_value": "'*'",
-   "source_value": "'.' (readme text says '* = 10 or less' but every suppressed cell in the file is '.'; zero '*' cells in file)",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "NO",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "Humana PR contract rows",
-   "website_value": "(not stated)",
-   "source_value": "YES - 10 Humana contracts have PR rows, all suppressed: H2029 HUMANA INSURANCE OF PUERTO RICO, INC. Local PPO (78 rows), H1036, H5216, H6622, H5525, H7284, H3533, H0473, H1468, X0001 LI NET",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "N/A",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
-   "dataset": "CMS MA enrollment Aug 2026",
-   "period": "",
-   "item": "Other PR contracts omitted by site",
-   "website_value": "none listed",
-   "source_value": "202 other contracts appear in PR rows; ALL have zero numeric cells (every row '.'), so their reportable enrollment is 0 (omission does not change totals)",
-   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
-   "result": "OMISSION (0 enrollment)",
-   "validated_at": "2026-09-14T13:58:50Z"
-  },
-  {
    "dataset": "CMS 2026 Star Ratings",
    "period": "",
    "item": "H5577 Part C / Part D summary",
@@ -5013,7 +4687,7 @@
    "period": "FY2025",
    "item": "Benefit ratio (Insurance segment)",
    "website_value": "90.4%",
-   "source_value": "Insurance segment table row: 'Benefit ratio | 90.4 % | 90.4 % | — %'; text: 'The Insurance segment benefit ratio was unchanged at 90.4% in the 2024 and 2025 periods'. (Consolidated benefit ratio is 90.2%: 'Benefit ratio (a) | 90.2 % | 89.8 %'; consolidated benefits $110,812M.)",
+   "source_value": "Insurance segment table row: 'Benefit ratio | 90.4 % | 90.4 % | \u2014 %'; text: 'The Insurance segment benefit ratio was unchanged at 90.4% in the 2024 and 2025 periods'. (Consolidated benefit ratio is 90.2%: 'Benefit ratio (a) | 90.2 % | 89.8 %'; consolidated benefits $110,812M.)",
    "location": "90.4% (reported segment ratio; segment benefits expense not itemized in table, not recomputed)",
    "result": "YES",
    "validated_at": "2026-09-14T13:59:06Z"
@@ -5367,6 +5041,336 @@
    "location": "text/html",
    "result": "LIVE",
    "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5577 enrollment (sum numeric PR rows)",
+   "website_value": "359,424",
+   "source_value": "359,424",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5577 numeric counties / PR rows",
+   "website_value": "78/78",
+   "source_value": "78/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5577 organization name",
+   "website_value": "MCS ADVANTAGE, INC.",
+   "source_value": "MCS ADVANTAGE, INC.",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5577 plan type label",
+   "website_value": "HMO/HMOPOS",
+   "source_value": "HMO/HMOPOS",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5774 enrollment (sum numeric PR rows)",
+   "website_value": "119,738",
+   "source_value": "119,738",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5774 numeric counties / PR rows",
+   "website_value": "78/78",
+   "source_value": "78/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5774 organization name",
+   "website_value": "TRIPLE S ADVANTAGE, INC.",
+   "source_value": "TRIPLE S ADVANTAGE, INC.",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5774 plan type label",
+   "website_value": "HMO/HMOPOS",
+   "source_value": "HMO/HMOPOS",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4004 enrollment (sum numeric PR rows)",
+   "website_value": "101,337",
+   "source_value": "101,337",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4004 numeric counties / PR rows",
+   "website_value": "78/78",
+   "source_value": "78/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4004 organization name",
+   "website_value": "MMM HEALTHCARE, LLC",
+   "source_value": "MMM HEALTHCARE, LLC",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4004 plan type label",
+   "website_value": "HMO/HMOPOS",
+   "source_value": "HMO/HMOPOS",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4003 enrollment (sum numeric PR rows)",
+   "website_value": "94,708",
+   "source_value": "94,708",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4003 numeric counties / PR rows",
+   "website_value": "78/78",
+   "source_value": "78/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4003 organization name",
+   "website_value": "MMM HEALTHCARE, LLC",
+   "source_value": "MMM HEALTHCARE, LLC",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4003 plan type label",
+   "website_value": "HMO/HMOPOS",
+   "source_value": "HMO/HMOPOS",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4005 enrollment (sum numeric PR rows)",
+   "website_value": "6,438",
+   "source_value": "6,438",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4005 numeric counties / PR rows",
+   "website_value": "62/78",
+   "source_value": "62/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4005 organization name",
+   "website_value": "TRIPLE S ADVANTAGE, INC.",
+   "source_value": "TRIPLE S ADVANTAGE, INC.",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H4005 plan type label",
+   "website_value": "Local PPO",
+   "source_value": "Local PPO",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H2001 enrollment (sum numeric PR rows)",
+   "website_value": "14",
+   "source_value": "14",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H2001 numeric counties / PR rows",
+   "website_value": "1/78",
+   "source_value": "1/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H2001 organization name",
+   "website_value": "SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.",
+   "source_value": "SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H2001 plan type label",
+   "website_value": "Local PPO",
+   "source_value": "Local PPO",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5522 enrollment (sum numeric PR rows)",
+   "website_value": "13",
+   "source_value": "13",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5522 numeric counties / PR rows",
+   "website_value": "1/78",
+   "source_value": "1/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5522 organization name",
+   "website_value": "AETNA LIFE INSURANCE COMPANY",
+   "source_value": "AETNA LIFE INSURANCE COMPANY",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "H5522 plan type label",
+   "website_value": "Local PPO",
+   "source_value": "Local PPO",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:20:16Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "Total reported numeric PR enrollment (all contracts)",
+   "website_value": "681,672",
+   "source_value": "681,672",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:21:02Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "Principal PR orgs (MCS+MMM+Triple-S) enrollment",
+   "website_value": "681,645",
+   "source_value": "681,645",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T16:21:02Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "Suppression token for <=10 enrollees",
+   "website_value": "'*'",
+   "source_value": "'.' (readme text says '* = 10 or less' but every suppressed cell in the file is '.'; zero '*' cells in file)",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "NO",
+   "validated_at": "2026-09-14T16:21:02Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "Humana PR contract rows",
+   "website_value": "(not stated)",
+   "source_value": "YES - 11 Humana contracts have PR rows, all suppressed: H2029 HUMANA INSURANCE OF PUERTO RICO, INC. Local PPO (78 rows), H1036, H5216, H6622, H5525, H7284, H3533, H0473, H1468, H4141, X0001 LI NET",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "N/A",
+   "validated_at": "2026-09-14T16:21:02Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Sep 2026",
+   "period": "",
+   "item": "Other PR contracts omitted by site",
+   "website_value": "none listed",
+   "source_value": "192 other contracts appear in PR rows; ALL have zero numeric cells (every row '.'), so their reportable enrollment is 0 (omission does not change totals)",
+   "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
+   "result": "OMISSION (0 enrollment)",
+   "validated_at": "2026-09-14T16:21:02Z"
   }
  ]
 }
