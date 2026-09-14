@@ -91,3 +91,5 @@ The overview now opens with four scoped metrics, a shared-scale premium/claims c
 The independent review in `validation/independent_ocs_recheck.json` records 18 insurer PDFs and 3 Planillas checked, actual Composio/Firecrawl/Apify provenance, index-extraction limitations, and corrected calculations. Statutory totals now include zero-premium lines with financial activity. Benefits/admin ratios use matched eight-filer populations. Share changes are computed before rounding. Paid-claims ratios do not receive financial-health classifications.
 
 `assets/observatory.css` and `assets/observatory.js` extend the original static application. No runtime API credentials or new backend service are needed.
+
+The targeted federal review in `validation/federal_recheck.json` matched 62 retained CMS, HRSA and SEC numeric fields. CMS suppression language now correctly states counts of 10 or less; suppressed cells are not zero and are not imputed. Source hashes and comparison scopes are recorded.
