@@ -101,3 +101,34 @@ The second design pass adds `assets/explorer.js` and `assets/explorer.css`: a sc
 All new calculations derive from the existing verified data objects. The nine-entity share denominator excludes the wider Planilla market; NI/premiums is not a revenue net margin; missing Health-blank fields are omitted. Bubble area scales with premiums. Annual and Q1 2026 values stay separate.
 
 Lovable was used to create an editable Visual Lab prototype and explore the editorial-finance palette and interactive ranking/spotlight pattern. Canva was queried for existing Observatory/ePAC assets and brand kits; no relevant reusable asset was found. Wix account context and design-system chart documentation were consulted; the production site remains on GitHub Pages. No unrelated pharmacy data or site was modified.
+
+### Apache ECharts integration and period tabs
+
+The overview, insurer and coverage pages use locally vendored Apache ECharts
+6.0.0 (SVG renderer), with license and notice under `assets/vendor/`.
+Spanish-language period tabs select 2024, 2025 or Q1 2026 consistently across
+these pages. Shareable URLs use `?period=2024`, `?period=2025` or
+`?period=q1-2026`. The same component structure, chart types, colors, controls
+and units serve all periods. Annual charts use matching scales where applicable.
+
+Eight main views cover market premiums/claims, a ten-coverage treemap with a
+three-group ring toggle, coverage premiums/claims, coverage enrollment and paid
+claims ratio, insurer ranking with optional paired-year comparison, a signed
+net-income contribution waterfall, insurer scale and result, and an eight-filer
+medical/administrative cost heatmap. Insurer selection links the ranking,
+spotlight, waterfall, scatter and heatmap. Keyboard entity buttons, period-tab
+arrow navigation, exact-value tables and source links are provided. Reused
+instances animate updates, respecting reduced-motion preferences.
+
+Q1 2026 has the same four market/coverage visualizations using actual quarterly
+Planilla data. The four insurer views show explicit unavailable states because
+verified quarterly insurer statements are not in the dataset. No annual values
+are substituted, extrapolated or annualized. Legacy annual filing comparisons
+remain explicitly labeled; they are hidden on the quarterly insurer page.
+Dollar chart labels use M = millions, explained visibly in Spanish.
+
+Validation with the actual ECharts library checked equal annual structures,
+exact selected-period values, signed waterfall reconciliation, linked selection,
+instance reuse, all period/toggle controls, quarterly coverage totals, explicit
+missing-data states, synchronized navigation, theme state and shareable URLs.
+No inline source data or legacy calculation code was changed.

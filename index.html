@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Puerto Rico Insurance Observatory | OCS FY2025 · CMS 2026 · CY2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -360,7 +360,7 @@ table.ins tr.insrow{cursor:pointer}table.ins tr.insrow:hover td{background:var(-
 <meta name="twitter:title" content="Puerto Rico Insurance Observatory | OCS FY2025 · CMS 2026 · CY2027">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/observatory.css?v=20260914-3">
-<link rel="stylesheet" href="assets/explorer.css?v=20260914-6">
+<link rel="stylesheet" href="assets/explorer.css?v=20260914-7">
 </head><body>
 
 <header><div class="mx hdr">
@@ -389,7 +389,7 @@ table.ins tr.insrow{cursor:pointer}table.ins tr.insrow:hover td{background:var(-
 </section>
 <section class="sec" id="s-coverage">
 <div class="pg show" id="p-cov"></div>
-<div class="pg show" id="p-lob"></div>
+<details class="more"><summary>Tablas históricas de coberturas · periodos indicados en cada tabla</summary><div class="pg show" id="p-lob"></div></details>
 <details class="more"><summary>Statutory lines of business (NAIC Health blank, FY2024 vs FY2025)</summary><div class="pg show" id="p-lobb"></div></details>
 <details class="more"><summary>Insurer segments (derived whole-entity grouping)</summary><div class="pg show" id="p-seg"><div id="cov-seg"></div></div></details>
 </section>
@@ -1719,5 +1719,7 @@ render();renderValidation();a11yPass();attachSources();watchSources();
 window.__rendered=true;
 </script>
 <script src="assets/observatory.js?v=20260914-3"></script>
-<script src="assets/explorer.js?v=20260914-6"></script>
+<script src="assets/vendor/echarts-6.0.0.min.js"></script>
+<script src="assets/echarts-observatory.js?v=20260914-7"></script>
+<script src="assets/explorer.js?v=20260914-7"></script>
 </body></html>
