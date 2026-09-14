@@ -83,3 +83,11 @@ markup, data, and logic are unchanged.
 ## Disclaimer
 
 Analytical platform. Not a legal conclusion, audit opinion, actuarial certification, or regulatory finding.
+
+## Visual and calculation revision — September 14, 2026
+
+The overview now opens with four scoped metrics, a shared-scale premium/claims comparison, all nine insurer results, all ten coverage categories, and a paid-claims ratio view. Its year selector switches FY2024/FY2025; the two-year comparison and latest-quarter context retain explicit periods. The insurer section adds simultaneous annual premium comparison and net-income change charts above the exact detail table. Responsive sidebar navigation, larger typography, direct labels, keyboard controls, light/dark support, existing CSV exports and source links remain available.
+
+The independent review in `validation/independent_ocs_recheck.json` records 18 insurer PDFs and 3 Planillas checked, actual Composio/Firecrawl/Apify provenance, index-extraction limitations, and corrected calculations. Statutory totals now include zero-premium lines with financial activity. Benefits/admin ratios use matched eight-filer populations. Share changes are computed before rounding. Paid-claims ratios do not receive financial-health classifications.
+
+`assets/observatory.css` and `assets/observatory.js` extend the original static application. No runtime API credentials or new backend service are needed.
