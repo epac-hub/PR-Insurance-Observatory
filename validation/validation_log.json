@@ -1,0 +1,5372 @@
+{
+ "summary": {
+  "validated_at": "2026-09-14T13:59:06Z",
+  "pass_completed_at": "2026-09-14T14:13:44Z",
+  "data_updated": "2026-09-14T14:13:44Z",
+  "data_refreshed": "2026-09-05",
+  "validation_pass": "2026-09-14 full-source validation",
+  "total_checks": 429,
+  "total_matches": 392,
+  "total_mismatches": 26,
+  "datasets": [
+   {
+    "id": "planilla",
+    "name": "OCS Planilla de Salud (FY2024, FY2025, 1Q2026)",
+    "authority": "Oficina del Comisionado de Seguros de Puerto Rico",
+    "index_url": "https://www.ocs.pr.gov/regulados/informes-planillas-de-salud",
+    "method": "Direct download of the three OCS PDFs; text-layer extraction (PyMuPDF); every coverage row and total compared against detail pages (p1 premiums written, p2 claims paid, p3 insureds) and the summary page.",
+    "tools": [
+     "curl",
+     "PyMuPDF",
+     "Firecrawl search (index page)",
+     "Apify website-content-crawler (index page)"
+    ],
+    "validated_at": "2026-09-14T13:57:53Z",
+    "checks": 207,
+    "matches": 205,
+    "mismatches": 2,
+    "other": 0,
+    "status": "VERIFIED",
+    "notes": [
+     "The only two non-matches are the documented FY2025 claims conflict: the whole $196,246 difference between detailed page 2 (15,492,767,512) and summary page 8 (15,492,571,266) sits in the Private Individual Plans row (292,800,674 vs 292,604,428). The site uses page 2, consistently for the row and the total.",
+     "Source definitions: premium = premiums written; claims = claims paid; lives = number of insured (OCS 'Suscribers'). OCS prints no total-market MLR; the site's MLR is calculated.",
+     "Source anomaly: FY2025 PDF page 9 (age/gender) reprints FY2024 figures; not used by this site."
+    ],
+    "files": [
+     {
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+      "http_status": 200,
+      "bytes": 4297904,
+      "pages": 9,
+      "text_layer": true
+     },
+     {
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+      "http_status": 200,
+      "bytes": 4390116,
+      "pages": 9,
+      "text_layer": true
+     },
+     {
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2026/2026.1Q%20-%20Planilla%20de%20Salud.pdf",
+      "http_status": 200,
+      "bytes": 577690,
+      "pages": 4,
+      "text_layer": true
+     }
+    ]
+   },
+   {
+    "id": "as1",
+    "name": "OCS/NAIC Annual Statements, core entities batch A (FY2025 and FY2024)",
+    "authority": "OCS Puerto Rico (NAIC annual statement blanks)",
+    "index_url": "https://www.ocs.pr.gov/regulados/informes-anuales",
+    "method": "Direct download of each entity's FY2025 and FY2024 annual statement PDF from OCS; text-layer extraction; Statement of Revenue and Expenses, enrollment exhibit and balance sheet compared field by field; Analysis of Operations by Lines of Business extracted for the statutory LOB dataset.",
+    "tools": [
+     "curl",
+     "PyMuPDF",
+     "Firecrawl search (index/NAIC pages)",
+     "Apify website-content-crawler (index page)"
+    ],
+    "validated_at": "2026-09-14T13:58:10Z",
+    "checks": 68,
+    "matches": 59,
+    "mismatches": 9,
+    "other": 0,
+    "status": "CORRECTED",
+    "notes": [
+     "Entities: MCS Advantage, MMM Healthcare, Triple-S Salud, First Medical. All FY2025 fields, balance sheets, member months and premiums match the filed statements; premium = Statement of Revenue line 2 (net premium income).",
+     "FY2024 net income for MCS Advantage, MMM Healthcare and First Medical had been taken from the restated prior-year column of the FY2025 statement; the site now shows the values as filed in the FY2024 statements (68,358,385; 13,377,592; -25,515,404) and discloses the restated figures in Methodology.",
+     "Triple-S Salud total hospital and medical now uses Statement of Revenue line 18 (2,594,840,815 / 2,312,936,301); the LOB page differs by $1-2.",
+     "NAIC company codes read from the cover pages: MCS Advantage 13022 (group 1301), MMM Healthcare 11157 (0671), Triple-S Salud 55816 (0536; Schedule Y prints group 4802 under GuideWell), First Medical 95722 (no group)."
+    ],
+    "files": [
+     {
+      "id": "mcsa",
+      "year": 2025,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Advantage,%20Inc..pdf",
+      "http_status": 200,
+      "bytes": 466155,
+      "pages": 48,
+      "text_layer": "yes"
+     },
+     {
+      "id": "mcsa",
+      "year": 2024,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Advantage,%20Inc.pdf",
+      "http_status": 200,
+      "bytes": 1065253,
+      "pages": 134,
+      "text_layer": "yes"
+     },
+     {
+      "id": "mmmhc",
+      "year": 2025,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Healthcare,%20LLC.pdf",
+      "http_status": 200,
+      "bytes": 2434193,
+      "pages": 67,
+      "text_layer": "yes (page 1 cover is image-only, no text; read visually)"
+     },
+     {
+      "id": "mmmhc",
+      "year": 2024,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Healthcare,%20LLC.pdf",
+      "http_status": 200,
+      "bytes": 2559241,
+      "pages": 69,
+      "text_layer": "yes (page 1 cover is image-only, no text; read visually)"
+     },
+     {
+      "id": "tss",
+      "year": 2025,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Salud,%20Inc..pdf",
+      "http_status": 200,
+      "bytes": 8147380,
+      "pages": 74,
+      "text_layer": "yes"
+     },
+     {
+      "id": "tss",
+      "year": 2024,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Salud,%20Inc.pdf",
+      "http_status": 200,
+      "bytes": 9364420,
+      "pages": 69,
+      "text_layer": "yes"
+     },
+     {
+      "id": "fmhp",
+      "year": 2025,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/First%20Medical%20Health%20Plan,%20Inc..pdf",
+      "http_status": 200,
+      "bytes": 2192306,
+      "pages": 55,
+      "text_layer": "yes"
+     },
+     {
+      "id": "fmhp",
+      "year": 2024,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/First%20Medical%20Health%20Plan,%20Inc.pdf",
+      "http_status": 200,
+      "bytes": 2261525,
+      "pages": 171,
+      "text_layer": "yes"
+     }
+    ],
+    "naic": [
+     {
+      "id": "mcsa",
+      "naic_code": "13022",
+      "group": "NAIC Group Code 1301 (cover p1 FY2025 / p2 FY2024, current & prior). Group name not printed in filing; Schedule Y org chart (FY2025 p48, image) shows ultimate control by Kinderhook Capital Fund III/VI/VI-B L.P. -> KCF Holdings -> Medical Card System, Inc. -> MCS Healthcare Holdings, LLC -> MCS Advantage, Inc."
+     },
+     {
+      "id": "mmmhc",
+      "naic_code": "11157",
+      "group": "NAIC Group Code 0671 (cover p1 of both years, image-only page read visually; current & prior). Notes/Schedule Y: wholly owned by MMM Holdings, LLC, indirect subsidiary of Elevance Health, Inc. (Schedule Y chart p56 headed WellPoint Acquisition, LLC / Anthem entities)."
+     },
+     {
+      "id": "tss",
+      "naic_code": "55816",
+      "group": "NAIC Group Code 0536 on cover (p1, current & prior, both years). Schedule Y Part 1 chart (FY2025 p65) labels parent \"Triple-S Management Corporation (PR); NAIC Group Code 4802\" under GuideWell Mutual Holding Corporation (FL) - note the cover (0536) and chart (4802) group codes differ."
+     },
+     {
+      "id": "fmhp",
+      "naic_code": "95722",
+      "group": "NAIC Group Code blank on FY2025 cover (p1); General Interrogatory 1.1 (FY2025 p43, FY2024 p29): not a member of an Insurance Holding Company System -> no NAIC group (independent). FY2024 file has no cover page; code 95722 taken from Exhibit of Premiums, Enrollment and Utilization header (p39) and barcode 95722202443054100."
+     }
+    ]
+   },
+   {
+    "id": "as2",
+    "name": "OCS/NAIC Annual Statements, core entities batch B (FY2025 and FY2024)",
+    "authority": "OCS Puerto Rico (NAIC annual statement blanks)",
+    "index_url": "https://www.ocs.pr.gov/regulados/informes-anuales",
+    "method": "Direct download of each entity's FY2025 and FY2024 annual statement PDF from OCS; text-layer extraction; Statement of Revenue and Expenses, enrollment exhibit and balance sheet compared field by field; Analysis of Operations by Lines of Business extracted for the statutory LOB dataset.",
+    "tools": [
+     "curl",
+     "PyMuPDF",
+     "Firecrawl search (index/NAIC pages)",
+     "Apify website-content-crawler (index page)"
+    ],
+    "validated_at": "2026-09-14T13:58:32Z",
+    "checks": 70,
+    "matches": 61,
+    "mismatches": 9,
+    "other": 0,
+    "status": "CORRECTED",
+    "notes": [
+     "Entities: Triple-S Advantage, MMM Multi Health, Menonita, Humana Health Plans of PR, MCS Life. Triple-S Advantage, Humana and MCS Life match the filed statements (Humana capital and surplus now the filed 89,965,692; MCS Life group-life premium prints 3,207,289 vs 3,207,288 by subtraction).",
+     "FY2024 values for Menonita (premium, benefits, total medical, admin, net income) and MMM Multi Health net income had been taken from the restated prior-year column of the FY2025 statement; the site now shows the values as filed in the FY2024 statements and discloses the restated figures in Methodology.",
+     "Menonita FY2025 total hospital and medical now uses Statement of Revenue line 18 (739,238,278); the filing itself prints 276/277/278 on different pages.",
+     "Humana FY2025 statement Note 1.A discloses the exit from all Puerto Rico Medicare business effective January 1, 2026, supporting the site's flag.",
+     "NAIC company codes: Triple-S Advantage 11152 (group 0536), MMM Multi Health 12534 (0671), Menonita 95730, Humana Health Plans of PR 95721 (0119), MCS Life 60030 (1301)."
+    ],
+    "files": [
+     {
+      "id": "tsa",
+      "year": 2025,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Advantage,%20Inc..pdf",
+      "http_status": 200,
+      "bytes": 9912371,
+      "pages": 66,
+      "text_layer": "yes (66/66 pages)"
+     },
+     {
+      "id": "tsa",
+      "year": 2024,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Advantage,%20Inc.pdf",
+      "http_status": 200,
+      "bytes": 8932969,
+      "pages": 57,
+      "text_layer": "yes (57/57)"
+     },
+     {
+      "id": "mmmm",
+      "year": 2025,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Multi%20Health,%20LLC.pdf",
+      "http_status": 200,
+      "bytes": 2398957,
+      "pages": 65,
+      "text_layer": "yes (64/65; cover page 1 is image-only)"
+     },
+     {
+      "id": "mmmm",
+      "year": 2024,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Multi%20Health,%20LLC.pdf",
+      "http_status": 200,
+      "bytes": 2527769,
+      "pages": 67,
+      "text_layer": "yes (66/67; cover page 1 image-only)"
+     },
+     {
+      "id": "meno",
+      "year": 2025,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Plan%20de%20Salud%20Menonita,%20Inc..pdf",
+      "http_status": 200,
+      "bytes": 2152384,
+      "pages": 48,
+      "text_layer": "yes (47/48; cover page 1 image-only)"
+     },
+     {
+      "id": "meno",
+      "year": 2024,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Plan%20de%20Salud%20Menonita,%20Inc.pdf",
+      "http_status": 200,
+      "bytes": 2239370,
+      "pages": 41,
+      "text_layer": "yes (40/41; cover page 1 image-only)"
+     },
+     {
+      "id": "huma",
+      "year": 2025,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc..pdf",
+      "http_status": 200,
+      "bytes": 4431319,
+      "pages": 72,
+      "text_layer": "yes (71/72; cover page 1 image-only)"
+     },
+     {
+      "id": "huma",
+      "year": 2024,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc.pdf",
+      "http_status": 200,
+      "bytes": 4744768,
+      "pages": 70,
+      "text_layer": "yes (70/70)"
+     },
+     {
+      "id": "mcsl",
+      "year": 2025,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Life%20Insurance%20Company.pdf",
+      "http_status": 200,
+      "bytes": 497679,
+      "pages": 52,
+      "text_layer": "yes (52/52)"
+     },
+     {
+      "id": "mcsl",
+      "year": 2024,
+      "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Life%20Insurance%20Company.pdf",
+      "http_status": 200,
+      "bytes": 1221468,
+      "pages": 174,
+      "text_layer": "yes (174/174)"
+     }
+    ],
+    "naic": [
+     {
+      "id": "tsa",
+      "naic_code": "11152",
+      "group": "0536"
+     },
+     {
+      "id": "mmmm",
+      "naic_code": "12534",
+      "group": "0671"
+     },
+     {
+      "id": "meno",
+      "naic_code": "95730",
+      "group": "95730 (as printed on cover: NAIC Group Code field shows 95730, same as company code)"
+     },
+     {
+      "id": "huma",
+      "naic_code": "95721",
+      "group": "0119"
+     },
+     {
+      "id": "mcsl",
+      "naic_code": "60030",
+      "group": "1301"
+     }
+    ]
+   },
+   {
+    "id": "cms",
+    "name": "CMS Medicare Advantage: enrollment (Aug 2026), 2026 Star Ratings, CY2027 Rate Book",
+    "authority": "Centers for Medicare & Medicaid Services",
+    "index_url": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/monthly-ma-enrollment-state/county/contract/ma-enrollment-scc-2026-08",
+    "method": "Direct download of the three CMS ZIP files; Puerto Rico rows filtered from SCC_Enrollment_MA_2026_08.csv (numeric county rows summed, suppressed cells never imputed), Summary_Rating sheet of the 2026 Star Ratings table, and CountyRate2027.csv (78 municipalities); every statistic recomputed.",
+    "tools": [
+     "curl",
+     "unzip",
+     "python csv/openpyxl",
+     "Firecrawl search (landing pages)"
+    ],
+    "validated_at": "2026-09-14T13:58:50Z",
+    "checks": 64,
+    "matches": 54,
+    "mismatches": 1,
+    "other": 9,
+    "status": "VERIFIED",
+    "notes": [
+     "All seven contract totals, county counts, Part C/D ratings and the 15 ratebook statistics match exactly.",
+     "Suppressed cells in the August 2026 file are printed as '.' (the CMS read-me describes '*'); none are imputed.",
+     "Humana Insurance of Puerto Rico (H2029) and 202 other contracts appear in PR rows with every county suppressed; reportable enrollment is zero, so omitting them does not change totals.",
+     "The CY2027 ZIP contains no statutory-benchmark CSV; PACE and EGWP files also carry 78 PR rows."
+    ],
+    "landing_pages": {
+     "ma_enrollment_scc_aug_2026": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/monthly-ma-enrollment-state/county/contract/ma-enrollment-scc-2026-08",
+     "ma_enrollment_scc_index": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/monthly-ma-enrollment-state/county/contract",
+     "monthly_enrollment_cpsc_aug_2026": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/monthly-enrollment-contract/plan/state/county/monthly-enrollment-cpsc-2026-08",
+     "contract_enrollment_data_hub": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data",
+     "star_ratings_part_c_d_performance_data": "https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data",
+     "rate_announcement_2027_index": "https://www.cms.gov/medicare/payment/medicare-advantage-rates-statistics/announcements-and-documents/2027",
+     "announcements_and_documents_index": "https://www.cms.gov/medicare/payment/medicare-advantage-rates-statistics/announcements-and-documents",
+     "ratebooks_supporting_data": "https://www.cms.gov/medicare/payment/medicare-advantage-rates-statistics/ratebooks-supporting-data",
+     "rate_announcement_2027_fact_sheet": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement"
+    },
+    "files": [
+     {
+      "url": "https://www.cms.gov/files/zip/ma-enrollment-state-county-contract-august-2026-full-version.zip",
+      "http_status": 200,
+      "bytes": 2442453,
+      "inner_file": "SCC_Enrollment_MA_2026_08/SCC_Enrollment_MA_2026_08.csv (45,655,928 bytes) + Read_Me_SCC_Enrollment_MA_2026.txt"
+     },
+     {
+      "url": "https://www.cms.gov/files/zip/2026-star-ratings-data-tables.zip",
+      "http_status": 200,
+      "bytes": 2168534,
+      "inner_file": "Master Tables Individual Files 8 17 26/2026 Star Ratings Data Table - Summary Ratings (July 22 2026).xlsx, sheet Summary_Rating"
+     },
+     {
+      "url": "https://www.cms.gov/files/zip/2027-ma-rate-book.zip",
+      "http_status": 200,
+      "bytes": 643209,
+      "inner_file": "CSV/CountyRate2027.csv (also CSV/CountyRate2027PACE.csv, CSV/2027 Regional Rates.csv, CSV/Local EGWP Rates 2027.csv, XLSX/RateBook2027.xlsx)"
+     },
+     {
+      "url": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement",
+      "http_status": 200,
+      "bytes": 62887,
+      "inner_file": "HTML page, title '2027 Medicare Advantage and Part D Rate Announcement | CMS'"
+     }
+    ]
+   },
+   {
+    "id": "hrsa",
+    "name": "HRSA Health Professional Shortage Areas, Puerto Rico (Q3 FY2026, data as of 07-01-2026)",
+    "authority": "Health Resources and Services Administration",
+    "index_url": "https://data.hrsa.gov/topics/health-workforce/shortage-areas",
+    "method": "Direct download of the Designated HPSA Quarterly Summary PDF; Puerto Rico rows read from Table 3 (primary care), Table 4 (dental) and Table 5 (mental health).",
+    "tools": [
+     "curl",
+     "PyMuPDF"
+    ],
+    "validated_at": "2026-09-14T13:58:50Z",
+    "checks": 8,
+    "matches": 1,
+    "mismatches": 5,
+    "other": 2,
+    "status": "CORRECTED",
+    "notes": [
+     "The values published before this validation (72/121 primary care, 51/12 mental health, dental unavailable) did not appear anywhere in the Puerto Rico rows and were replaced with the source values: primary care 42 designations / 138 practitioners needed / 574,059 population / 28.90% of need met; dental 99 / 297 / 2,292,005 / 48.02%; mental health 74 / 70 / 1,140,925 / 8.31%."
+    ],
+    "files": [
+     {
+      "url": "https://data.hrsa.gov/Default/GenerateHPSAQuarterlyReport",
+      "http_status": 200,
+      "bytes": 952896,
+      "inner_file": "PDF, 15 pages: 'Designated HPSA Quarterly Summary, Third Quarter of Fiscal Year 2026, As of June 30, 2026' (Data as of: 07/01/2026); Tables 3 (p5), 4 (p8), 5 (p11)"
+     }
+    ]
+   },
+   {
+    "id": "sec",
+    "name": "SEC Forms 10-K FY2025: UnitedHealth, Elevance, Humana, CVS/Aetna",
+    "authority": "U.S. Securities and Exchange Commission (EDGAR); NYSE listings",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=10-K",
+    "method": "Direct download of each 10-K from EDGAR with a descriptive User-Agent; cover page (form type, fiscal year, Section 12(b) exchange) and EDGAR index (accession, filing date) confirmed; each ratio located and each margin recomputed from the statements of operations.",
+    "tools": [
+     "curl (EDGAR)",
+     "python text extraction",
+     "Firecrawl search (NYSE quote pages)"
+    ],
+    "validated_at": "2026-09-14T13:59:06Z",
+    "checks": 12,
+    "matches": 12,
+    "mismatches": 0,
+    "other": 0,
+    "status": "VERIFIED",
+    "notes": [
+     "All twelve ratios and margins match the 10-K figures to one decimal.",
+     "Reported vs calculated labels are accurate; UNH net earnings margin 2.7% is also a reported 10-K line.",
+     "All four registrants are NYSE-listed per the 10-K cover pages and NYSE quote pages."
+    ],
+    "files": [
+     {
+      "company": "UnitedHealth Group Incorporated (NYSE: UNH)",
+      "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm",
+      "http_status": 200,
+      "bytes": 2870606,
+      "form": "10-K",
+      "fiscal_year_end": "2025-12-31",
+      "accession": "0000731766-26-000062",
+      "filed": "2026-03-02"
+     },
+     {
+      "company": "Elevance Health, Inc. (NYSE: ELV)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1156039/000115603926000013/elv-20251231.htm",
+      "http_status": 200,
+      "bytes": 3760011,
+      "form": "10-K",
+      "fiscal_year_end": "2025-12-31",
+      "accession": "0001156039-26-000013",
+      "filed": "2026-02-06"
+     },
+     {
+      "company": "Humana Inc. (NYSE: HUM)",
+      "url": "https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/hum-20251231.htm",
+      "http_status": 200,
+      "bytes": 2991992,
+      "form": "10-K",
+      "fiscal_year_end": "2025-12-31",
+      "accession": "0000049071-26-000009",
+      "filed": "2026-02-19"
+     },
+     {
+      "company": "CVS Health Corporation (NYSE: CVS)",
+      "url": "https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm",
+      "http_status": 200,
+      "bytes": 4921164,
+      "form": "10-K",
+      "fiscal_year_end": "2025-12-31",
+      "accession": "0000064803-26-000010",
+      "filed": "2026-02-10"
+     }
+    ],
+    "nyse": [
+     {
+      "ticker": "UNH",
+      "url": "https://www.nyse.com/quote/XNYS:UNH",
+      "note": "Direct search hit: 'unitedhealth group inc - NYSE'"
+     },
+     {
+      "ticker": "ELV",
+      "url": "https://www.nyse.com/quote/XNYS:ELV",
+      "note": "Direct search hit: 'elevance health inc - NYSE'"
+     },
+     {
+      "ticker": "HUM",
+      "url": "https://www.nyse.com/quote/XNYS:HUM",
+      "note": "Direct search hit: 'NYSE / HUM. HUMANA INC.'"
+     },
+     {
+      "ticker": "CVS",
+      "url": "https://www.nyse.com/quote/XNYS:CVS",
+      "note": "URL surfaced inside NYSE site-search result (https://www.nyse.com/site-search?q=health) as 'CVS HEALTH CORPORATION https://www.nyse.com/quote/XNYS:CVS'; not a direct hit"
+     }
+    ]
+   }
+  ],
+  "links": [
+   {
+    "url": "https://data.hrsa.gov/Default/GenerateHPSAQuarterlyReport",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/First%20Medical%20Health%20Plan,%20Inc.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Advantage,%20Inc.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Life%20Insurance%20Company.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Healthcare,%20LLC.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Multi%20Health,%20LLC.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Plan%20de%20Salud%20Menonita,%20Inc.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Advantage,%20Inc.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Salud,%20Inc.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/First%20Medical%20Health%20Plan,%20Inc..pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc..pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Advantage,%20Inc..pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Life%20Insurance%20Company.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Healthcare,%20LLC.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Multi%20Health,%20LLC.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Plan%20de%20Salud%20Menonita,%20Inc..pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Advantage,%20Inc..pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Salud,%20Inc..pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2026/2026.1Q%20-%20Planilla%20de%20Salud.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://www.cms.gov/files/zip/2026-star-ratings-data-tables.zip",
+    "http_status": 200,
+    "content_type": "application/zip",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://www.cms.gov/files/zip/2027-ma-rate-book.zip",
+    "http_status": 200,
+    "content_type": "application/zip",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://www.cms.gov/files/zip/ma-enrollment-state-county-contract-august-2026-full-version.zip",
+    "http_status": 200,
+    "content_type": "application/zip",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "HTTP 206 = partial-content probe; full download HTTP 200"
+   },
+   {
+    "url": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement",
+    "http_status": 200,
+    "content_type": "text/html;",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": ""
+   },
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/1156039/000115603926000013/elv-20251231.htm",
+    "http_status": 200,
+    "content_type": "text/html",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "EDGAR returns 403 to generic clients; HTTP 200 with a descriptive User-Agent (browser or research UA)"
+   },
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/hum-20251231.htm",
+    "http_status": 200,
+    "content_type": "text/html",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "EDGAR returns 403 to generic clients; HTTP 200 with a descriptive User-Agent (browser or research UA)"
+   },
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm",
+    "http_status": 200,
+    "content_type": "text/html",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "EDGAR returns 403 to generic clients; HTTP 200 with a descriptive User-Agent (browser or research UA)"
+   },
+   {
+    "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm",
+    "http_status": 200,
+    "content_type": "text/html",
+    "checked_at": "2026-09-14T13:52:00Z",
+    "note": "EDGAR returns 403 to generic clients; HTTP 200 with a descriptive User-Agent (browser or research UA)"
+   }
+  ],
+  "live_links": 30,
+  "tool_evidence": {
+   "apify_runs": [],
+   "firecrawl_scrape_ids": [],
+   "ocs_index_pdf_links_seen": {
+    "firecrawl": null,
+    "apify": null
+   }
+  },
+  "corrections": [
+   {
+    "item": "FY2024 core-entity comparatives",
+    "before": "Net income (MCS Advantage 61,434,352; MMM Healthcare 17,340,429; First Medical -39,801,289; MMM Multi Health 29,445,019; Menonita 28,779,636) and Menonita FY2024 premium/benefits/total medical/admin taken from the restated prior-year column of the FY2025 statements",
+    "after": "All FY2024 fields as filed in the FY2024 annual statements (MCS Advantage 68,358,385; MMM Healthcare 13,377,592; First Medical -25,515,404; MMM Multi Health 23,763,178; Menonita 27,343,478; Menonita premium 707,735,210, benefits 421,421,192, total medical 638,766,298, admin 33,466,375); restated figures disclosed in Methodology",
+    "source": "OCS FY2024 annual statements (linked per entity)"
+   },
+   {
+    "item": "Source rounding ($1-2)",
+    "before": "Triple-S Salud total medical 2,594,840,817 / 2,312,936,302; Menonita FY2025 total medical 739,238,276; Humana capital and surplus 89,965,691",
+    "after": "Statement of Revenue line 18 values 2,594,840,815 / 2,312,936,301 and 739,238,278; Humana filed line 33 89,965,692",
+    "source": "OCS FY2025 and FY2024 annual statements"
+   },
+   {
+    "item": "HRSA Puerto Rico HPSA figures",
+    "before": "Primary care 72/121; mental health 51/12; dental unavailable",
+    "after": "Primary care 42/138; mental health 74/70; dental 99/297 (with population and % need met)",
+    "source": "HRSA Designated HPSA Quarterly Summary, Q3 FY2026"
+   },
+   {
+    "item": "FY2025 Planilla claims conflict",
+    "before": "Disclosed as a $196,246 total difference",
+    "after": "Located in the Private Individual Plans row (page 2: 292,800,674; page 8: 292,604,428); disclosure added",
+    "source": "OCS 2025.Y Planilla de Salud"
+   },
+   {
+    "item": "Source links",
+    "before": "110 of 119 numeric cards had no hyperlink to a source",
+    "after": "Every card and every entity row carries a live link to its primary document and official index page",
+    "source": "This validation pass"
+   }
+  ],
+  "naic_codes": {
+   "mcsa": "13022",
+   "mmmhc": "11157",
+   "tss": "55816",
+   "fmhp": "95722",
+   "tsa": "11152",
+   "mmmm": "12534",
+   "meno": "95730",
+   "huma": "95721",
+   "mcsl": "60030"
+  },
+  "index_pages": {
+   "ocs_annual_statements": "https://www.ocs.pr.gov/regulados/informes-anuales",
+   "ocs_planillas": "https://www.ocs.pr.gov/regulados/informes-planillas-de-salud",
+   "naic_cis": "https://content.naic.org/cis_consumer_information.htm",
+   "cms_enrollment": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/monthly-ma-enrollment-state/county/contract/ma-enrollment-scc-2026-08",
+   "cms_stars": null,
+   "cms_ratebook": null,
+   "cms_rate_announcement": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement",
+   "hrsa": "https://data.hrsa.gov/Default/GenerateHPSAQuarterlyReport",
+   "edgar": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=10-K",
+   "nyse": "https://www.nyse.com/quote/XNYS:UNH"
+  }
+ },
+ "log": [
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "TOTAL premium (detail page)",
+   "website_value": 15460881103,
+   "source_value": 15460881103,
+   "location": "p1 grand-total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "TOTAL premium (summary page)",
+   "website_value": 15460881103,
+   "source_value": 15460881103,
+   "location": "p8 Total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "TOTAL claims (detail page)",
+   "website_value": 13715858154,
+   "source_value": 13715858154,
+   "location": "p2 grand-total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "TOTAL claims (summary page)",
+   "website_value": 13715858154,
+   "source_value": 13715858154,
+   "location": "p8 Total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "TOTAL lives (detail page)",
+   "website_value": 2955747,
+   "source_value": 2955747,
+   "location": "p3 grand-total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "TOTAL lives (summary page)",
+   "website_value": 2955747,
+   "source_value": 2955747,
+   "location": "p8 Total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Advantage premium (detail)",
+   "website_value": 5186710160,
+   "source_value": 5186710160,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Advantage premium (summary)",
+   "website_value": 5186710160,
+   "source_value": 5186710160,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Advantage claims (detail)",
+   "website_value": 4502496550,
+   "source_value": 4502496550,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Advantage claims (summary)",
+   "website_value": 4502496550,
+   "source_value": 4502496550,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Advantage lives (detail)",
+   "website_value": 407172,
+   "source_value": 407172,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Advantage lives (summary)",
+   "website_value": 407172,
+   "source_value": 407172,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Health Plan (Vital) premium (detail)",
+   "website_value": 4557985951,
+   "source_value": 4557985951,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Health Plan (Vital) premium (summary)",
+   "website_value": 4557985951,
+   "source_value": 4557985951,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Health Plan (Vital) claims (detail)",
+   "website_value": 4265488980,
+   "source_value": 4265488980,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Health Plan (Vital) claims (summary)",
+   "website_value": 4265488980,
+   "source_value": 4265488980,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Health Plan (Vital) lives (detail)",
+   "website_value": 1244110,
+   "source_value": 1244110,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Health Plan (Vital) lives (summary)",
+   "website_value": 1244110,
+   "source_value": 1244110,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Platinum premium (detail)",
+   "website_value": 3149281227,
+   "source_value": 3149281227,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Platinum premium (summary)",
+   "website_value": 3149281227,
+   "source_value": 3149281227,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Platinum claims (detail)",
+   "website_value": 2805527537,
+   "source_value": 2805527537,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Platinum claims (summary)",
+   "website_value": 2805527537,
+   "source_value": 2805527537,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Platinum lives (detail)",
+   "website_value": 224240,
+   "source_value": 224240,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Platinum lives (summary)",
+   "website_value": 224240,
+   "source_value": 224240,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Large Private Group Plans premium (detail)",
+   "website_value": 844734853,
+   "source_value": 844734853,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Large Private Group Plans premium (summary)",
+   "website_value": 844734853,
+   "source_value": 844734853,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Large Private Group Plans claims (detail)",
+   "website_value": 694530764,
+   "source_value": 694530764,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Large Private Group Plans claims (summary)",
+   "website_value": 694530764,
+   "source_value": 694530764,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Large Private Group Plans lives (detail)",
+   "website_value": 538660,
+   "source_value": 538660,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Large Private Group Plans lives (summary)",
+   "website_value": 538660,
+   "source_value": 538660,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Retirees premium (detail)",
+   "website_value": 445995338,
+   "source_value": 445995338,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Retirees premium (summary)",
+   "website_value": 445995338,
+   "source_value": 445995338,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Retirees claims (detail)",
+   "website_value": 372749862,
+   "source_value": 372749862,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Retirees claims (summary)",
+   "website_value": 372749862,
+   "source_value": 372749862,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Retirees lives (detail)",
+   "website_value": 49001,
+   "source_value": 49001,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Retirees lives (summary)",
+   "website_value": 49001,
+   "source_value": 49001,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Employees premium (detail)",
+   "website_value": 370263193,
+   "source_value": 370263193,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Employees premium (summary)",
+   "website_value": 370263193,
+   "source_value": 370263193,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Employees claims (detail)",
+   "website_value": 332508600,
+   "source_value": 332508600,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Employees claims (summary)",
+   "website_value": 332508600,
+   "source_value": 332508600,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Employees lives (detail)",
+   "website_value": 151644,
+   "source_value": 151644,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Government Employees lives (summary)",
+   "website_value": 151644,
+   "source_value": 151644,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Private Individual Plans premium (detail)",
+   "website_value": 363327800,
+   "source_value": 363327800,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Private Individual Plans premium (summary)",
+   "website_value": 363327800,
+   "source_value": 363327800,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Private Individual Plans claims (detail)",
+   "website_value": 280604447,
+   "source_value": 280604447,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Private Individual Plans claims (summary)",
+   "website_value": 280604447,
+   "source_value": 280604447,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Private Individual Plans lives (detail)",
+   "website_value": 182768,
+   "source_value": 182768,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Private Individual Plans lives (summary)",
+   "website_value": 182768,
+   "source_value": 182768,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Small Private Group Plans premium (detail)",
+   "website_value": 263803007,
+   "source_value": 263803007,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Small Private Group Plans premium (summary)",
+   "website_value": 263803007,
+   "source_value": 263803007,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Small Private Group Plans claims (detail)",
+   "website_value": 210204520,
+   "source_value": 210204520,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Small Private Group Plans claims (summary)",
+   "website_value": 210204520,
+   "source_value": 210204520,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Small Private Group Plans lives (detail)",
+   "website_value": 89989,
+   "source_value": 89989,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Small Private Group Plans lives (summary)",
+   "website_value": 89989,
+   "source_value": 89989,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Federal Government Employees premium (detail)",
+   "website_value": 256117849,
+   "source_value": 256117849,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Federal Government Employees premium (summary)",
+   "website_value": 256117849,
+   "source_value": 256117849,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Federal Government Employees claims (detail)",
+   "website_value": 234499302,
+   "source_value": 234499302,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Federal Government Employees claims (summary)",
+   "website_value": 234499302,
+   "source_value": 234499302,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Federal Government Employees lives (detail)",
+   "website_value": 58050,
+   "source_value": 58050,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Federal Government Employees lives (summary)",
+   "website_value": 58050,
+   "source_value": 58050,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Supplement Plans premium (detail)",
+   "website_value": 22661725,
+   "source_value": 22661725,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Supplement Plans premium (summary)",
+   "website_value": 22661725,
+   "source_value": 22661725,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Supplement Plans claims (detail)",
+   "website_value": 17247592,
+   "source_value": 17247592,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Supplement Plans claims (summary)",
+   "website_value": 17247592,
+   "source_value": 17247592,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Supplement Plans lives (detail)",
+   "website_value": 10113,
+   "source_value": 10113,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "Medicare Supplement Plans lives (summary)",
+   "website_value": 10113,
+   "source_value": 10113,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "TOTAL premium (detail page)",
+   "website_value": 17182555169,
+   "source_value": 17182555169,
+   "location": "p1 grand-total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "TOTAL premium (summary page)",
+   "website_value": 17182555169,
+   "source_value": 17182555169,
+   "location": "p8 Total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "TOTAL claims (detail page)",
+   "website_value": 15492767512,
+   "source_value": 15492767512,
+   "location": "p2 grand-total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "TOTAL claims (summary page)",
+   "website_value": 15492767512,
+   "source_value": 15492571266,
+   "location": "p8 Total row",
+   "result": "NO",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "TOTAL lives (detail page)",
+   "website_value": 2999355,
+   "source_value": 2999355,
+   "location": "p3 grand-total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "TOTAL lives (summary page)",
+   "website_value": 2999355,
+   "source_value": 2999355,
+   "location": "p8 Total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Platinum premium (detail)",
+   "website_value": 5736929998,
+   "source_value": 5736929998,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Platinum premium (summary)",
+   "website_value": 5736929998,
+   "source_value": 5736929998,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Platinum claims (detail)",
+   "website_value": 5149625273,
+   "source_value": 5149625273,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Platinum claims (summary)",
+   "website_value": 5149625273,
+   "source_value": 5149625273,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Platinum lives (detail)",
+   "website_value": 331310,
+   "source_value": 331310,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Platinum lives (summary)",
+   "website_value": 331310,
+   "source_value": 331310,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Health Plan (Vital) premium (detail)",
+   "website_value": 4994843984,
+   "source_value": 4994843984,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Health Plan (Vital) premium (summary)",
+   "website_value": 4994843984,
+   "source_value": 4994843984,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Health Plan (Vital) claims (detail)",
+   "website_value": 4786791796,
+   "source_value": 4786791796,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Health Plan (Vital) claims (summary)",
+   "website_value": 4786791796,
+   "source_value": 4786791796,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Health Plan (Vital) lives (detail)",
+   "website_value": 1240563,
+   "source_value": 1240563,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Health Plan (Vital) lives (summary)",
+   "website_value": 1240563,
+   "source_value": 1240563,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Advantage premium (detail)",
+   "website_value": 3270885178,
+   "source_value": 3270885178,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Advantage premium (summary)",
+   "website_value": 3270885178,
+   "source_value": 3270885178,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Advantage claims (detail)",
+   "website_value": 2865086458,
+   "source_value": 2865086458,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Advantage claims (summary)",
+   "website_value": 2865086458,
+   "source_value": 2865086458,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Advantage lives (detail)",
+   "website_value": 274168,
+   "source_value": 274168,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Advantage lives (summary)",
+   "website_value": 274168,
+   "source_value": 274168,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Retirees premium (detail)",
+   "website_value": 990332715,
+   "source_value": 990332715,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Retirees premium (summary)",
+   "website_value": 990332715,
+   "source_value": 990332715,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Retirees claims (detail)",
+   "website_value": 891500189,
+   "source_value": 891500189,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Retirees claims (summary)",
+   "website_value": 891500189,
+   "source_value": 891500189,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Retirees lives (detail)",
+   "website_value": 82853,
+   "source_value": 82853,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Retirees lives (summary)",
+   "website_value": 82853,
+   "source_value": 82853,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Large Private Group Plans premium (detail)",
+   "website_value": 889992252,
+   "source_value": 889992252,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Large Private Group Plans premium (summary)",
+   "website_value": 889992252,
+   "source_value": 889992252,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Large Private Group Plans claims (detail)",
+   "website_value": 704568685,
+   "source_value": 704568685,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Large Private Group Plans claims (summary)",
+   "website_value": 704568685,
+   "source_value": 704568685,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Large Private Group Plans lives (detail)",
+   "website_value": 597906,
+   "source_value": 597906,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Large Private Group Plans lives (summary)",
+   "website_value": 597906,
+   "source_value": 597906,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Private Individual Plans premium (detail)",
+   "website_value": 373591602,
+   "source_value": 373591602,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Private Individual Plans premium (summary)",
+   "website_value": 373591602,
+   "source_value": 373591602,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Private Individual Plans claims (detail)",
+   "website_value": 292800674,
+   "source_value": 292800674,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Private Individual Plans claims (summary)",
+   "website_value": 292800674,
+   "source_value": 292604428,
+   "location": "p8",
+   "result": "NO",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Private Individual Plans lives (detail)",
+   "website_value": 179472,
+   "source_value": 179472,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Private Individual Plans lives (summary)",
+   "website_value": 179472,
+   "source_value": 179472,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Employees premium (detail)",
+   "website_value": 367986231,
+   "source_value": 367986231,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Employees premium (summary)",
+   "website_value": 367986231,
+   "source_value": 367986231,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Employees claims (detail)",
+   "website_value": 350132840,
+   "source_value": 350132840,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Employees claims (summary)",
+   "website_value": 350132840,
+   "source_value": 350132840,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Employees lives (detail)",
+   "website_value": 143262,
+   "source_value": 143262,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Government Employees lives (summary)",
+   "website_value": 143262,
+   "source_value": 143262,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Small Private Group Plans premium (detail)",
+   "website_value": 270404247,
+   "source_value": 270404247,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Small Private Group Plans premium (summary)",
+   "website_value": 270404247,
+   "source_value": 270404247,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Small Private Group Plans claims (detail)",
+   "website_value": 186449831,
+   "source_value": 186449831,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Small Private Group Plans claims (summary)",
+   "website_value": 186449831,
+   "source_value": 186449831,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Small Private Group Plans lives (detail)",
+   "website_value": 90331,
+   "source_value": 90331,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Small Private Group Plans lives (summary)",
+   "website_value": 90331,
+   "source_value": 90331,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Federal Government Employees premium (detail)",
+   "website_value": 267130426,
+   "source_value": 267130426,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Federal Government Employees premium (summary)",
+   "website_value": 267130426,
+   "source_value": 267130426,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Federal Government Employees claims (detail)",
+   "website_value": 248831657,
+   "source_value": 248831657,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Federal Government Employees claims (summary)",
+   "website_value": 248831657,
+   "source_value": 248831657,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Federal Government Employees lives (detail)",
+   "website_value": 48286,
+   "source_value": 48286,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Federal Government Employees lives (summary)",
+   "website_value": 48286,
+   "source_value": 48286,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Supplement Plans premium (detail)",
+   "website_value": 20458536,
+   "source_value": 20458536,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Supplement Plans premium (summary)",
+   "website_value": 20458536,
+   "source_value": 20458536,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Supplement Plans claims (detail)",
+   "website_value": 16980109,
+   "source_value": 16980109,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Supplement Plans claims (summary)",
+   "website_value": 16980109,
+   "source_value": 16980109,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Supplement Plans lives (detail)",
+   "website_value": 11204,
+   "source_value": 11204,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "Medicare Supplement Plans lives (summary)",
+   "website_value": 11204,
+   "source_value": 11204,
+   "location": "p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "TOTAL premium (detail page)",
+   "website_value": 4525571406,
+   "source_value": 4525571406,
+   "location": "p1 grand-total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "TOTAL premium (summary page)",
+   "website_value": 4525571406,
+   "source_value": 4525571406,
+   "location": "p4 Total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "TOTAL claims (detail page)",
+   "website_value": 3762741555,
+   "source_value": 3762741555,
+   "location": "p2 grand-total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "TOTAL claims (summary page)",
+   "website_value": 3762741555,
+   "source_value": 3762741555,
+   "location": "p4 Total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "TOTAL lives (detail page)",
+   "website_value": 2988792,
+   "source_value": 2988792,
+   "location": "p3 grand-total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "TOTAL lives (summary page)",
+   "website_value": 2988792,
+   "source_value": 2988792,
+   "location": "p4 Total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Platinum premium (detail)",
+   "website_value": 1579451763,
+   "source_value": 1579451763,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Platinum premium (summary)",
+   "website_value": 1579451763,
+   "source_value": 1579451763,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Platinum claims (detail)",
+   "website_value": 1280825394,
+   "source_value": 1280825394,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Platinum claims (summary)",
+   "website_value": 1280825394,
+   "source_value": 1280825394,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Platinum lives (detail)",
+   "website_value": 328472,
+   "source_value": 328472,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Platinum lives (summary)",
+   "website_value": 328472,
+   "source_value": 328472,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Health Plan (Vital) premium (detail)",
+   "website_value": 1235861682,
+   "source_value": 1235861682,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Health Plan (Vital) premium (summary)",
+   "website_value": 1235861682,
+   "source_value": 1235861682,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Health Plan (Vital) claims (detail)",
+   "website_value": 1152044593,
+   "source_value": 1152044593,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Health Plan (Vital) claims (summary)",
+   "website_value": 1152044593,
+   "source_value": 1152044593,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Health Plan (Vital) lives (detail)",
+   "website_value": 1230723,
+   "source_value": 1230723,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Health Plan (Vital) lives (summary)",
+   "website_value": 1230723,
+   "source_value": 1230723,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Advantage premium (detail)",
+   "website_value": 802989885,
+   "source_value": 802989885,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Advantage premium (summary)",
+   "website_value": 802989885,
+   "source_value": 802989885,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Advantage claims (detail)",
+   "website_value": 646261900,
+   "source_value": 646261900,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Advantage claims (summary)",
+   "website_value": 646261900,
+   "source_value": 646261900,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Advantage lives (detail)",
+   "website_value": 264813,
+   "source_value": 264813,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Advantage lives (summary)",
+   "website_value": 264813,
+   "source_value": 264813,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Retirees premium (detail)",
+   "website_value": 351936710,
+   "source_value": 351936710,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Retirees premium (summary)",
+   "website_value": 351936710,
+   "source_value": 351936710,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Retirees claims (detail)",
+   "website_value": 264202224,
+   "source_value": 264202224,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Retirees claims (summary)",
+   "website_value": 264202224,
+   "source_value": 264202224,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Retirees lives (detail)",
+   "website_value": 101293,
+   "source_value": 101293,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Retirees lives (summary)",
+   "website_value": 101293,
+   "source_value": 101293,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Large Private Group Plans premium (detail)",
+   "website_value": 230437303,
+   "source_value": 230437303,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Large Private Group Plans premium (summary)",
+   "website_value": 230437303,
+   "source_value": 230437303,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Large Private Group Plans claims (detail)",
+   "website_value": 161480530,
+   "source_value": 161480530,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Large Private Group Plans claims (summary)",
+   "website_value": 161480530,
+   "source_value": 161480530,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Large Private Group Plans lives (detail)",
+   "website_value": 586607,
+   "source_value": 586607,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Large Private Group Plans lives (summary)",
+   "website_value": 586607,
+   "source_value": 586607,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Private Individual Plans premium (detail)",
+   "website_value": 95924989,
+   "source_value": 95924989,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Private Individual Plans premium (summary)",
+   "website_value": 95924989,
+   "source_value": 95924989,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Private Individual Plans claims (detail)",
+   "website_value": 66300486,
+   "source_value": 66300486,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Private Individual Plans claims (summary)",
+   "website_value": 66300486,
+   "source_value": 66300486,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Private Individual Plans lives (detail)",
+   "website_value": 180838,
+   "source_value": 180838,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Private Individual Plans lives (summary)",
+   "website_value": 180838,
+   "source_value": 180838,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Employees premium (detail)",
+   "website_value": 92859989,
+   "source_value": 92859989,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Employees premium (summary)",
+   "website_value": 92859989,
+   "source_value": 92859989,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Employees claims (detail)",
+   "website_value": 79723696,
+   "source_value": 79723696,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Employees claims (summary)",
+   "website_value": 79723696,
+   "source_value": 79723696,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Employees lives (detail)",
+   "website_value": 131483,
+   "source_value": 131483,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Government Employees lives (summary)",
+   "website_value": 131483,
+   "source_value": 131483,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Small Private Group Plans premium (detail)",
+   "website_value": 67143300,
+   "source_value": 67143300,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Small Private Group Plans premium (summary)",
+   "website_value": 67143300,
+   "source_value": 67143300,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Small Private Group Plans claims (detail)",
+   "website_value": 50828793,
+   "source_value": 50828793,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Small Private Group Plans claims (summary)",
+   "website_value": 50828793,
+   "source_value": 50828793,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Small Private Group Plans lives (detail)",
+   "website_value": 94446,
+   "source_value": 94446,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Small Private Group Plans lives (summary)",
+   "website_value": 94446,
+   "source_value": 94446,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Federal Government Employees premium (detail)",
+   "website_value": 64148743,
+   "source_value": 64148743,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Federal Government Employees premium (summary)",
+   "website_value": 64148743,
+   "source_value": 64148743,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Federal Government Employees claims (detail)",
+   "website_value": 56672236,
+   "source_value": 56672236,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Federal Government Employees claims (summary)",
+   "website_value": 56672236,
+   "source_value": 56672236,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Federal Government Employees lives (detail)",
+   "website_value": 61023,
+   "source_value": 61023,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Federal Government Employees lives (summary)",
+   "website_value": 61023,
+   "source_value": 61023,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Supplement Plans premium (detail)",
+   "website_value": 4817042,
+   "source_value": 4817042,
+   "location": "p1 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Supplement Plans premium (summary)",
+   "website_value": 4817042,
+   "source_value": 4817042,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Supplement Plans claims (detail)",
+   "website_value": 4401703,
+   "source_value": 4401703,
+   "location": "p2 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Supplement Plans claims (summary)",
+   "website_value": 4401703,
+   "source_value": 4401703,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Supplement Plans lives (detail)",
+   "website_value": 9094,
+   "source_value": 9094,
+   "location": "p3 col sum",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "Medicare Supplement Plans lives (summary)",
+   "website_value": 9094,
+   "source_value": 9094,
+   "location": "p4",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "claimsConflict.detailPageTotal",
+   "website_value": 15492767512,
+   "source_value": 15492767512,
+   "location": "p2 grand-total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "claimsConflict.summaryPageTotal",
+   "website_value": 15492571266,
+   "source_value": 15492571266,
+   "location": "p8 Total row",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "claimsConflict.difference",
+   "website_value": 196246,
+   "source_value": 196246,
+   "location": "p2 minus p8",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "annualChange.premium_change",
+   "website_value": 1721674066,
+   "source_value": 1721674066,
+   "location": "p1 FY25 minus p1 FY24",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "annualChange.claims_change",
+   "website_value": 1776909358,
+   "source_value": 1776909358,
+   "location": "p2 FY25 minus p2 FY24",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "annualChange.covered_lives_change",
+   "website_value": 43608,
+   "source_value": 43608,
+   "location": "p3 FY25 minus p3 FY24",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2024",
+   "item": "market.mlr (rounded 6dp)",
+   "website_value": 0.887133,
+   "source_value": 0.887133,
+   "location": "p2/p1 (OCS prints no total MLR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "FY2025",
+   "item": "market.mlr (rounded 6dp)",
+   "website_value": 0.901657,
+   "source_value": 0.901657,
+   "location": "p2/p1 (OCS prints no total MLR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS Planilla",
+   "period": "1Q2026",
+   "item": "market.mlr (rounded 6dp)",
+   "website_value": 0.83144,
+   "source_value": 0.83144,
+   "location": "p2/p1 (OCS prints no total MLR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:57:53Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2025,
+   "item": "Premium = Net premium income (L2)",
+   "website_value": 4730861034,
+   "source_value": 4730861034,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2025,
+   "item": "  (info) Total revenues (L8)",
+   "website_value": 4730861034,
+   "source_value": 4730861034,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2025,
+   "item": "Hospital/medical benefits (L9)",
+   "website_value": 3253991428,
+   "source_value": 3253991428,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2025,
+   "item": "Total hospital and medical (L18)",
+   "website_value": 4184943562,
+   "source_value": 4184943562,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2025,
+   "item": "General administrative expenses (L21)",
+   "website_value": 413665116,
+   "source_value": 413665116,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2025,
+   "item": "Net income (L32)",
+   "website_value": 101374716,
+   "source_value": 101374716,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2025,
+   "item": "Member months (Stmt of Rev L1, Total col)",
+   "website_value": 3875924,
+   "source_value": 3875924,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2024,
+   "item": "Premium = Net premium income (L2)",
+   "website_value": 3605893822,
+   "source_value": 3605893822,
+   "location": 5,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2024,
+   "item": "  (info) Total revenues (L8)",
+   "website_value": 3605893822,
+   "source_value": 3605893822,
+   "location": 5,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2024,
+   "item": "Hospital/medical benefits (L9)",
+   "website_value": 2615003999,
+   "source_value": 2615003999,
+   "location": 5,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2024,
+   "item": "Total hospital and medical (L18)",
+   "website_value": 3146749770,
+   "source_value": 3146749770,
+   "location": 5,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2024,
+   "item": "General administrative expenses (L21)",
+   "website_value": 368123100,
+   "source_value": 368123100,
+   "location": 5,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2024,
+   "item": "Net income (L32)",
+   "website_value": 61434352,
+   "source_value": 68358385,
+   "location": 5,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2024,
+   "item": "Member months (Stmt of Rev L1, Total col)",
+   "website_value": 3323475,
+   "source_value": 3323475,
+   "location": 5,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2025,
+   "item": "Total admitted assets (col 3, L28)",
+   "website_value": 967368973,
+   "source_value": 967368973,
+   "location": 2,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2025,
+   "item": "Total liabilities (col 3, L24)",
+   "website_value": 603388919,
+   "source_value": 603388919,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsa",
+   "period": 2025,
+   "item": "Total capital and surplus (col 3, L33)",
+   "website_value": 363980055,
+   "source_value": 363980055,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2025,
+   "item": "Premium = Net premium income (L2)",
+   "website_value": 3297440566,
+   "source_value": 3297440566,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2025,
+   "item": "  (info) Total revenues (L8)",
+   "website_value": 3297440566,
+   "source_value": 3237586680,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2025,
+   "item": "Hospital/medical benefits (L9)",
+   "website_value": 1848011597,
+   "source_value": 1848011597,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2025,
+   "item": "Total hospital and medical (L18)",
+   "website_value": 2920533113,
+   "source_value": 2920533113,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2025,
+   "item": "General administrative expenses (L21)",
+   "website_value": 335549824,
+   "source_value": 335549824,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2025,
+   "item": "Net income (L32)",
+   "website_value": -8964419,
+   "source_value": -8964419,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2025,
+   "item": "Member months (Stmt of Rev L1, Total col)",
+   "website_value": 2579628,
+   "source_value": 2579628,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2024,
+   "item": "Premium = Net premium income (L2)",
+   "website_value": 3051305347,
+   "source_value": 3051305347,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2024,
+   "item": "  (info) Total revenues (L8)",
+   "website_value": 3051305347,
+   "source_value": 3047620202,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2024,
+   "item": "Hospital/medical benefits (L9)",
+   "website_value": 1742934598,
+   "source_value": 1742934598,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2024,
+   "item": "Total hospital and medical (L18)",
+   "website_value": 2674745597,
+   "source_value": 2674745597,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2024,
+   "item": "General administrative expenses (L21)",
+   "website_value": 314636443,
+   "source_value": 314636443,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2024,
+   "item": "Net income (L32)",
+   "website_value": 17340429,
+   "source_value": 13377592,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2024,
+   "item": "Member months (Stmt of Rev L1, Total col)",
+   "website_value": 2638673,
+   "source_value": 2638673,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2025,
+   "item": "Total admitted assets (col 3, L28)",
+   "website_value": 737136017,
+   "source_value": 737136017,
+   "location": 2,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2025,
+   "item": "Total liabilities (col 3, L24)",
+   "website_value": 479780936,
+   "source_value": 479780936,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmhc",
+   "period": 2025,
+   "item": "Total capital and surplus (col 3, L33)",
+   "website_value": 257355081,
+   "source_value": 257355081,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2025,
+   "item": "Premium = Net premium income (L2)",
+   "website_value": 2874971487,
+   "source_value": 2874971487,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2025,
+   "item": "  (info) Total revenues (L8)",
+   "website_value": 2874971487,
+   "source_value": 2874987177,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2025,
+   "item": "Hospital/medical benefits (L9)",
+   "website_value": 1619912611,
+   "source_value": 1619912611,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2025,
+   "item": "Total hospital and medical (L18)",
+   "website_value": 2594840817,
+   "source_value": 2594840815,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2025,
+   "item": "General administrative expenses (L21)",
+   "website_value": 199348114,
+   "source_value": 199348114,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2025,
+   "item": "Net income (L32)",
+   "website_value": 6308964,
+   "source_value": 6308964,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2025,
+   "item": "Member months (Stmt of Rev L1, Total col)",
+   "website_value": 10031810,
+   "source_value": 10031810,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2024,
+   "item": "Premium = Net premium income (L2)",
+   "website_value": 2548230206,
+   "source_value": 2548230206,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2024,
+   "item": "  (info) Total revenues (L8)",
+   "website_value": 2548230206,
+   "source_value": 2548207703,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2024,
+   "item": "Hospital/medical benefits (L9)",
+   "website_value": 1309280027,
+   "source_value": 1309280027,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2024,
+   "item": "Total hospital and medical (L18)",
+   "website_value": 2312936302,
+   "source_value": 2312936301,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2024,
+   "item": "General administrative expenses (L21)",
+   "website_value": 146137489,
+   "source_value": 146137489,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2024,
+   "item": "Net income (L32)",
+   "website_value": 20808896,
+   "source_value": 20808896,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2024,
+   "item": "Member months (Stmt of Rev L1, Total col)",
+   "website_value": 10151514,
+   "source_value": 10151514,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2025,
+   "item": "Total admitted assets (col 3, L28)",
+   "website_value": 950706686,
+   "source_value": 950706686,
+   "location": 2,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2025,
+   "item": "Total liabilities (col 3, L24)",
+   "website_value": 586646242,
+   "source_value": 586646242,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tss",
+   "period": 2025,
+   "item": "Total capital and surplus (col 3, L33)",
+   "website_value": 364060444,
+   "source_value": 364060444,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2025,
+   "item": "Premium = Net premium income (L2)",
+   "website_value": 1624549762,
+   "source_value": 1624549762,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2025,
+   "item": "  (info) Total revenues (L8)",
+   "website_value": 1624549762,
+   "source_value": 1624549762,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2025,
+   "item": "Hospital/medical benefits (L9)",
+   "website_value": 826850022,
+   "source_value": 826850022,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2025,
+   "item": "Total hospital and medical (L18)",
+   "website_value": 1494250533,
+   "source_value": 1494250533,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2025,
+   "item": "General administrative expenses (L21)",
+   "website_value": 127865401,
+   "source_value": 127865401,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2025,
+   "item": "Net income (L32)",
+   "website_value": 5257506,
+   "source_value": 5257506,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2025,
+   "item": "Member months (Stmt of Rev L1, Total col)",
+   "website_value": 5362698,
+   "source_value": 5362698,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2024,
+   "item": "Premium = Net premium income (L2)",
+   "website_value": 1681971106,
+   "source_value": 1681971106,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2024,
+   "item": "  (info) Total revenues (L8)",
+   "website_value": 1681971106,
+   "source_value": 1681971106,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2024,
+   "item": "Hospital/medical benefits (L9)",
+   "website_value": 893312487,
+   "source_value": 893312487,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2024,
+   "item": "Total hospital and medical (L18)",
+   "website_value": 1588540477,
+   "source_value": 1588540477,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2024,
+   "item": "General administrative expenses (L21)",
+   "website_value": 137393593,
+   "source_value": 137393593,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2024,
+   "item": "Net income (L32)",
+   "website_value": -39801289,
+   "source_value": -25515404,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2024,
+   "item": "Member months (Stmt of Rev L1, Total col)",
+   "website_value": 6230396,
+   "source_value": 6230396,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2025,
+   "item": "Total admitted assets (col 3, L28)",
+   "website_value": 271680792,
+   "source_value": 271680792,
+   "location": 2,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2025,
+   "item": "Total liabilities (col 3, L24)",
+   "website_value": 215974124,
+   "source_value": 215974124,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement fmhp",
+   "period": 2025,
+   "item": "Total capital and surplus (col 3, L33)",
+   "website_value": 55706668,
+   "source_value": 55706668,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:10Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2025,
+   "item": "Premium (Net premium income)",
+   "website_value": 1536319683,
+   "source_value": 1536319683,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2024,
+   "item": "Premium (Net premium income)",
+   "website_value": 1575943369,
+   "source_value": 1575943369,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2025,
+   "item": "Hospital/medical benefits",
+   "website_value": 678508181,
+   "source_value": 678508181,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2024,
+   "item": "Hospital/medical benefits",
+   "website_value": 624633197,
+   "source_value": 624633197,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2025,
+   "item": "Total hospital and medical",
+   "website_value": 1421430710,
+   "source_value": 1421430710,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2024,
+   "item": "Total hospital and medical",
+   "website_value": 1396040340,
+   "source_value": 1396040340,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2025,
+   "item": "General administrative expenses",
+   "website_value": 164674847,
+   "source_value": 164674847,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2024,
+   "item": "General administrative expenses",
+   "website_value": 182195944,
+   "source_value": 182195944,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2025,
+   "item": "Net income",
+   "website_value": -86691102,
+   "source_value": -86691102,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2024,
+   "item": "Net income",
+   "website_value": -41948126,
+   "source_value": -41948126,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2025,
+   "item": "Member months",
+   "website_value": 1232658,
+   "source_value": 1232658,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2024,
+   "item": "Member months",
+   "website_value": 1495589,
+   "source_value": 1495589,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2025,
+   "item": "Total admitted assets",
+   "website_value": 379277202,
+   "source_value": 379277202,
+   "location": 2,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2025,
+   "item": "Total liabilities",
+   "website_value": 216239981,
+   "source_value": 216239981,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement tsa",
+   "period": 2025,
+   "item": "Total capital and surplus",
+   "website_value": 163037221,
+   "source_value": 163037221,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2025,
+   "item": "Premium (Net premium income)",
+   "website_value": 1324108128,
+   "source_value": 1324108128,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2024,
+   "item": "Premium (Net premium income)",
+   "website_value": 1225696436,
+   "source_value": 1225696436,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2025,
+   "item": "Hospital/medical benefits",
+   "website_value": 809448175,
+   "source_value": 809448175,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2024,
+   "item": "Hospital/medical benefits",
+   "website_value": 708849509,
+   "source_value": 708849509,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2025,
+   "item": "Total hospital and medical",
+   "website_value": 1266762711,
+   "source_value": 1266762711,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2024,
+   "item": "Total hospital and medical",
+   "website_value": 1137138737,
+   "source_value": 1137138737,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2025,
+   "item": "General administrative expenses",
+   "website_value": 56065409,
+   "source_value": 56065409,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2024,
+   "item": "General administrative expenses",
+   "website_value": 52373364,
+   "source_value": 52373364,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2025,
+   "item": "Net income",
+   "website_value": 3640727,
+   "source_value": 3640727,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2024,
+   "item": "Net income",
+   "website_value": 29445019,
+   "source_value": 23763178,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2025,
+   "item": "Member months",
+   "website_value": 3322831,
+   "source_value": 3322831,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2024,
+   "item": "Member months",
+   "website_value": 3464710,
+   "source_value": 3464710,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2025,
+   "item": "Total admitted assets",
+   "website_value": 383137377,
+   "source_value": 383137377,
+   "location": 2,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2025,
+   "item": "Total liabilities",
+   "website_value": 243458000,
+   "source_value": 243458000,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mmmm",
+   "period": 2025,
+   "item": "Total capital and surplus",
+   "website_value": 139679377,
+   "source_value": 139679377,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2025,
+   "item": "Premium (Net premium income)",
+   "website_value": 775122853,
+   "source_value": 775122853,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2024,
+   "item": "Premium (Net premium income)",
+   "website_value": 714718421,
+   "source_value": 707735210,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2025,
+   "item": "Hospital/medical benefits",
+   "website_value": 497197862,
+   "source_value": 497197862,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2024,
+   "item": "Hospital/medical benefits",
+   "website_value": 426924207,
+   "source_value": 421421192,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2025,
+   "item": "Total hospital and medical",
+   "website_value": 739238276,
+   "source_value": 739238278,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2024,
+   "item": "Total hospital and medical",
+   "website_value": 640532133,
+   "source_value": 638766298,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2025,
+   "item": "General administrative expenses",
+   "website_value": 37216578,
+   "source_value": 37216578,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2024,
+   "item": "General administrative expenses",
+   "website_value": 35869696,
+   "source_value": 33466375,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2025,
+   "item": "Net income",
+   "website_value": -8496179,
+   "source_value": -8496179,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2024,
+   "item": "Net income",
+   "website_value": 28779636,
+   "source_value": 27343478,
+   "location": 4,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2025,
+   "item": "Member months",
+   "website_value": 2281732,
+   "source_value": 2281732,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2024,
+   "item": "Member months",
+   "website_value": 2304418,
+   "source_value": 2304418,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2025,
+   "item": "Total admitted assets",
+   "website_value": 193841335,
+   "source_value": 193841335,
+   "location": 2,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2025,
+   "item": "Total liabilities",
+   "website_value": 99616383,
+   "source_value": 99616383,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement meno",
+   "period": 2025,
+   "item": "Total capital and surplus",
+   "website_value": 94224952,
+   "source_value": 94224952,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2025,
+   "item": "Premium (Net premium income)",
+   "website_value": 381382990,
+   "source_value": 381382990,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2024,
+   "item": "Premium (Net premium income)",
+   "website_value": 485594759,
+   "source_value": 485594759,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2025,
+   "item": "Hospital/medical benefits",
+   "website_value": 196384608,
+   "source_value": 196384608,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2024,
+   "item": "Hospital/medical benefits",
+   "website_value": 316416377,
+   "source_value": 316416377,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2025,
+   "item": "Total hospital and medical",
+   "website_value": 328781965,
+   "source_value": 328781965,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2024,
+   "item": "Total hospital and medical",
+   "website_value": 419219786,
+   "source_value": 419219786,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2025,
+   "item": "General administrative expenses",
+   "website_value": 65521537,
+   "source_value": 65521537,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2024,
+   "item": "General administrative expenses",
+   "website_value": 49426904,
+   "source_value": 49426904,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2025,
+   "item": "Net income",
+   "website_value": -63285921,
+   "source_value": -63285921,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2024,
+   "item": "Net income",
+   "website_value": -2827315,
+   "source_value": -2827315,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2025,
+   "item": "Member months",
+   "website_value": 329121,
+   "source_value": 329121,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2024,
+   "item": "Member months",
+   "website_value": 441602,
+   "source_value": 441602,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2025,
+   "item": "Total admitted assets",
+   "website_value": 185790476,
+   "source_value": 185790476,
+   "location": 2,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2025,
+   "item": "Total liabilities",
+   "website_value": 95824785,
+   "source_value": 95824785,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement huma",
+   "period": 2025,
+   "item": "Total capital and surplus",
+   "website_value": 89965691,
+   "source_value": 89965692,
+   "location": 3,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsl",
+   "period": 2025,
+   "item": "Premium (Net premium income)",
+   "website_value": 508232940,
+   "source_value": 508232940,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsl",
+   "period": 2024,
+   "item": "Premium (Net premium income)",
+   "website_value": 437367063,
+   "source_value": 437367063,
+   "location": 5,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsl",
+   "period": 2025,
+   "item": "Net income",
+   "website_value": 31021530,
+   "source_value": 31021530,
+   "location": 4,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsl",
+   "period": 2024,
+   "item": "Net income",
+   "website_value": 20604750,
+   "source_value": 20604750,
+   "location": 5,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsl",
+   "period": 2025,
+   "item": "A&H premium (mcsLifeAdj)",
+   "website_value": 505025652,
+   "source_value": 505025652,
+   "location": 6,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsl",
+   "period": 2024,
+   "item": "A&H premium (mcsLifeAdj)",
+   "website_value": 434494534,
+   "source_value": 434494534,
+   "location": 7,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsl",
+   "period": 2025,
+   "item": "Non-A&H premium (mcsLifeAdj)",
+   "website_value": 3207288,
+   "source_value": 3207289,
+   "location": 6,
+   "result": "MISMATCH (corrected on site 2026-09-14)",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsl",
+   "period": 2025,
+   "item": "Total admitted assets",
+   "website_value": 214902457,
+   "source_value": 214902457,
+   "location": 2,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsl",
+   "period": 2025,
+   "item": "Total liabilities",
+   "website_value": 119308944,
+   "source_value": 119308944,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "OCS/NAIC Annual Statement mcsl",
+   "period": 2025,
+   "item": "Total capital and surplus",
+   "website_value": 95593513,
+   "source_value": 95593513,
+   "location": 3,
+   "result": "MATCH",
+   "validated_at": "2026-09-14T13:58:32Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5577 enrollment (sum numeric PR rows)",
+   "website_value": "358,392",
+   "source_value": "358,392",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5577 numeric counties / PR rows",
+   "website_value": "78/78",
+   "source_value": "78/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5577 organization name",
+   "website_value": "MCS ADVANTAGE, INC.",
+   "source_value": "MCS ADVANTAGE, INC.",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5577 plan type label",
+   "website_value": "HMO/HMOPOS",
+   "source_value": "HMO/HMOPOS",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5774 enrollment (sum numeric PR rows)",
+   "website_value": "119,380",
+   "source_value": "119,380",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5774 numeric counties / PR rows",
+   "website_value": "78/78",
+   "source_value": "78/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5774 organization name",
+   "website_value": "TRIPLE S ADVANTAGE, INC.",
+   "source_value": "TRIPLE S ADVANTAGE, INC.",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5774 plan type label",
+   "website_value": "HMO/HMOPOS",
+   "source_value": "HMO/HMOPOS",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4004 enrollment (sum numeric PR rows)",
+   "website_value": "101,734",
+   "source_value": "101,734",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4004 numeric counties / PR rows",
+   "website_value": "78/78",
+   "source_value": "78/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4004 organization name",
+   "website_value": "MMM HEALTHCARE, LLC",
+   "source_value": "MMM HEALTHCARE, LLC",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4004 plan type label",
+   "website_value": "HMO/HMOPOS",
+   "source_value": "HMO/HMOPOS",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4003 enrollment (sum numeric PR rows)",
+   "website_value": "95,126",
+   "source_value": "95,126",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4003 numeric counties / PR rows",
+   "website_value": "78/78",
+   "source_value": "78/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4003 organization name",
+   "website_value": "MMM HEALTHCARE, LLC",
+   "source_value": "MMM HEALTHCARE, LLC",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4003 plan type label",
+   "website_value": "HMO/HMOPOS",
+   "source_value": "HMO/HMOPOS",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4005 enrollment (sum numeric PR rows)",
+   "website_value": "6,456",
+   "source_value": "6,456",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4005 numeric counties / PR rows",
+   "website_value": "62/78",
+   "source_value": "62/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4005 organization name",
+   "website_value": "TRIPLE S ADVANTAGE, INC.",
+   "source_value": "TRIPLE S ADVANTAGE, INC.",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H4005 plan type label",
+   "website_value": "Local PPO",
+   "source_value": "Local PPO",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H2001 enrollment (sum numeric PR rows)",
+   "website_value": "15",
+   "source_value": "15",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H2001 numeric counties / PR rows",
+   "website_value": "1/78",
+   "source_value": "1/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H2001 organization name",
+   "website_value": "SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.",
+   "source_value": "SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H2001 plan type label",
+   "website_value": "Local PPO",
+   "source_value": "Local PPO",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5522 enrollment (sum numeric PR rows)",
+   "website_value": "13",
+   "source_value": "13",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5522 numeric counties / PR rows",
+   "website_value": "1/78",
+   "source_value": "1/78",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5522 organization name",
+   "website_value": "AETNA LIFE INSURANCE COMPANY",
+   "source_value": "AETNA LIFE INSURANCE COMPANY",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "H5522 plan type label",
+   "website_value": "Local PPO",
+   "source_value": "Local PPO",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "Total reported numeric PR enrollment (all contracts)",
+   "website_value": "681,116",
+   "source_value": "681,116",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "Principal PR orgs (MCS+MMM+Triple-S) enrollment",
+   "website_value": "681,088",
+   "source_value": "681,088",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "Suppression token for <=10 enrollees",
+   "website_value": "'*'",
+   "source_value": "'.' (readme text says '* = 10 or less' but every suppressed cell in the file is '.'; zero '*' cells in file)",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "NO",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "Humana PR contract rows",
+   "website_value": "(not stated)",
+   "source_value": "YES - 10 Humana contracts have PR rows, all suppressed: H2029 HUMANA INSURANCE OF PUERTO RICO, INC. Local PPO (78 rows), H1036, H5216, H6622, H5525, H7284, H3533, H0473, H1468, X0001 LI NET",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "N/A",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS MA enrollment Aug 2026",
+   "period": "",
+   "item": "Other PR contracts omitted by site",
+   "website_value": "none listed",
+   "source_value": "202 other contracts appear in PR rows; ALL have zero numeric cells (every row '.'), so their reportable enrollment is 0 (omission does not change totals)",
+   "location": "enroll: SCC_Enrollment_MA_2026_08.csv (State=PR)",
+   "result": "OMISSION (0 enrollment)",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H5577 Part C / Part D summary",
+   "website_value": "5/5",
+   "source_value": "5/5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H5577 Overall",
+   "website_value": "(not stated)",
+   "source_value": "5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "N/A",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H5774 Part C / Part D summary",
+   "website_value": "4.5/4.5",
+   "source_value": "4.5/4.5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H5774 Overall",
+   "website_value": "(not stated)",
+   "source_value": "4.5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "N/A",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H4004 Part C / Part D summary",
+   "website_value": "5/5",
+   "source_value": "5/5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H4004 Overall",
+   "website_value": "(not stated)",
+   "source_value": "5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "N/A",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H4003 Part C / Part D summary",
+   "website_value": "5/5",
+   "source_value": "5/5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H4003 Overall",
+   "website_value": "(not stated)",
+   "source_value": "5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "N/A",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H4005 Part C / Part D summary",
+   "website_value": "3.5/4.5",
+   "source_value": "3.5/4.5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H4005 Overall",
+   "website_value": "(not stated)",
+   "source_value": "3.5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "N/A",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H2001 Part C / Part D summary",
+   "website_value": "4.5/4",
+   "source_value": "4.5/4",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H2001 Overall",
+   "website_value": "(not stated)",
+   "source_value": "4.5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "N/A",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H5522 Part C / Part D summary",
+   "website_value": "4.5/4.5",
+   "source_value": "4.5/4.5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2026 Star Ratings",
+   "period": "",
+   "item": "H5522 Overall",
+   "website_value": "(not stated)",
+   "source_value": "4.5",
+   "location": "stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating",
+   "result": "N/A",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "0% bonus n [Parts A&B 0% Bonus 2027 Rate]",
+   "website_value": "78",
+   "source_value": "78",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "0% bonus min [Parts A&B 0% Bonus 2027 Rate]",
+   "website_value": "685.99",
+   "source_value": "685.99",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "0% bonus median [Parts A&B 0% Bonus 2027 Rate]",
+   "website_value": "768.50",
+   "source_value": "768.50",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "0% bonus max [Parts A&B 0% Bonus 2027 Rate]",
+   "website_value": "923.46",
+   "source_value": "923.46",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "0% bonus mean [Parts A&B 0% Bonus 2027 Rate]",
+   "website_value": "777.98",
+   "source_value": "777.98",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "3.5% bonus n [Parts A&B 3.5% Bonus 2027 Rate]",
+   "website_value": "78",
+   "source_value": "78",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "3.5% bonus min [Parts A&B 3.5% Bonus 2027 Rate]",
+   "website_value": "706.86",
+   "source_value": "706.86",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "3.5% bonus median [Parts A&B 3.5% Bonus 2027 Rate]",
+   "website_value": "806.42",
+   "source_value": "806.42",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "3.5% bonus max [Parts A&B 3.5% Bonus 2027 Rate]",
+   "website_value": "977.13",
+   "source_value": "977.13",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "3.5% bonus mean [Parts A&B 3.5% Bonus 2027 Rate]",
+   "website_value": "816.90",
+   "source_value": "816.90",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "5% bonus n [Parts A&B 5% Bonus 2027 Rate]",
+   "website_value": "78",
+   "source_value": "78",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "5% bonus min [Parts A&B 5% Bonus 2027 Rate]",
+   "website_value": "715.81",
+   "source_value": "715.81",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "5% bonus median [Parts A&B 5% Bonus 2027 Rate]",
+   "website_value": "819.88",
+   "source_value": "819.88",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "5% bonus max [Parts A&B 5% Bonus 2027 Rate]",
+   "website_value": "1001.16",
+   "source_value": "1001.16",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "5% bonus mean [Parts A&B 5% Bonus 2027 Rate]",
+   "website_value": "833.56",
+   "source_value": "833.56",
+   "location": "ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS CY2027 Rate Book",
+   "period": "",
+   "item": "Statutory-benchmark CSV in zip",
+   "website_value": "zip has none with PR rows",
+   "source_value": "zip contains NO statutory/benchmark CSV at all (only CountyRate2027, CountyRate2027PACE, 2027 Regional Rates, Local EGWP Rates 2027 + RateBook2027.xlsx). PACE and EGWP CSVs DO have 78 PR rows.",
+   "location": "ratebook.zip listing",
+   "result": "YES (no such file)",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "CMS 2027 Rate Announcement fact sheet",
+   "period": "",
+   "item": "Page loads",
+   "website_value": "(claimed)",
+   "source_value": "HTTP 200; headline: 'increase of 2.48% or over $13 billion in payments to MA plans in CY 2027' (Effective Growth Rate 5.33%)",
+   "location": "fact sheet HTML",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "HRSA HPSA",
+   "period": "",
+   "item": "Report as-of date",
+   "website_value": "07-01-2026",
+   "source_value": "Data as of: 07/01/2026; tables titled 'as of June 30, 2026'; Third Quarter FY2026",
+   "location": "hrsa: HPSA Quarterly Summary PDF p1",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "HRSA HPSA",
+   "period": "",
+   "item": "Primary Care total designations",
+   "website_value": "72",
+   "source_value": "42 (Geographic 0, Population 20, Facility 22)",
+   "location": "hrsa: HPSA Quarterly Summary PDF Table 3 p5",
+   "result": "NO (corrected on site)",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "HRSA HPSA",
+   "period": "",
+   "item": "Primary Care practitioners needed",
+   "website_value": "121",
+   "source_value": "138",
+   "location": "hrsa: HPSA Quarterly Summary PDF Table 3 p5",
+   "result": "NO (corrected on site)",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "HRSA HPSA",
+   "period": "",
+   "item": "Primary Care population / % need met",
+   "website_value": "(not stated)",
+   "source_value": "574,059 / 28.90%",
+   "location": "hrsa: HPSA Quarterly Summary PDF Table 3 p5",
+   "result": "N/A",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "HRSA HPSA",
+   "period": "",
+   "item": "Mental Health total designations",
+   "website_value": "51",
+   "source_value": "74 (Geographic 0, Population 52, Facility 22)",
+   "location": "hrsa: HPSA Quarterly Summary PDF Table 5 p11",
+   "result": "NO (corrected on site)",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "HRSA HPSA",
+   "period": "",
+   "item": "Mental Health practitioners needed",
+   "website_value": "12",
+   "source_value": "70",
+   "location": "hrsa: HPSA Quarterly Summary PDF Table 5 p11",
+   "result": "NO (corrected on site)",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "HRSA HPSA",
+   "period": "",
+   "item": "Mental Health population / % need met",
+   "website_value": "(not stated)",
+   "source_value": "1,140,925 / 8.31%",
+   "location": "hrsa: HPSA Quarterly Summary PDF Table 5 p11",
+   "result": "N/A",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "HRSA HPSA",
+   "period": "",
+   "item": "Dental row",
+   "website_value": "unavailable",
+   "source_value": "PRESENT: 99 designations (Geographic 1, Population 76, Facility 22); population 2,292,005; 48.02% need met; 297 practitioners needed",
+   "location": "hrsa: HPSA Quarterly Summary PDF Table 4 p8",
+   "result": "NO (corrected on site)",
+   "validated_at": "2026-09-14T13:58:50Z"
+  },
+  {
+   "dataset": "SEC 10-K UnitedHealth Group",
+   "period": "FY2025",
+   "item": "Medical care ratio (consolidated)",
+   "website_value": "89.1%",
+   "source_value": "MD&A table row: 'Medical care ratio (a) | 89.1 % | 85.5 % | 83.2 %'; footnote (a): 'Medical care ratio (MCR) is calculated as medical costs divided by premium revenue.' Medical costs $313,995M (premium revenue used for MCR is shown in the same table).",
+   "location": "89.1% (reported; not recomputed - website labels it as reported ratio)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K UnitedHealth Group",
+   "period": "FY2025",
+   "item": "Operating margin (consolidated, reported)",
+   "website_value": "4.2%",
+   "source_value": "10-K table 'Operating margin | 4.2 | 8.1 | 8.7' and 'Consolidated operating margin | 4.2 % | 8.1 % | 8.7 %'. Earnings from operations $18,964M / Total revenues $447,567M (Consolidated Statements of Operations).",
+   "location": "4.2% (4.237%)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K UnitedHealth Group",
+   "period": "FY2025",
+   "item": "Net margin (net earnings attributable to common shareholders / total revenues)",
+   "website_value": "2.7%",
+   "source_value": "10-K table 'Net earnings margin (b) | 2.7 | 3.6 | 6.0'; footnote (b) 'Net earnings margin attributable to UnitedHealth Group common shareholders.' Net earnings attributable to UnitedHealth Group common shareholders $12,056M / Total revenues $447,567M. (Also: Earnings before income taxes $14,697M; Ne",
+   "location": "2.7% (2.694%)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K Elevance Health",
+   "period": "FY2025",
+   "item": "Benefit expense ratio (consolidated)",
+   "website_value": "90.0%",
+   "source_value": "MD&A table row: 'Benefit expense ratio 2 | 90.0 % | 88.5 % | 87.0 %'; footnote 2: 'Benefit expense ratio represents benefit expense as a percentage of premium revenue. Premiums for the years ended December 31, 2025, 2024 and 2023 were $164,639, $144,166 and $142,854'. Benefit expense $148,223M.",
+   "location": "90.0% (90.029%) = 148,223 / 164,639",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K Elevance Health",
+   "period": "FY2025",
+   "item": "Pre-tax margin (income before income tax / total revenues, reported)",
+   "website_value": "3.4%",
+   "source_value": "MD&A table row: 'Income before income tax expense as a percentage of total revenues | 3.4 % | 4.5 % | 4.5 %'. Income before income tax expense $6,710M / Total revenues $199,125M (Consolidated Statements of Income).",
+   "location": "3.4% (3.370%)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K Elevance Health",
+   "period": "FY2025",
+   "item": "Net margin (shareholders' net income / total revenues, reported)",
+   "website_value": "2.8%",
+   "source_value": "MD&A table row: 'Shareholders' net income as a percentage of total revenues | 2.8 % | 3.4 % | 3.5 %'. Shareholders' net income $5,662M / Total revenues $199,125M. (Net income $5,661M; noncontrolling interest loss $1M.)",
+   "location": "2.8% (2.843%)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K Humana Inc.",
+   "period": "FY2025",
+   "item": "Benefit ratio (Insurance segment)",
+   "website_value": "90.4%",
+   "source_value": "Insurance segment table row: 'Benefit ratio | 90.4 % | 90.4 % | — %'; text: 'The Insurance segment benefit ratio was unchanged at 90.4% in the 2024 and 2025 periods'. (Consolidated benefit ratio is 90.2%: 'Benefit ratio (a) | 90.2 % | 89.8 %'; consolidated benefits $110,812M.)",
+   "location": "90.4% (reported segment ratio; segment benefits expense not itemized in table, not recomputed)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K Humana Inc.",
+   "period": "FY2025",
+   "item": "Operating margin (calculated: consolidated income from operations / total revenues)",
+   "website_value": "2.1%",
+   "source_value": "Consolidated Statements of Income: 'Income from operations | 2,704 | 2,562 | 4,013'; 'Total revenues | 129,664 | 117,761 | 106,374'. Income from operations $2,704M / Total revenues $129,664M. No operating-margin line is reported in the 10-K.",
+   "location": "2.1% (2.085%)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K Humana Inc.",
+   "period": "FY2025",
+   "item": "Net margin (calculated: net income attributable to Humana / total revenues)",
+   "website_value": "0.9%",
+   "source_value": "Consolidated Statements of Income: 'Net income attributable to Humana | $ 1,188 | $ 1,207 | $ 2,489'; 'Income before income taxes and equity in net losses | 1,555'; 'Net income | $ 1,203'. Net income attributable to Humana $1,188M / Total revenues $129,664M. No net-margin line is reported in the 10-",
+   "location": "0.9% (0.916%)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K CVS Health / Aetna",
+   "period": "FY2025",
+   "item": "Medical benefit ratio (Health Care Benefits segment)",
+   "website_value": "91.2%",
+   "source_value": "Health Care Benefits segment table: 'MBR (Health care costs as a % of premium revenues) | 91.2 % | 92.5 % | 86.2%'. Health care costs $122,949M; Premiums $134,749M.",
+   "location": "91.2% (91.243%) = 122,949 / 134,749",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K CVS Health / Aetna",
+   "period": "FY2025",
+   "item": "Operating margin (calculated: consolidated operating income / total revenues)",
+   "website_value": "1.2%",
+   "source_value": "Consolidated Statements of Operations: 'Operating income | 4,660 | 8,516 | 13,743'; 'Total revenues | 402,067 | 372,809 | 357,776'. Operating income $4,660M / Total revenues $402,067M. Consolidated operating margin is not reported as a line in the 10-K (only segment-level 'Operating income as a % of",
+   "location": "1.2% (1.159%)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "SEC 10-K CVS Health / Aetna",
+   "period": "FY2025",
+   "item": "Net margin (calculated: net income attributable to CVS Health / total revenues)",
+   "website_value": "0.4%",
+   "source_value": "Consolidated Statements of Operations: 'Net income attributable to CVS Health | $ 1,768 | $ 4,614 | $ 8,344'; 'Income before income tax provision | 2,136'; 'Net income | 1,728'. $1,768M / $402,067M. Not reported as a margin line in the 10-K.",
+   "location": "0.4% (0.440%)",
+   "result": "YES",
+   "validated_at": "2026-09-14T13:59:06Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://data.hrsa.gov/Default/GenerateHPSAQuarterlyReport",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/First%20Medical%20Health%20Plan,%20Inc.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Advantage,%20Inc.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Life%20Insurance%20Company.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Healthcare,%20LLC.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Multi%20Health,%20LLC.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Plan%20de%20Salud%20Menonita,%20Inc.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Advantage,%20Inc.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Salud,%20Inc.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/First%20Medical%20Health%20Plan,%20Inc..pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc..pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Advantage,%20Inc..pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Life%20Insurance%20Company.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Healthcare,%20LLC.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Multi%20Health,%20LLC.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Plan%20de%20Salud%20Menonita,%20Inc..pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Advantage,%20Inc..pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Salud,%20Inc..pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2026/2026.1Q%20-%20Planilla%20de%20Salud.pdf",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/pdf",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://www.cms.gov/files/zip/2026-star-ratings-data-tables.zip",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/zip",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://www.cms.gov/files/zip/2027-ma-rate-book.zip",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/zip",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://www.cms.gov/files/zip/ma-enrollment-state-county-contract-august-2026-full-version.zip",
+   "website_value": "",
+   "source_value": "200",
+   "location": "application/zip",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement",
+   "website_value": "",
+   "source_value": "200",
+   "location": "text/html;",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://www.sec.gov/Archives/edgar/data/1156039/000115603926000013/elv-20251231.htm",
+   "website_value": "",
+   "source_value": "200",
+   "location": "text/html",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/hum-20251231.htm",
+   "website_value": "",
+   "source_value": "200",
+   "location": "text/html",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm",
+   "website_value": "",
+   "source_value": "200",
+   "location": "text/html",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  },
+  {
+   "dataset": "Live link check",
+   "period": "",
+   "item": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm",
+   "website_value": "",
+   "source_value": "200",
+   "location": "text/html",
+   "result": "LIVE",
+   "validated_at": "2026-09-14T13:52:00Z"
+  }
+ ]
+}
