@@ -132,3 +132,16 @@ exact selected-period values, signed waterfall reconciliation, linked selection,
 instance reuse, all period/toggle controls, quarterly coverage totals, explicit
 missing-data states, synchronized navigation, theme state and shareable URLs.
 No inline source data or legacy calculation code was changed.
+
+### Executive landing view
+
+The default landing view has three period tabs, three market KPIs, and two
+horizontal bar charts: insurer premiums and coverage premiums. One Dollars /
+Share switch controls both charts, using their separate statutory-insurer and
+market-wide denominators. Labels show complete reported names and direct values.
+Selecting an insurer opens a dismissible native dialog with profit/loss,
+medical and administrative expense ratios, and its source filing. Keyboard
+users can reach the same insurer choices. The additional visualizations and
+tables live under a closed-by-default View details disclosure and initialize
+only when opened. Q1 2026 explicitly lacks insurer financial statements; its
+market KPIs and coverage chart use actual quarterly values.
