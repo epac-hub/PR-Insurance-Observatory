@@ -38,7 +38,7 @@ html[data-theme="dark"]{
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,var(--grad-top) 0%,var(--grad-bot) 100%);background-attachment:fixed;color:var(--t1);font-size:13px;line-height:1.45;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;transition:background .3s,color .3s}
+body{font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,var(--grad-top) 0%,var(--grad-bot) 100%);background-attachment:fixed;color:var(--t1);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;transition:background .3s,color .3s}
 .mx{max-width:1480px;margin:0 auto;padding:0 24px}
 
 /* ── HEADER ── */
@@ -323,6 +323,26 @@ html[data-theme="dark"] .donutTip{background:rgba(12,19,26,.97)}
 /* validation pass 2026-09-14: prevent page-level horizontal scroll on narrow screens */
 @media(max-width:760px){.c{overflow-x:auto}.gk,.g2,.g3,.trend-grid{grid-template-columns:1fr}.mx{padding:0 16px}.hbar{grid-template-columns:120px 1fr 100px !important}}
 .srcline{font-size:9px;color:var(--t3);margin-top:8px;line-height:1.6;border-top:1px dashed var(--bs);padding-top:6px}.srcline a{color:var(--ac);font-weight:700;text-decoration:none;margin-right:8px;display:inline-block}.mk .srcline{white-space:normal}.srcline a:hover{text-decoration:underline}.glance-hero .srcline{border-top-color:rgba(244,236,221,.18)}.glance-hero .srcline,.glance-hero .srcline a{color:#CFC4B2}.kpi-card .srcline{margin-top:6px}.rowsrc{font-size:9px;margin-left:4px;color:var(--ac);text-decoration:none;font-weight:800}.rowsrc:hover{text-decoration:underline}.vbtn{cursor:pointer;font-family:inherit}.vbtn:hover{background:rgba(252,250,244,.26)}.valkpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:10px 0 14px}.valkpi .mk .v{font-size:22px;font-weight:800;color:var(--t1)}.valkpi .mk .l{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--t2);font-weight:700}.valkpi .mk .u{font-size:9px;color:var(--t3);margin-top:3px}.st{font-size:8px;font-weight:800;padding:3px 8px;border-radius:5px;letter-spacing:.04em}.st-ok{background:#E6ECDE;color:#4F6B4D;border:1px solid #B7C4AE}.st-fix{background:#F7EFDD;color:#6F5624;border:1px solid var(--warn)}.st-pend{background:#ECE6DA;color:#586872;border:1px solid var(--bm)}
+
+/* ── Phase 1 (2026-09-14): five-section architecture, progressive disclosure, readability ── */
+.sec{display:none;animation:fade .35s ease}.sec.show{display:block}
+.sec .pg{display:block;padding:18px 0 10px}.sec#s-data .pg{display:none;padding:18px 0 30px}.sec#s-data .pg.show{display:block}
+.more{margin:12px 0;border:1px solid var(--bs);border-radius:14px;background:var(--cd);box-shadow:var(--shadow-sm)}
+.more>summary{cursor:pointer;padding:13px 18px;font-weight:700;font-size:13.5px;color:var(--t1);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.more>summary::-webkit-details-marker{display:none}.more>summary::after{content:"+";font-size:18px;color:var(--ch);font-weight:800;line-height:1}.more[open]>summary::after{content:"\2212"}
+.more>summary:hover{background:var(--row-hover);border-radius:14px}.more[open]>summary{border-bottom:1px solid var(--bs);border-radius:14px 14px 0 0}
+.more>.pg{padding:6px 16px 16px}.more .thdr h2{font-size:16px}
+.subnav{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0 4px}.subnav button,.jump button{font-family:inherit;font-size:11.5px;font-weight:700;padding:7px 13px;border-radius:9px;border:1px solid var(--bm);background:var(--cd);color:var(--t2);cursor:pointer}
+.subnav button.on{background:var(--ac);color:#FBFAF6;border-color:var(--ac)}.subnav button:hover,.jump button:hover{border-color:var(--ac);color:var(--t1)}
+.jump{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0 24px;font-size:11px;color:var(--t3);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.lede{font-size:14.5px;line-height:1.6;color:var(--t1);max-width:1100px;margin:6px 0 14px}.lede b{font-weight:700}
+.ins-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:0 0 16px}
+table.ins th{cursor:pointer;user-select:none;white-space:nowrap}table.ins td.b:first-child{white-space:nowrap}table.ins td:nth-child(2){min-width:150px}table.ins th.sorted{color:var(--ac)}table.ins th .arr{font-size:9px;margin-left:3px;opacity:.7}
+table.ins tr.insrow{cursor:pointer}table.ins tr.insrow:hover td{background:var(--row-hover)}table.ins tr.insd{display:none;background:var(--zebra)}table.ins tr.insd.open{display:table-row}
+.insd td{padding:12px 14px 14px}.insd .dg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}.insd table{font-size:11px}.insd h4{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--t2);margin:0 0 6px}
+.sm{font-size:11px}.desc{font-size:12px}.gexpl{font-size:10px}.wb{font-size:10.5px}.srcline{font-size:10px}
+@media(max-width:760px){.lede{font-size:13.5px}.more>summary{padding:11px 12px;font-size:12.5px}}
+@media print{.more{border:none;box-shadow:none}.more>summary{display:none}.more>.pg{display:block!important}.sec{display:block!important}.jump,.subnav{display:none!important}}
 @media print{
   header,.navwrap,#topBtn,.searchbar,.btn,.icon-btn,footer .src{display:none!important}
   .pg{display:block!important;page-break-inside:avoid}
@@ -351,23 +371,37 @@ html[data-theme="dark"] .donutTip{background:rgba(12,19,26,.97)}
 <div class="navwrap"><div class="mx navrow"><nav id="nav"></nav>
 </div></div>
 <main class="mx">
+<section class="sec show" id="s-overview">
 <div class="pg show" id="p-glance"></div>
-<div class="pg" id="p-obs"></div>
-<div class="pg" id="p-comp"></div>
-<div class="pg" id="p-ratio"></div>
-<div class="pg" id="p-lob"></div>
-<div class="pg" id="p-lobb"></div>
-<div class="pg" id="p-prof"></div>
-<div class="pg" id="p-fin"></div>
-<div class="pg" id="p-mlr"></div>
-<div class="pg" id="p-mkt"></div>
-<div class="pg" id="p-fed"></div>
-<div class="pg" id="p-rpt"></div>
+<div class="jump"><span>Go deeper:</span><button onclick="go('insurers')">Insurers ▸</button><button onclick="go('coverage')">Coverage ▸</button><button onclick="go('federal')">Federal context ▸</button><button onclick="go('data')">Data &amp; method ▸</button></div>
+</section>
+<section class="sec" id="s-insurers">
+<div class="pg show" id="p-ins"></div>
+<details class="more"><summary>Comparison audit table and visual summary</summary><div class="pg show" id="p-comp"></div></details>
+<details class="more"><summary>Ratios, rankings and balance sheet</summary><div class="pg show" id="p-ratio"></div></details>
+<details class="more"><summary>Financial trends</summary><div class="pg show" id="p-fin"></div></details>
+<details class="more"><summary>Claims and medical loss ratio</summary><div class="pg show" id="p-mlr"></div></details>
+<details class="more"><summary>Market share</summary><div class="pg show" id="p-mkt"></div></details>
+<details class="more"><summary>Company profiles</summary><div class="pg show" id="p-prof"></div></details>
+<details class="more"><summary>Market observatory: dollar flow, top movers and net-income swing</summary><div class="pg show" id="p-obs"></div></details>
+</section>
+<section class="sec" id="s-coverage">
+<div class="pg show" id="p-cov"></div>
+<div class="pg show" id="p-lob"></div>
+<details class="more"><summary>Statutory lines of business (NAIC Health blank, FY2024 vs FY2025)</summary><div class="pg show" id="p-lobb"></div></details>
+<details class="more"><summary>Insurer segments (derived whole-entity grouping)</summary><div class="pg show" id="p-seg"><div id="cov-seg"></div></div></details>
+</section>
+<section class="sec" id="s-federal">
+<div class="pg show" id="p-fed"></div>
+</section>
+<section class="sec" id="s-data">
+<div class="subnav" id="dataSub"><button data-t="src" onclick="go('src')">Sources</button><button data-t="meth" onclick="go('meth')">Methodology</button><button data-t="dl" onclick="go('dl')">Downloads</button><button data-t="val" onclick="go('val')">Validation</button></div>
 <div class="pg" id="p-src"></div>
 <div class="pg" id="p-meth"></div>
 <div class="pg" id="p-dl"></div>
 <div class="pg" id="p-val"></div>
-
+</section>
+<div class="pg" id="p-rpt" hidden></div>
 </main>
 <footer><div class="mx">
 <div style="margin-bottom:12px"><a href="mailto:elliotpac@gmail.com?subject=PR%20Insurance%20Observatory" style="font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ch);text-decoration:none;letter-spacing:.005em">Powered by ePAC</a></div>
@@ -680,42 +714,25 @@ function searchBar(tid){return '';}
 function TH(tid,ttl,desc){var v=TP[tid];return searchBar(tid)+'<div class="thdr"><div><h2>'+ttl+'</h2><div class="desc">'+desc+'</div></div><div class="tsel"><label>Reporting Period</label><select onchange="TP.'+tid+'=this.value;render();" class="ysel"><option value="25"'+(v==="25"?' selected':'')+'>Full Year 2025</option><option value="24"'+(v==="24"?' selected':'')+'>Full Year 2024</option><option value="vs"'+(v==="vs"?' selected':'')+'>2024 vs 2025</option></select></div></div>';}
 function dirP(a,b){var g=gr(a,b);if(g==="N/A")return"\u2014";var n=parseFloat(g);return '<span class="du '+(n>0?"du-u":"du-d")+'">'+(n>0?"+":"")+g+'%</span>';}
 
-var TABS=[
-{id:"glance",label:"Overview"},
-{id:"comp",label:"Analysis"},{id:"obs",label:"Market Performance"},{id:"ratio",label:"Ratios"},
-{id:"lob",label:"Segments"},{id:"lobb",label:"Statutory LOB"},{id:"prof",label:"Profiles"},{id:"fin",label:"Financial"},
-{id:"mlr",label:"Claims/MLR"},{id:"mkt",label:"Mkt Share"},{id:"fed",label:"Federal Context"},{id:"rpt",label:"Reports"}
-];
+var TABS=[{id:"overview",label:"Overview"},{id:"insurers",label:"Insurers"},{id:"coverage",label:"Coverage"},{id:"federal",label:"Federal Context"},{id:"data",label:"Data & Method"}];
 var DATA_TABS=[{id:"src",label:"Sources"},{id:"meth",label:"Methodology"},{id:"dl",label:"Downloads"},{id:"val",label:"Validation"}];
 var navEl=document.getElementById("nav");
 var tabHtml="";
-for(var i=0;i<TABS.length;i++){
-  tabHtml+='<button data-t="'+TABS[i].id+'" class="'+(TABS[i].id==="glance"?"on":"")+'" onclick="go(\''+TABS[i].id+'\')">'+TABS[i].label+'</button>';
-}
-var dataMenu='';
-for(var j=0;j<DATA_TABS.length;j++){
-  dataMenu+='<button data-t="'+DATA_TABS[j].id+'" class="ddi" onclick="go(\''+DATA_TABS[j].id+'\')">'+DATA_TABS[j].label+'</button>';
-}
-tabHtml+='<div class="dd" id="dataDD"><button class="ddbtn" id="dataBtn" onclick="toggleDataDD(event)">Data <span class="ddcar">\u25be</span></button><div class="ddmenu" id="dataMenu">'+dataMenu+'</div></div>';
+for(var i=0;i<TABS.length;i++){tabHtml+='<button data-t="'+TABS[i].id+'" class="'+(TABS[i].id==="overview"?"on":"")+'" onclick="go(\''+TABS[i].id+'\')">'+TABS[i].label+'</button>';}
 navEl.innerHTML=tabHtml;
-function toggleDataDD(e){e.stopPropagation();document.getElementById("dataDD").classList.toggle("open");}
-document.addEventListener("click",function(){var d=document.getElementById("dataDD");if(d)d.classList.remove("open");});
-
+function toggleDataDD(e){}
 var CUR='glance';
 var DATA_IDS={src:1,meth:1,dl:1,val:1};
-function go(id){setTimeout(function(){a11yPass();attachSources();},0);
-  CUR=id;
-  var btns=document.querySelectorAll("nav .navtabs button, #nav > button");
-  var all=document.querySelectorAll("nav button");
-  for(var i=0;i<all.length;i++) all[i].classList.toggle("on",all[i].dataset.t===id && !all[i].classList.contains("ddi"));
-  var dataBtn=document.getElementById("dataBtn");
-  if(dataBtn) dataBtn.classList.toggle("on",!!DATA_IDS[id]);
-  var ddis=document.querySelectorAll(".ddi");
-  for(var k=0;k<ddis.length;k++) ddis[k].classList.toggle("sel",ddis[k].dataset.t===id);
-  var pgs=document.querySelectorAll(".pg");
-  for(var i=0;i<pgs.length;i++) pgs[i].classList.toggle("show",pgs[i].id==="p-"+id);
-  var d=document.getElementById("dataDD");if(d)d.classList.remove("open");
-  window.scrollTo({top:0,behavior:"smooth"});
+var SEC_OF={glance:'overview',overview:'overview',obs:'insurers',comp:'insurers',ratio:'insurers',prof:'insurers',fin:'insurers',mlr:'insurers',mkt:'insurers',ins:'insurers',insurers:'insurers',lob:'coverage',lobb:'coverage',seg:'coverage',cov:'coverage',coverage:'coverage',fed:'federal',federal:'federal',rpt:'data',src:'data',meth:'data',dl:'data',val:'data',data:'data'};
+function go(id){
+  var sec=SEC_OF[id]||'overview';CUR=id;
+  var nb=document.querySelectorAll('#nav button');for(var i=0;i<nb.length;i++)nb[i].classList.toggle('on',nb[i].dataset.t===sec);
+  var secs=document.querySelectorAll('.sec');for(var j=0;j<secs.length;j++)secs[j].classList.toggle('show',secs[j].id==='s-'+sec);
+  if(sec==='data'){var sub=DATA_IDS[id]?id:'src';var ps=document.querySelectorAll('#s-data .pg');for(var k=0;k<ps.length;k++)ps[k].classList.toggle('show',ps[k].id==='p-'+sub);var sb=document.querySelectorAll('#dataSub button');for(var m=0;m<sb.length;m++)sb[m].classList.toggle('on',sb[m].dataset.t===sub);}
+  var target=document.getElementById('p-'+id);
+  if(target&&sec!=='data'&&id!==sec&&id!=='glance'&&id!=='ins'&&id!=='cov'&&id!=='fed'&&id!=='lob'){var det=target.closest('details');if(det)det.open=true;setTimeout(function(){target.scrollIntoView({behavior:'smooth',block:'start'});},60);}
+  else{window.scrollTo({top:0,behavior:'smooth'});}
+  setTimeout(function(){a11yPass();attachSources();},0);
 }
 window.addEventListener("scroll",function(){var b=document.getElementById("topBtn");if(b)b.classList.toggle("show",window.scrollY>400);});
 
@@ -938,13 +955,15 @@ obsH+='</tbody></table></div></div>';
 
 
 // Source-verified coverage-type distribution
-obsH+=(isVS?renderCoverageComparison():renderCoverageTable(coverageKey(yk),true));
-if(!isVS&&yk==='25')obsH+=renderLatestQuarter();
 
-obsH+=renderObsLOB(yk,isVS);
+
+
 // Derived Market Distribution by Insurer Segment (renders in all modes; FY2024 also keeps the OCS Planilla table above)
-if(isVS){obsH+=renderSegComp();}else{obsH+=renderSegDist(yk);}
+var segH=isVS?renderSegComp():renderSegDist(yk);
 document.getElementById("p-obs").innerHTML=obsH;
+document.getElementById("cov-seg").innerHTML=segH;
+document.getElementById("p-ins").innerHTML=insurerBlock(tP25,tP24,tNI25,tNI24,pr25,pr24);
+document.getElementById("p-cov").innerHTML=coverageLede();
 
 // ──── COMPARISON ────
 y=TP.comp;isVS=y==="vs";yk=isVS?"25":y;yr=y==="25"?"Full Year 2025":y==="24"?"Full Year 2024":"2024 vs 2025";tP=isVS?tP25:sm(D,"p"+yk);
@@ -1073,7 +1092,7 @@ document.getElementById("p-ratio").innerHTML=ratH;
 
 // ──── SEGMENT ANALYSIS ────
 y=TP.lob;isVS=y==="vs";yk=isVS?"25":y;yr=y==="25"?"Full Year 2025":y==="24"?"Full Year 2024":"2024 vs 2025";tP=isVS?tP25:sm(D,"p"+yk);
-var lobH='<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px"><div><h2>Segment Analysis \u2014 By Line of Business</h2><div class="desc" id="lobDesc">Complete Plan MLR by segment</div></div>';
+var lobH='<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px"><div><h2>By coverage type</h2><div class="desc" id="lobDesc">Complete Plan MLR by segment</div></div>';
 lobH+='<div><label style="font-size:10px;font-weight:700;color:var(--t2)">Year:</label> <select id="lobYr" onchange="renderLOB()" style="font-size:12px;padding:7px 14px;border-radius:9px;border:2px solid var(--bs);background:var(--cd);font-weight:700;cursor:pointer;min-width:150px"><option value="2025">Full Year 2025</option><option value="2024">Full Year 2024</option></select></div></div><div id="lobC"></div>';
 document.getElementById("p-lob").innerHTML=lobH;
 renderLOB();
@@ -1469,7 +1488,7 @@ if(slopeEl){
 })();
 
 // ── POST-RENDER HOOKS (search, sort, count-up) ──
-animateCountUps(document.querySelector('.pg.show'));
+animateCountUps(document.querySelector('.sec.show'));
 attachTableTools();
 wireSearch();
 animateBars();
@@ -1479,7 +1498,7 @@ wireDonuts();
 
 // animate HTML bar fills from 0 to target width
 function animateBars(){
-  var fills=document.querySelectorAll('.pg.show .hbar-fill');
+  var fills=document.querySelectorAll('.sec.show .hbar-fill');
   fills.forEach(function(f){
     var target=f.style.width;f.style.width='0';
     requestAnimationFrame(function(){requestAnimationFrame(function(){f.style.width=target;});});
@@ -1487,7 +1506,7 @@ function animateBars(){
 }
 // interactive SVG donut: hover wedge/legend -> highlight + floating tooltip
 function wireDonuts(){
-  var blocks=document.querySelectorAll('.pg.show .donutBlock');
+  var blocks=document.querySelectorAll('.sec.show .donutBlock');
   blocks.forEach(function(block){
     var svg=block.querySelector('.donutSvg');
     var tip=block.querySelector('.donutTip');
@@ -1612,6 +1631,9 @@ function tabSources(tab,card){var h=((card.querySelector('h3,h2,.l')||{}).textCo
  else if(tab==='lob'){var y=(document.getElementById('lobYr')||{}).value;k=has('national','sec')?['SEC']:[(y==='2024'?'P24':'P25'),'PI'];}
  else if(tab==='fed'){if(has('enrollment','organizations','contract'))k=['CE','CEL'];else if(has('star','rating'))k=['CS','CSL'];else if(has('ratebook','rate book'))k=['CR','CRL','CRA'];else if(has('hpsa','hrsa','primary care','mental'))k=['HR'];else if(has('sec','carrier'))k=['SEC'];else k=['CE','CS','CR','HR','SEC'];}
  else if(tab==='dl'){if(has('planilla'))k=[has('2024')?'P24':has('1q2026')?'PQ':'P25','PI'];else if(has('cms'))k=has('ratebook')?['CR','CRL']:['CE','CS','CEL'];else if(has('sec'))k=['SEC'];else if(has('hrsa'))k=['HR'];else if(has('annual statement pdfs'))k=['AI'];else k=['AI','NINE'];}
+ else if(tab==='ins'){k=['AI','NINE'];}
+ else if(tab==='cov'){k=['P25','P24','PQ','PI'];}
+ else if(tab==='seg'){k=['AI','NINE'];}
  else if(tab==='src'||tab==='meth'){k=['AI','PI','VAL'];}
  else if(tab==='rpt'||tab==='val'){k=[];}
  return k.map(S_).filter(Boolean);}
@@ -1644,6 +1666,47 @@ function renderValidation(){var V=typeof VALIDATION!=='undefined'?VALIDATION:nul
  var f=document.getElementById('valFoot');if(f){f.innerHTML='Dataset vintage '+V.data_refreshed+' · Data last updated '+fmtTs(V.data_updated)+' · Full-source validation completed '+fmtTs(V.pass_completed_at)+' · '+V.total_checks+' checks, '+V.total_matches+' exact matches, '+V.live_links+'/'+V.links.length+' live links · <a href="#" onclick="go(\'val\');return false" style="color:var(--ch);font-weight:700;text-decoration:none">Validation log ▸</a>';}
 }
 var __srcObs=null;function watchSources(){try{if(__srcObs)return;var t=null;__srcObs=new MutationObserver(function(){clearTimeout(t);t=setTimeout(function(){a11yPass();attachSources();},60);});__srcObs.observe(document.querySelector('main'),{childList:true,subtree:true});}catch(e){}}
+
+// ──── Phase 1: consolidated insurer table and section ledes ────
+var INS_SORT={k:'p25',dir:-1};
+var INS_COLS=[
+ {k:'n',l:'Insurer',t:'s',f:function(d){return DN(d.n)+(d.ex?' <span class="badge b-ex">EXIT</span>':'');},v:function(d){return DN(d.n);}},
+ {k:'sg',l:'Segment',t:'s',f:function(d){return '<span class="sm" style="color:var(--t2)">'+d.sg+'</span>';},v:function(d){return d.sg;}},
+ {k:'p25',l:'Premium FY2025',r:1,f:function(d){return '<b>'+fmt(d.p25)+'</b>';},v:function(d){return d.p25;}},
+ {k:'gr',l:'\u0394 vs FY2024',r:1,f:function(d){var g=parseFloat(gr(d.p25,d.p24));return '<span class="'+(g>=0?'pos':'neg')+'">'+(g>=0?'+':'')+g.toFixed(1)+'%</span>';},v:function(d){return (d.p25-d.p24)/d.p24;}},
+ {k:'br',l:'Benefits ratio',r:1,f:function(d){return d.c25!=null?pct(d.c25,d.p25):'N/A';},v:function(d){return d.c25!=null?d.c25/d.p25:-1;}},
+ {k:'mr',l:'Total medical ratio',r:1,f:function(d){return d.tm25!=null?pct(d.tm25,d.p25):'N/A';},v:function(d){return d.tm25!=null?d.tm25/d.p25:-1;}},
+ {k:'ar',l:'Admin ratio',r:1,f:function(d){return d.a25!=null?pct(d.a25,d.p25):'N/A';},v:function(d){return d.a25!=null?d.a25/d.p25:-1;}},
+ {k:'ni25',l:'Net income FY2025',r:1,f:function(d){return '<span class="'+(d.ni25>=0?'pos':'neg')+'"><b>'+fmt(d.ni25)+'</b></span>';},v:function(d){return d.ni25;}},
+ {k:'nim',l:'NI margin',r:1,f:function(d){return '<span class="'+(d.ni25>=0?'pos':'neg')+'">'+pct(d.ni25,d.p25)+'</span>';},v:function(d){return d.ni25/d.p25;}},
+ {k:'enr',l:'Avg. enrollment',r:1,f:function(d){return d.mm25!=null?Math.round(d.mm25/12).toLocaleString():'N/A';},v:function(d){return d.mm25!=null?d.mm25/12:-1;}},
+ {k:'ast',l:'Admitted assets',r:1,f:function(d){return fmt(d.ast);},v:function(d){return d.ast;}},
+ {k:'ea',l:'Equity / assets',r:1,f:function(d){return pct(d.eq,d.ast);},v:function(d){return d.eq/d.ast;}}
+];
+function sortIns(k){if(INS_SORT.k===k)INS_SORT.dir=-INS_SORT.dir;else{INS_SORT.k=k;INS_SORT.dir=(k==='n'||k==='sg')?1:-1;}var el=document.getElementById('ins-table');if(el)el.innerHTML=insTable();}
+function toggleIns(id){var r=document.getElementById('insd-'+id);if(r)r.classList.toggle('open');}
+function dRow(l,a,b,money){var ch=(a!=null&&b!=null)?a-b:null;var chs=ch==null?'\u2014':((ch>=0?'+':'\u2212')+(money?'$':'')+Math.abs(ch).toLocaleString());var pc=(a!=null&&b)?((a-b)/Math.abs(b)*100).toFixed(1)+'%':'';return '<tr><td class="b">'+l+'</td><td class="r">'+(a==null?'N/A':(money?fmtF(a):a.toLocaleString()))+'</td><td class="r">'+(b==null?'N/A':(money?fmtF(b):b.toLocaleString()))+'</td><td class="r '+(ch==null?'':(ch>=0?'pos':'neg'))+'">'+chs+(pc?' <span class="sm">('+pc+')</span>':'')+'</td></tr>';}
+function insDetail(d){var h='<div class="dg">';
+ h+='<div><h4>Statement of Revenue and Expenses</h4><table><thead><tr><th></th><th class="r">FY2025</th><th class="r">FY2024</th><th class="r">Change</th></tr></thead><tbody>'+dRow('Net premium income',d.p25,d.p24,true)+dRow('Hospital / medical benefits',d.c25,d.c24,true)+dRow('Total hospital and medical',d.tm25,d.tm24,true)+dRow('General administrative expenses',d.a25,d.a24,true)+dRow('Net income',d.ni25,d.ni24,true)+dRow('Member months',d.mm25,d.mm24,false)+'</tbody></table></div>';
+ h+='<div><h4>Balance sheet FY2025</h4><table><tbody><tr><td class="b">Total admitted assets</td><td class="r">'+fmtF(d.ast)+'</td></tr><tr><td class="b">Total liabilities</td><td class="r">'+fmtF(d.lia)+'</td></tr><tr><td class="b">Capital and surplus</td><td class="r">'+fmtF(d.eq)+'</td></tr><tr><td class="b">Equity / assets</td><td class="r">'+pct(d.eq,d.ast)+'</td></tr></tbody></table>';
+ h+='<h4 style="margin-top:12px">Identity</h4><table><tbody><tr><td class="b">Legal entity</td><td>'+d.le+'</td></tr><tr><td class="b">Parent / group</td><td>'+d.pa+'</td></tr><tr><td class="b">NAIC blank</td><td>'+d.blank+'</td></tr><tr><td class="b">NAIC company code</td><td><a class="src" target="_blank" rel="noopener noreferrer" href="https://content.naic.org/cis_consumer_information.htm">'+d.naic+(d.naicGroup?' \u00b7 group '+d.naicGroup:'')+'</a></td></tr></tbody></table>';
+ h+='<div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap"><a class="src" target="_blank" rel="noopener noreferrer" href="'+d.s25+'">FY2025 annual statement (PDF) \u2197</a><a class="src" target="_blank" rel="noopener noreferrer" href="'+d.s24+'">FY2024 annual statement (PDF) \u2197</a><a class="src" target="_blank" rel="noopener noreferrer" href="'+SRC_PAGES.ocsAnnual+'">OCS index \u2197</a></div></div></div>';
+ return h;}
+function insTable(){var rows=D.slice();var col=null;for(var i=0;i<INS_COLS.length;i++)if(INS_COLS[i].k===INS_SORT.k)col=INS_COLS[i];
+ rows.sort(function(a,b){var va=col.v(a),vb=col.v(b);if(typeof va==='string')return va.localeCompare(vb)*INS_SORT.dir;return (va-vb)*INS_SORT.dir;});
+ var h='<table class="ins"><thead><tr>';INS_COLS.forEach(function(c){h+='<th class="'+(c.r?'r ':'')+(c.k===INS_SORT.k?'sorted':'')+'" onclick="sortIns(\''+c.k+'\')" title="Sort by '+c.l+'">'+c.l+(c.k===INS_SORT.k?'<span class="arr">'+(INS_SORT.dir<0?'\u25BC':'\u25B2')+'</span>':'')+'</th>';});h+='<th></th></tr></thead><tbody>';
+ rows.forEach(function(d){h+='<tr class="insrow'+(d.ex?' exit-row':'')+'" onclick="toggleIns(\''+d.id+'\')">';INS_COLS.forEach(function(c){h+='<td class="'+(c.r?'r':'b')+'">'+c.f(d)+'</td>';});h+='<td class="r sm" style="color:var(--ac);font-weight:800">details \u25BE</td></tr>';h+='<tr class="insd" id="insd-'+d.id+'"><td colspan="'+(INS_COLS.length+1)+'">'+insDetail(d)+'</td></tr>';});
+ h+='</tbody></table>';return h;}
+function insurerBlock(tP25,tP24,tNI25,tNI24,pr25,pr24){var g=(tP25/tP24-1)*100;var big=D.slice().sort(function(a,b){return b.p25-a.p25;})[0];var worst=D.slice().sort(function(a,b){return (a.ni25-a.ni24)-(b.ni25-b.ni24);})[0];var best=D.slice().sort(function(a,b){return (b.ni25-b.ni24)-(a.ni25-a.ni24);})[0];var enr=Math.round(sm(D,'mm25')/12);
+ var h='<div class="thdr"><div><h2>Insurers</h2><div class="desc">Nine statutory legal entities \u00b7 OCS/NAIC annual statements \u00b7 Full Year 2025 vs 2024</div></div></div>';
+ h+='<p class="lede">The nine statutory entities wrote <b>'+fmt(tP25)+'</b> in FY2025 net premium, <b>'+(g>=0?'+':'')+g.toFixed(1)+'%</b> versus FY2024. Aggregate net income was <b>'+fmt(tNI25)+'</b> with <b>'+pr25+' of 9</b> entities profitable, compared with '+fmt(tNI24)+' and '+pr24+' of 9 in FY2024. '+DN(big.n)+' alone wrote '+pct(big.p25,tP25)+' of core premium. The largest deterioration in net income was '+DN(worst.n)+' ('+(worst.ni25-worst.ni24>=0?'+':'\u2212')+fmt(Math.abs(worst.ni25-worst.ni24))+'); the largest improvement was '+DN(best.n)+' (+'+fmt(best.ni25-best.ni24)+').</p>';
+ h+='<div class="ins-kpis"><div class="mk"><div class="l">Core premium FY2025</div><div class="v">'+fmt(tP25)+'</div><div class="u">'+(g>=0?'+':'')+g.toFixed(1)+'% vs FY2024 \u00b7 nine entities</div></div><div class="mk"><div class="l">Net income FY2025</div><div class="v" style="color:'+(tNI25>=0?'var(--pos)':'var(--neg)')+'">'+fmt(tNI25)+'</div><div class="u">FY2024: '+fmt(tNI24)+'</div></div><div class="mk"><div class="l">Profitable entities</div><div class="v">'+pr25+' / 9</div><div class="u">FY2024: '+pr24+' / 9</div></div><div class="mk"><div class="l">Average enrollment</div><div class="v">'+enr.toLocaleString()+'</div><div class="u">member months \u00f7 12 \u00b7 eight Health-blank filers</div></div></div>';
+ h+='<div class="c"><h3>All nine insurers, one table</h3><div class="gexpl" style="margin-bottom:8px">Click a column to sort; click a row for the full FY2025 vs FY2024 statement, balance sheet, identifiers and source documents. Ratios are divided by net premium income.</div><div id="ins-table" style="overflow-x:auto">'+insTable()+'</div></div>';
+ return h;}
+function coverageLede(){var m25=PLANILLA.market.FY25,m24=PLANILLA.market.FY24,q=PLANILLA.market.Q1_2026;var rows=PLANILLA.coverage.FY25.slice().sort(function(a,b){return b.prem-a.prem;});var top=rows.slice(0,3);var topShare=top.reduce(function(s,r){return s+r.prem;},0)/m25.prem*100;
+ var h='<div class="thdr"><div><h2>Coverage</h2><div class="desc">Market-wide OCS Planilla de Salud by coverage type \u00b7 statutory lines of business \u00b7 derived segments</div></div></div>';
+ h+='<p class="lede">OCS\u2019s market-wide Planilla reports <b>'+fmt(m25.prem)+'</b> in FY2025 premiums written across ten coverage types, <b>+'+((m25.prem/m24.prem-1)*100).toFixed(1)+'%</b> versus FY2024, against <b>'+fmt(m25.claims)+'</b> in claims paid (calculated MLR <b>'+(m25.mlr*100).toFixed(1)+'%</b>, up '+((m25.mlr-m24.mlr)*100).toFixed(1)+' points). '+top.map(function(r){return r.t+' ('+pct(r.prem,m25.prem)+')';}).join(', ')+' account for '+topShare.toFixed(1)+'% of premium. The latest quarter, 1Q2026, shows '+fmt(q.prem)+' in premium and an MLR of '+(q.mlr*100).toFixed(1)+'%; quarterly figures are not annualized.</p>';
+ return h;}
 function a11yPass(){try{document.querySelectorAll('canvas').forEach(function(c){if(!c.getAttribute('aria-label')){var card=c.closest('.c')||c.parentElement,h=card?card.querySelector('h3,h2'):null;c.setAttribute('role','img');c.setAttribute('aria-label',(h?h.textContent.trim():'Chart')+' (chart)');}});document.querySelectorAll('select').forEach(function(s){if(!s.getAttribute('aria-label')&&!s.labels.length){var l=s.closest('.tsel,.thdr,div');var lab=l?l.querySelector('label'):null;s.setAttribute('aria-label',lab?lab.textContent.trim():(s.id||'Selector'));}});}catch(e){}}
 document.getElementById("yrSel").addEventListener("change",render);
 render();renderValidation();a11yPass();attachSources();watchSources();

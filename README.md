@@ -4,6 +4,20 @@ Analytical platform built on the OCS (Oficina del Comisionado de Seguros) Annual
 
 Powered by ePAC. Contact: elliotpac@gmail.com
 
+## Site architecture (phase 1, 2026-09-14)
+
+Five sections replace the former fifteen tabs. Nothing in the data changed; the same figures are grouped by the question they answer.
+
+| Section | Question | Contents |
+| --- | --- | --- |
+| Overview | How is the market doing and where is it heading? | Market at a glance, four trend cards |
+| Insurers | Who is gaining, who is losing, and why? | Executive lede, four KPIs, one sortable table of the nine entities with a per-row drill-down (full statement, balance sheet, NAIC code, source PDFs); detailed analyses folded under expandable panels |
+| Coverage | How is premium distributed by type of coverage? | Executive lede, OCS Planilla coverage-type analysis with year selector; statutory lines of business and derived segments folded |
+| Federal Context | What changes from CMS, HRSA and the national carriers? | CMS enrollment, Star Ratings, CY2027 ratebook, HRSA shortage areas, SEC comparators |
+| Data & Method | Where does each number come from and how do I verify it? | Sources, Methodology, Downloads, Validation |
+
+Legacy anchors (`go('ratio')`, `go('lobb')`, `go('val')` and the rest) still resolve: they open the section, expand the panel that holds the former tab and scroll to it.
+
 ## Structure
 
 | Path | Purpose |
