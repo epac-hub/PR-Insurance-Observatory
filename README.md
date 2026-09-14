@@ -153,7 +153,7 @@ The English-language opening view now exposes market structure, premium/claims c
 ### Design and chart system
 - `assets/design-tokens.css`: canvas, foreground, borders and semantic series colors.
 - `assets/briefing.css`: layout, mobile behavior and print brief.
-- `assets/echarts-observatory.js`: shared `palette`, `base` and `axis` chart theme functions; real ECharts SVG rendering.
+- `assets/chart-theme.js`: shared `palette`, `base` and `axis` theme functions. `assets/echarts-observatory.js` binds data to real ECharts SVG charts.
 - `assets/briefing.js`: selected-period CSV, chart PNG, print and keyboard navigation (`/`, `Esc`, `j`, `k`).
 
 Art direction: an institutional reading surface with near-black canvas, restrained sea-glass emphasis, neutral comparison series and crimson losses. Large figures establish the question; direct chart labels and nearby source notes supply the evidence. Keep source scope explicit and preserve room for labels. Avoid decorative imagery, multicolor palettes, complex menus and invented time series.
