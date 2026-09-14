@@ -15,3 +15,6 @@
 @media(max-width:760px){.vx-mix{grid-template-columns:1fr}.vx-mix .vx-chart{grid-row:auto;max-width:250px}.vx-mix .vx-text-button{grid-column:auto;font-size:12px}.vx-mix-legend>div{font-size:13px}.vx-mix-legend small{font-size:11px}.vx-rank-row{font-size:11px}.vx-tabs button{font-size:11px}.vx-foot,.vx-scope,.vx-chart-note,.vx-legend,.vx-spot-note{font-size:11px}.vx-spotlight .vx-eyebrow{font-size:10px}.vx-kpi>small{font-size:12px}}
 
 .vx-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.vx-scatter-detail{margin-top:14px;padding:12px 14px;border-radius:8px;background:var(--vx-wash);font-size:12px;line-height:1.6}.vx-scatter-detail strong{display:block;font-weight:600}.vx-scatter-detail span{color:var(--t2)}
+
+.vx-bottom-grid{grid-template-columns:1fr 1fr}.vx-bottom-grid>.vx-panel:first-child{grid-column:1 / -1}
+@media(max-width:1150px){.vx-bottom-grid{grid-template-columns:1fr}.vx-bottom-grid>.vx-panel:first-child{grid-column:auto}}
