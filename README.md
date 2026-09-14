@@ -11,7 +11,7 @@ Powered by ePAC. Contact: elliotpac@gmail.com
 | `index.html` | Single-page application: styles, markup, data, and rendering logic. |
 | `assets/chart.umd.min.js` | Chart.js 4.4.4 (UMD build), vendored so the site has no runtime CDN dependency. |
 | `favicon.svg` | Site icon. |
-| `.github/workflows/pages.yml` | Deploys the site to GitHub Pages on every push to `main`. |
+| `.github/workflows/pages.yml` | Publishes the site to the `gh-pages` branch on every push to `main`; GitHub Pages serves that branch. |
 | `.nojekyll` | Disables Jekyll processing on GitHub Pages. |
 
 Typography is loaded from Google Fonts (Inter, Fraunces, Plus Jakarta Sans) with system fallbacks.
@@ -27,12 +27,13 @@ python3 -m http.server 8000
 
 ## Deployment
 
-Pushes to `main` (or, until the default branch is renamed, to `claude/great-ptolemy-slaw15`) trigger the GitHub Pages workflow. The published URL is
-`https://<owner>.github.io/<repository>/` unless a custom domain is configured under
-Settings, Pages.
+Live site: https://epac-hub.github.io/PR-Insurance-Observatory/
 
-If the first run fails with a Pages permissions error, enable Pages once under
-Settings, Pages, with "GitHub Actions" as the source, then re-run the workflow.
+Pushes to `main` (or, until the default branch is renamed, to `claude/great-ptolemy-slaw15`)
+run the workflow, which copies the repository root (minus `.github`, `README.md`, and
+`.gitignore`) into the `gh-pages` branch. GitHub Pages is configured to deploy from that
+branch, so the site updates within a minute or two of each run. Do not edit `gh-pages` by
+hand; it is overwritten on every deploy.
 
 ## Provenance
 
