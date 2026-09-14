@@ -93,3 +93,11 @@ The independent review in `validation/independent_ocs_recheck.json` records 18 i
 `assets/observatory.css` and `assets/observatory.js` extend the original static application. No runtime API credentials or new backend service are needed.
 
 The targeted federal review in `validation/federal_recheck.json` matched 62 retained CMS, HRSA and SEC numeric fields. CMS suppression language now correctly states counts of 10 or less; suppressed cells are not zero and are not imputed. Source hashes and comparison scopes are recorded.
+
+## Interactive visual revision — September 14, 2026
+
+The second design pass adds `assets/explorer.js` and `assets/explorer.css`: a scoped market pulse, premium composition ring (Medicare categories, Vital, other seven coverages), a four-metric insurer explorer, an entity spotlight linked to filings, a net-income-change waterfall, growth/profitability bubbles, and an eight-Health-filer ratio comparison. Year, metric and entity state survive theme changes. Native controls and exact-value tables support keyboard and touch use. The waterfall and growth comparison explicitly retain FY2024/FY2025 periods. Existing detailed analysis, federal context, exports and validation records remain.
+
+All new calculations derive from the existing verified data objects. The nine-entity share denominator excludes the wider Planilla market; NI/premiums is not a revenue net margin; missing Health-blank fields are omitted. Bubble area scales with premiums. Annual and Q1 2026 values stay separate.
+
+Lovable was used to create an editable Visual Lab prototype and explore the editorial-finance palette and interactive ranking/spotlight pattern. Canva was queried for existing Observatory/ePAC assets and brand kits; no relevant reusable asset was found. Wix account context and design-system chart documentation were consulted; the production site remains on GitHub Pages. No unrelated pharmacy data or site was modified.
