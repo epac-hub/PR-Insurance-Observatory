@@ -106,7 +106,7 @@ Lovable was used to create an editable Visual Lab prototype and explore the edit
 
 The overview, insurer and coverage pages use locally vendored Apache ECharts
 6.0.0 (SVG renderer), with license and notice under `assets/vendor/`.
-Spanish-language period tabs select 2024, 2025 or Q1 2026 consistently across
+English-language period tabs select 2024, 2025 or Q1 2026 consistently across
 these pages. Shareable URLs use `?period=2024`, `?period=2025` or
 `?period=q1-2026`. The same component structure, chart types, colors, controls
 and units serve all periods. Annual charts use matching scales where applicable.
@@ -125,7 +125,7 @@ Planilla data. The four insurer views show explicit unavailable states because
 verified quarterly insurer statements are not in the dataset. No annual values
 are substituted, extrapolated or annualized. Legacy annual filing comparisons
 remain explicitly labeled; they are hidden on the quarterly insurer page.
-Dollar chart labels use M = millions, explained visibly in Spanish.
+Dollar chart labels use M = millions, explained visibly in English.
 
 Validation with the actual ECharts library checked equal annual structures,
 exact selected-period values, signed waterfall reconciliation, linked selection,
