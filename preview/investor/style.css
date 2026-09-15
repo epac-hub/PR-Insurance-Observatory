@@ -258,7 +258,7 @@ dialog::backdrop { background: #20242aa8; }
   .chart { height: 350px; }
   #portfolio-chart { height: 510px; }
   .chart-controls, .metric-switch { padding: 2px 17px 9px; gap: 5px; }
-  .chart-controls button, .metric-switch button { padding: 7px 9px; font-size: 12px; }
+  .chart-controls button, .metric-switch button { padding: 7px 7px; font-size: 12px; }
   .source-note { padding: 10px 17px 19px; font-size: 11px; }
   .spotlight h2 { font-size: 25px; }
   .spotlight { padding: 24px; }
