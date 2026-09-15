@@ -1,0 +1,1 @@
+:root{--canvas:#f2f5f5;--surface:#fff;--command:#132935;--ink:#172b37;--muted:#5c6d78;--line:#dce4e5;--teal:#087d70;--loss:#bd3450;--radius:8px;--font-ui:Inter,Arial,system-ui,sans-serif}body{background:var(--canvas)}::selection{background:#bceadd;color:#12382f}
