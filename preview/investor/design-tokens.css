@@ -1,1 +1,19 @@
-:root{--canvas:#f2f5f5;--surface:#fff;--command:#132935;--ink:#172b37;--muted:#5c6d78;--line:#dce4e5;--teal:#087d70;--loss:#bd3450;--radius:8px;--font-ui:Inter,Arial,system-ui,sans-serif}body{background:var(--canvas)}::selection{background:#bceadd;color:#12382f}
+/* Institutional research palette. Keep charts and controls within this system. */
+:root {
+  --canvas: #f5f4f0;
+  --surface: #ffffff;
+  --surface-subtle: #eeeee9;
+  --command: #20242a;
+  --ink: #20242a;
+  --muted: #62666c;
+  --line: #deded7;
+  --accent: #344b62;
+  --accent-soft: #e9edf0;
+  --teal: var(--accent); /* Compatibility alias; no teal is used. */
+  --loss: #923d3a;
+  --loss-soft: #f3eae7;
+  --prior: #a6adb2;
+  --radius: 7px;
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+::selection { background: #d6dfe7; color: #20242a; }
