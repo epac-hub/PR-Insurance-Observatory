@@ -32,3 +32,14 @@ Treat this as a precise investor research publication: warm white surfaces, grap
 ## Validation
 
 Verified unchanged source snapshots, all nine insurers, annual periods, sorted horizontal rankings, direct labels, signed values and consistent annual scales, member-month denominators, null handling for MCS Life, MMM page-level extraction, all coverage group/metric/period combinations and exact aggregate reconciliation. Tested unavailable quarterly-company states, comparison and source dialogs, sorting and SVG renders at narrow widths. Rendering, navigation and responsive screenshots are reviewed on the deployed preview before handoff.
+
+
+## Company-first review (September 2026 revision)
+
+The default landing view is the selected insurer's review. Start with company and year, a plain-language earnings summary and three labeled facts: statutory net income, statutory premiums and OCS Planilla reported covered lives. Then answer four questions in order: profit/loss; reported lives over time; business mix; operating costs per member-month. Each annual comparison shows real 2024 and 2025 observations with an adjacent interpretation. Company comparisons and market-wide analysis remain separate supporting views.
+
+`company-coverage.js` and `company-coverage.json` now contain all nine insurers, two annual periods, ten source categories and three measures. The 54 company/year/measure totals reconcile exactly to the printed report totals. The compact data preserves source URLs, page/row identifiers, literal source displays and dash/blank states. `coverage-audit.json.gz` contains the complete extraction, coordinates, raw cells and reconciliation evidence. Coverage CSV exports the selected entity's two years, preserving missing values as blank and signed corrections as signed numbers.
+
+Reported covered lives in the company review are from the Planilla and are not the statutory average membership used in PMPM calculations. Average membership remains available in the financial comparison. MCS Life therefore has reported lives in its review even though comparable member-month/expense fields are missing. Business-mix percentages use that company's Planilla premium total, never its statutory premium field. Those totals differ for some entities. A claims-only category or adjustment is not evidence of an active product; Humana's negative Private Individual Plans correction is preserved. Do not infer organic growth from coverage reclassifications.
+
+Browser ownership remains one SVG ECharts instance per visible company figure (earnings, reported lives, coverage mix and operating costs). Year, company and view remain URL-backed. There are no fabricated monthly observations. Supporting full financial tables use native details/summary disclosure. Q1 company review has an explicit unavailable state and a route to the existing Q1 market snapshot.
