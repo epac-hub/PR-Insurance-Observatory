@@ -1,0 +1,460 @@
+dataset,period,item,website_value,source_value,location,result,validated_at
+OCS Planilla,FY2024,TOTAL premium (detail page),15460881103,15460881103,p1 grand-total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,TOTAL premium (summary page),15460881103,15460881103,p8 Total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,TOTAL claims (detail page),13715858154,13715858154,p2 grand-total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,TOTAL claims (summary page),13715858154,13715858154,p8 Total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,TOTAL lives (detail page),2955747,2955747,p3 grand-total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,TOTAL lives (summary page),2955747,2955747,p8 Total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Advantage premium (detail),5186710160,5186710160,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Advantage premium (summary),5186710160,5186710160,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Advantage claims (detail),4502496550,4502496550,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Advantage claims (summary),4502496550,4502496550,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Advantage lives (detail),407172,407172,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Advantage lives (summary),407172,407172,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Health Plan (Vital) premium (detail),4557985951,4557985951,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Health Plan (Vital) premium (summary),4557985951,4557985951,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Health Plan (Vital) claims (detail),4265488980,4265488980,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Health Plan (Vital) claims (summary),4265488980,4265488980,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Health Plan (Vital) lives (detail),1244110,1244110,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Health Plan (Vital) lives (summary),1244110,1244110,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Platinum premium (detail),3149281227,3149281227,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Platinum premium (summary),3149281227,3149281227,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Platinum claims (detail),2805527537,2805527537,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Platinum claims (summary),2805527537,2805527537,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Platinum lives (detail),224240,224240,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Platinum lives (summary),224240,224240,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Large Private Group Plans premium (detail),844734853,844734853,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Large Private Group Plans premium (summary),844734853,844734853,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Large Private Group Plans claims (detail),694530764,694530764,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Large Private Group Plans claims (summary),694530764,694530764,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Large Private Group Plans lives (detail),538660,538660,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Large Private Group Plans lives (summary),538660,538660,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Retirees premium (detail),445995338,445995338,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Retirees premium (summary),445995338,445995338,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Retirees claims (detail),372749862,372749862,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Retirees claims (summary),372749862,372749862,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Retirees lives (detail),49001,49001,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Retirees lives (summary),49001,49001,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Employees premium (detail),370263193,370263193,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Employees premium (summary),370263193,370263193,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Employees claims (detail),332508600,332508600,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Employees claims (summary),332508600,332508600,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Employees lives (detail),151644,151644,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Government Employees lives (summary),151644,151644,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Private Individual Plans premium (detail),363327800,363327800,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Private Individual Plans premium (summary),363327800,363327800,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Private Individual Plans claims (detail),280604447,280604447,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Private Individual Plans claims (summary),280604447,280604447,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Private Individual Plans lives (detail),182768,182768,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Private Individual Plans lives (summary),182768,182768,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Small Private Group Plans premium (detail),263803007,263803007,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Small Private Group Plans premium (summary),263803007,263803007,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Small Private Group Plans claims (detail),210204520,210204520,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Small Private Group Plans claims (summary),210204520,210204520,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Small Private Group Plans lives (detail),89989,89989,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Small Private Group Plans lives (summary),89989,89989,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Federal Government Employees premium (detail),256117849,256117849,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Federal Government Employees premium (summary),256117849,256117849,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Federal Government Employees claims (detail),234499302,234499302,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Federal Government Employees claims (summary),234499302,234499302,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Federal Government Employees lives (detail),58050,58050,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Federal Government Employees lives (summary),58050,58050,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Supplement Plans premium (detail),22661725,22661725,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Supplement Plans premium (summary),22661725,22661725,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Supplement Plans claims (detail),17247592,17247592,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Supplement Plans claims (summary),17247592,17247592,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Supplement Plans lives (detail),10113,10113,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,Medicare Supplement Plans lives (summary),10113,10113,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,TOTAL premium (detail page),17182555169,17182555169,p1 grand-total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,TOTAL premium (summary page),17182555169,17182555169,p8 Total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,TOTAL claims (detail page),15492767512,15492767512,p2 grand-total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,TOTAL claims (summary page),15492767512,15492571266,p8 Total row,NO,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,TOTAL lives (detail page),2999355,2999355,p3 grand-total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,TOTAL lives (summary page),2999355,2999355,p8 Total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Platinum premium (detail),5736929998,5736929998,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Platinum premium (summary),5736929998,5736929998,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Platinum claims (detail),5149625273,5149625273,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Platinum claims (summary),5149625273,5149625273,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Platinum lives (detail),331310,331310,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Platinum lives (summary),331310,331310,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Health Plan (Vital) premium (detail),4994843984,4994843984,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Health Plan (Vital) premium (summary),4994843984,4994843984,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Health Plan (Vital) claims (detail),4786791796,4786791796,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Health Plan (Vital) claims (summary),4786791796,4786791796,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Health Plan (Vital) lives (detail),1240563,1240563,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Health Plan (Vital) lives (summary),1240563,1240563,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Advantage premium (detail),3270885178,3270885178,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Advantage premium (summary),3270885178,3270885178,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Advantage claims (detail),2865086458,2865086458,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Advantage claims (summary),2865086458,2865086458,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Advantage lives (detail),274168,274168,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Advantage lives (summary),274168,274168,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Retirees premium (detail),990332715,990332715,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Retirees premium (summary),990332715,990332715,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Retirees claims (detail),891500189,891500189,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Retirees claims (summary),891500189,891500189,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Retirees lives (detail),82853,82853,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Retirees lives (summary),82853,82853,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Large Private Group Plans premium (detail),889992252,889992252,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Large Private Group Plans premium (summary),889992252,889992252,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Large Private Group Plans claims (detail),704568685,704568685,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Large Private Group Plans claims (summary),704568685,704568685,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Large Private Group Plans lives (detail),597906,597906,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Large Private Group Plans lives (summary),597906,597906,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Private Individual Plans premium (detail),373591602,373591602,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Private Individual Plans premium (summary),373591602,373591602,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Private Individual Plans claims (detail),292800674,292800674,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Private Individual Plans claims (summary),292800674,292604428,p8,NO,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Private Individual Plans lives (detail),179472,179472,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Private Individual Plans lives (summary),179472,179472,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Employees premium (detail),367986231,367986231,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Employees premium (summary),367986231,367986231,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Employees claims (detail),350132840,350132840,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Employees claims (summary),350132840,350132840,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Employees lives (detail),143262,143262,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Government Employees lives (summary),143262,143262,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Small Private Group Plans premium (detail),270404247,270404247,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Small Private Group Plans premium (summary),270404247,270404247,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Small Private Group Plans claims (detail),186449831,186449831,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Small Private Group Plans claims (summary),186449831,186449831,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Small Private Group Plans lives (detail),90331,90331,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Small Private Group Plans lives (summary),90331,90331,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Federal Government Employees premium (detail),267130426,267130426,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Federal Government Employees premium (summary),267130426,267130426,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Federal Government Employees claims (detail),248831657,248831657,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Federal Government Employees claims (summary),248831657,248831657,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Federal Government Employees lives (detail),48286,48286,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Federal Government Employees lives (summary),48286,48286,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Supplement Plans premium (detail),20458536,20458536,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Supplement Plans premium (summary),20458536,20458536,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Supplement Plans claims (detail),16980109,16980109,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Supplement Plans claims (summary),16980109,16980109,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Supplement Plans lives (detail),11204,11204,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,Medicare Supplement Plans lives (summary),11204,11204,p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,TOTAL premium (detail page),4525571406,4525571406,p1 grand-total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,TOTAL premium (summary page),4525571406,4525571406,p4 Total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,TOTAL claims (detail page),3762741555,3762741555,p2 grand-total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,TOTAL claims (summary page),3762741555,3762741555,p4 Total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,TOTAL lives (detail page),2988792,2988792,p3 grand-total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,TOTAL lives (summary page),2988792,2988792,p4 Total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Platinum premium (detail),1579451763,1579451763,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Platinum premium (summary),1579451763,1579451763,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Platinum claims (detail),1280825394,1280825394,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Platinum claims (summary),1280825394,1280825394,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Platinum lives (detail),328472,328472,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Platinum lives (summary),328472,328472,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Health Plan (Vital) premium (detail),1235861682,1235861682,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Health Plan (Vital) premium (summary),1235861682,1235861682,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Health Plan (Vital) claims (detail),1152044593,1152044593,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Health Plan (Vital) claims (summary),1152044593,1152044593,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Health Plan (Vital) lives (detail),1230723,1230723,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Health Plan (Vital) lives (summary),1230723,1230723,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Advantage premium (detail),802989885,802989885,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Advantage premium (summary),802989885,802989885,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Advantage claims (detail),646261900,646261900,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Advantage claims (summary),646261900,646261900,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Advantage lives (detail),264813,264813,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Advantage lives (summary),264813,264813,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Retirees premium (detail),351936710,351936710,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Retirees premium (summary),351936710,351936710,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Retirees claims (detail),264202224,264202224,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Retirees claims (summary),264202224,264202224,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Retirees lives (detail),101293,101293,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Retirees lives (summary),101293,101293,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Large Private Group Plans premium (detail),230437303,230437303,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Large Private Group Plans premium (summary),230437303,230437303,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Large Private Group Plans claims (detail),161480530,161480530,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Large Private Group Plans claims (summary),161480530,161480530,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Large Private Group Plans lives (detail),586607,586607,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Large Private Group Plans lives (summary),586607,586607,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Private Individual Plans premium (detail),95924989,95924989,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Private Individual Plans premium (summary),95924989,95924989,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Private Individual Plans claims (detail),66300486,66300486,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Private Individual Plans claims (summary),66300486,66300486,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Private Individual Plans lives (detail),180838,180838,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Private Individual Plans lives (summary),180838,180838,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Employees premium (detail),92859989,92859989,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Employees premium (summary),92859989,92859989,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Employees claims (detail),79723696,79723696,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Employees claims (summary),79723696,79723696,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Employees lives (detail),131483,131483,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Government Employees lives (summary),131483,131483,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Small Private Group Plans premium (detail),67143300,67143300,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Small Private Group Plans premium (summary),67143300,67143300,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Small Private Group Plans claims (detail),50828793,50828793,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Small Private Group Plans claims (summary),50828793,50828793,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Small Private Group Plans lives (detail),94446,94446,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Small Private Group Plans lives (summary),94446,94446,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Federal Government Employees premium (detail),64148743,64148743,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Federal Government Employees premium (summary),64148743,64148743,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Federal Government Employees claims (detail),56672236,56672236,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Federal Government Employees claims (summary),56672236,56672236,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Federal Government Employees lives (detail),61023,61023,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Federal Government Employees lives (summary),61023,61023,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Supplement Plans premium (detail),4817042,4817042,p1 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Supplement Plans premium (summary),4817042,4817042,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Supplement Plans claims (detail),4401703,4401703,p2 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Supplement Plans claims (summary),4401703,4401703,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Supplement Plans lives (detail),9094,9094,p3 col sum,YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,Medicare Supplement Plans lives (summary),9094,9094,p4,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,claimsConflict.detailPageTotal,15492767512,15492767512,p2 grand-total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,claimsConflict.summaryPageTotal,15492571266,15492571266,p8 Total row,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,claimsConflict.difference,196246,196246,p2 minus p8,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,annualChange.premium_change,1721674066,1721674066,p1 FY25 minus p1 FY24,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,annualChange.claims_change,1776909358,1776909358,p2 FY25 minus p2 FY24,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,annualChange.covered_lives_change,43608,43608,p3 FY25 minus p3 FY24,YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2024,market.mlr (rounded 6dp),0.887133,0.887133,p2/p1 (OCS prints no total MLR),YES,2026-09-14T13:57:53Z
+OCS Planilla,FY2025,market.mlr (rounded 6dp),0.901657,0.901657,p2/p1 (OCS prints no total MLR),YES,2026-09-14T13:57:53Z
+OCS Planilla,1Q2026,market.mlr (rounded 6dp),0.83144,0.83144,p2/p1 (OCS prints no total MLR),YES,2026-09-14T13:57:53Z
+OCS/NAIC Annual Statement mcsa,2025,Premium = Net premium income (L2),4730861034,4730861034,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2025,  (info) Total revenues (L8),4730861034,4730861034,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2025,Hospital/medical benefits (L9),3253991428,3253991428,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2025,Total hospital and medical (L18),4184943562,4184943562,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2025,General administrative expenses (L21),413665116,413665116,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2025,Net income (L32),101374716,101374716,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2025,"Member months (Stmt of Rev L1, Total col)",3875924,3875924,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2024,Premium = Net premium income (L2),3605893822,3605893822,5,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2024,  (info) Total revenues (L8),3605893822,3605893822,5,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2024,Hospital/medical benefits (L9),2615003999,2615003999,5,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2024,Total hospital and medical (L18),3146749770,3146749770,5,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2024,General administrative expenses (L21),368123100,368123100,5,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2024,Net income (L32),61434352,68358385,5,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2024,"Member months (Stmt of Rev L1, Total col)",3323475,3323475,5,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2025,"Total admitted assets (col 3, L28)",967368973,967368973,2,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2025,"Total liabilities (col 3, L24)",603388919,603388919,3,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mcsa,2025,"Total capital and surplus (col 3, L33)",363980055,363980055,3,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2025,Premium = Net premium income (L2),3297440566,3297440566,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2025,  (info) Total revenues (L8),3297440566,3237586680,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2025,Hospital/medical benefits (L9),1848011597,1848011597,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2025,Total hospital and medical (L18),2920533113,2920533113,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2025,General administrative expenses (L21),335549824,335549824,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2025,Net income (L32),-8964419,-8964419,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2025,"Member months (Stmt of Rev L1, Total col)",2579628,2579628,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2024,Premium = Net premium income (L2),3051305347,3051305347,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2024,  (info) Total revenues (L8),3051305347,3047620202,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2024,Hospital/medical benefits (L9),1742934598,1742934598,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2024,Total hospital and medical (L18),2674745597,2674745597,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2024,General administrative expenses (L21),314636443,314636443,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2024,Net income (L32),17340429,13377592,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2024,"Member months (Stmt of Rev L1, Total col)",2638673,2638673,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2025,"Total admitted assets (col 3, L28)",737136017,737136017,2,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2025,"Total liabilities (col 3, L24)",479780936,479780936,3,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement mmmhc,2025,"Total capital and surplus (col 3, L33)",257355081,257355081,3,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2025,Premium = Net premium income (L2),2874971487,2874971487,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2025,  (info) Total revenues (L8),2874971487,2874987177,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2025,Hospital/medical benefits (L9),1619912611,1619912611,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2025,Total hospital and medical (L18),2594840817,2594840815,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2025,General administrative expenses (L21),199348114,199348114,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2025,Net income (L32),6308964,6308964,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2025,"Member months (Stmt of Rev L1, Total col)",10031810,10031810,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2024,Premium = Net premium income (L2),2548230206,2548230206,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2024,  (info) Total revenues (L8),2548230206,2548207703,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2024,Hospital/medical benefits (L9),1309280027,1309280027,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2024,Total hospital and medical (L18),2312936302,2312936301,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2024,General administrative expenses (L21),146137489,146137489,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2024,Net income (L32),20808896,20808896,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2024,"Member months (Stmt of Rev L1, Total col)",10151514,10151514,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2025,"Total admitted assets (col 3, L28)",950706686,950706686,2,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2025,"Total liabilities (col 3, L24)",586646242,586646242,3,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tss,2025,"Total capital and surplus (col 3, L33)",364060444,364060444,3,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2025,Premium = Net premium income (L2),1624549762,1624549762,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2025,  (info) Total revenues (L8),1624549762,1624549762,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2025,Hospital/medical benefits (L9),826850022,826850022,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2025,Total hospital and medical (L18),1494250533,1494250533,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2025,General administrative expenses (L21),127865401,127865401,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2025,Net income (L32),5257506,5257506,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2025,"Member months (Stmt of Rev L1, Total col)",5362698,5362698,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2024,Premium = Net premium income (L2),1681971106,1681971106,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2024,  (info) Total revenues (L8),1681971106,1681971106,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2024,Hospital/medical benefits (L9),893312487,893312487,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2024,Total hospital and medical (L18),1588540477,1588540477,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2024,General administrative expenses (L21),137393593,137393593,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2024,Net income (L32),-39801289,-25515404,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2024,"Member months (Stmt of Rev L1, Total col)",6230396,6230396,4,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2025,"Total admitted assets (col 3, L28)",271680792,271680792,2,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2025,"Total liabilities (col 3, L24)",215974124,215974124,3,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement fmhp,2025,"Total capital and surplus (col 3, L33)",55706668,55706668,3,MATCH,2026-09-14T13:58:10Z
+OCS/NAIC Annual Statement tsa,2025,Premium (Net premium income),1536319683,1536319683,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2024,Premium (Net premium income),1575943369,1575943369,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2025,Hospital/medical benefits,678508181,678508181,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2024,Hospital/medical benefits,624633197,624633197,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2025,Total hospital and medical,1421430710,1421430710,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2024,Total hospital and medical,1396040340,1396040340,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2025,General administrative expenses,164674847,164674847,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2024,General administrative expenses,182195944,182195944,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2025,Net income,-86691102,-86691102,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2024,Net income,-41948126,-41948126,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2025,Member months,1232658,1232658,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2024,Member months,1495589,1495589,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2025,Total admitted assets,379277202,379277202,2,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2025,Total liabilities,216239981,216239981,3,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement tsa,2025,Total capital and surplus,163037221,163037221,3,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2025,Premium (Net premium income),1324108128,1324108128,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2024,Premium (Net premium income),1225696436,1225696436,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2025,Hospital/medical benefits,809448175,809448175,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2024,Hospital/medical benefits,708849509,708849509,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2025,Total hospital and medical,1266762711,1266762711,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2024,Total hospital and medical,1137138737,1137138737,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2025,General administrative expenses,56065409,56065409,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2024,General administrative expenses,52373364,52373364,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2025,Net income,3640727,3640727,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2024,Net income,29445019,23763178,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2025,Member months,3322831,3322831,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2024,Member months,3464710,3464710,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2025,Total admitted assets,383137377,383137377,2,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2025,Total liabilities,243458000,243458000,3,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mmmm,2025,Total capital and surplus,139679377,139679377,3,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2025,Premium (Net premium income),775122853,775122853,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2024,Premium (Net premium income),714718421,707735210,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2025,Hospital/medical benefits,497197862,497197862,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2024,Hospital/medical benefits,426924207,421421192,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2025,Total hospital and medical,739238276,739238278,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2024,Total hospital and medical,640532133,638766298,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2025,General administrative expenses,37216578,37216578,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2024,General administrative expenses,35869696,33466375,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2025,Net income,-8496179,-8496179,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2024,Net income,28779636,27343478,4,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2025,Member months,2281732,2281732,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2024,Member months,2304418,2304418,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2025,Total admitted assets,193841335,193841335,2,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2025,Total liabilities,99616383,99616383,3,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement meno,2025,Total capital and surplus,94224952,94224952,3,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2025,Premium (Net premium income),381382990,381382990,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2024,Premium (Net premium income),485594759,485594759,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2025,Hospital/medical benefits,196384608,196384608,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2024,Hospital/medical benefits,316416377,316416377,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2025,Total hospital and medical,328781965,328781965,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2024,Total hospital and medical,419219786,419219786,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2025,General administrative expenses,65521537,65521537,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2024,General administrative expenses,49426904,49426904,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2025,Net income,-63285921,-63285921,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2024,Net income,-2827315,-2827315,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2025,Member months,329121,329121,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2024,Member months,441602,441602,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2025,Total admitted assets,185790476,185790476,2,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2025,Total liabilities,95824785,95824785,3,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement huma,2025,Total capital and surplus,89965691,89965692,3,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mcsl,2025,Premium (Net premium income),508232940,508232940,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mcsl,2024,Premium (Net premium income),437367063,437367063,5,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mcsl,2025,Net income,31021530,31021530,4,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mcsl,2024,Net income,20604750,20604750,5,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mcsl,2025,A&H premium (mcsLifeAdj),505025652,505025652,6,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mcsl,2024,A&H premium (mcsLifeAdj),434494534,434494534,7,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mcsl,2025,Non-A&H premium (mcsLifeAdj),3207288,3207289,6,MISMATCH (corrected on site 2026-09-14),2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mcsl,2025,Total admitted assets,214902457,214902457,2,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mcsl,2025,Total liabilities,119308944,119308944,3,MATCH,2026-09-14T13:58:32Z
+OCS/NAIC Annual Statement mcsl,2025,Total capital and surplus,95593513,95593513,3,MATCH,2026-09-14T13:58:32Z
+CMS 2026 Star Ratings,,H5577 Part C / Part D summary,5/5,5/5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,YES,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H5577 Overall,(not stated),5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,N/A,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H5774 Part C / Part D summary,4.5/4.5,4.5/4.5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,YES,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H5774 Overall,(not stated),4.5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,N/A,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H4004 Part C / Part D summary,5/5,5/5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,YES,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H4004 Overall,(not stated),5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,N/A,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H4003 Part C / Part D summary,5/5,5/5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,YES,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H4003 Overall,(not stated),5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,N/A,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H4005 Part C / Part D summary,3.5/4.5,3.5/4.5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,YES,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H4005 Overall,(not stated),3.5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,N/A,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H2001 Part C / Part D summary,4.5/4,4.5/4,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,YES,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H2001 Overall,(not stated),4.5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,N/A,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H5522 Part C / Part D summary,4.5/4.5,4.5/4.5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,YES,2026-09-14T13:58:50Z
+CMS 2026 Star Ratings,,H5522 Overall,(not stated),4.5,stars: Summary Ratings (July 22 2026).xlsx / Summary_Rating,N/A,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,0% bonus n [Parts A&B 0% Bonus 2027 Rate],78,78,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,0% bonus min [Parts A&B 0% Bonus 2027 Rate],685.99,685.99,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,0% bonus median [Parts A&B 0% Bonus 2027 Rate],768.50,768.50,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,0% bonus max [Parts A&B 0% Bonus 2027 Rate],923.46,923.46,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,0% bonus mean [Parts A&B 0% Bonus 2027 Rate],777.98,777.98,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,3.5% bonus n [Parts A&B 3.5% Bonus 2027 Rate],78,78,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,3.5% bonus min [Parts A&B 3.5% Bonus 2027 Rate],706.86,706.86,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,3.5% bonus median [Parts A&B 3.5% Bonus 2027 Rate],806.42,806.42,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,3.5% bonus max [Parts A&B 3.5% Bonus 2027 Rate],977.13,977.13,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,3.5% bonus mean [Parts A&B 3.5% Bonus 2027 Rate],816.90,816.90,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,5% bonus n [Parts A&B 5% Bonus 2027 Rate],78,78,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,5% bonus min [Parts A&B 5% Bonus 2027 Rate],715.81,715.81,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,5% bonus median [Parts A&B 5% Bonus 2027 Rate],819.88,819.88,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,5% bonus max [Parts A&B 5% Bonus 2027 Rate],1001.16,1001.16,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,5% bonus mean [Parts A&B 5% Bonus 2027 Rate],833.56,833.56,"ratebook: CSV/CountyRate2027.csv (State=PUERTO RICO, SSA codes 40xxx)",YES,2026-09-14T13:58:50Z
+CMS CY2027 Rate Book,,Statutory-benchmark CSV in zip,zip has none with PR rows,"zip contains NO statutory/benchmark CSV at all (only CountyRate2027, CountyRate2027PACE, 2027 Regional Rates, Local EGWP Rates 2027 + RateBook2027.xlsx). PACE and EGWP CSVs DO have 78 PR rows.",ratebook.zip listing,YES (no such file),2026-09-14T13:58:50Z
+CMS 2027 Rate Announcement fact sheet,,Page loads,(claimed),HTTP 200; headline: 'increase of 2.48% or over $13 billion in payments to MA plans in CY 2027' (Effective Growth Rate 5.33%),fact sheet HTML,YES,2026-09-14T13:58:50Z
+HRSA HPSA,,Report as-of date,07-01-2026,"Data as of: 07/01/2026; tables titled 'as of June 30, 2026'; Third Quarter FY2026",hrsa: HPSA Quarterly Summary PDF p1,YES,2026-09-14T13:58:50Z
+HRSA HPSA,,Primary Care total designations,72,"42 (Geographic 0, Population 20, Facility 22)",hrsa: HPSA Quarterly Summary PDF Table 3 p5,NO (corrected on site),2026-09-14T13:58:50Z
+HRSA HPSA,,Primary Care practitioners needed,121,138,hrsa: HPSA Quarterly Summary PDF Table 3 p5,NO (corrected on site),2026-09-14T13:58:50Z
+HRSA HPSA,,Primary Care population / % need met,(not stated),"574,059 / 28.90%",hrsa: HPSA Quarterly Summary PDF Table 3 p5,N/A,2026-09-14T13:58:50Z
+HRSA HPSA,,Mental Health total designations,51,"74 (Geographic 0, Population 52, Facility 22)",hrsa: HPSA Quarterly Summary PDF Table 5 p11,NO (corrected on site),2026-09-14T13:58:50Z
+HRSA HPSA,,Mental Health practitioners needed,12,70,hrsa: HPSA Quarterly Summary PDF Table 5 p11,NO (corrected on site),2026-09-14T13:58:50Z
+HRSA HPSA,,Mental Health population / % need met,(not stated),"1,140,925 / 8.31%",hrsa: HPSA Quarterly Summary PDF Table 5 p11,N/A,2026-09-14T13:58:50Z
+HRSA HPSA,,Dental row,unavailable,"PRESENT: 99 designations (Geographic 1, Population 76, Facility 22); population 2,292,005; 48.02% need met; 297 practitioners needed",hrsa: HPSA Quarterly Summary PDF Table 4 p8,NO (corrected on site),2026-09-14T13:58:50Z
+SEC 10-K UnitedHealth Group,FY2025,Medical care ratio (consolidated),89.1%,"MD&A table row: 'Medical care ratio (a) | 89.1 % | 85.5 % | 83.2 %'; footnote (a): 'Medical care ratio (MCR) is calculated as medical costs divided by premium revenue.' Medical costs $313,995M (premium revenue used for MCR is shown in the same table).",89.1% (reported; not recomputed - website labels it as reported ratio),YES,2026-09-14T13:59:06Z
+SEC 10-K UnitedHealth Group,FY2025,"Operating margin (consolidated, reported)",4.2%,"10-K table 'Operating margin | 4.2 | 8.1 | 8.7' and 'Consolidated operating margin | 4.2 % | 8.1 % | 8.7 %'. Earnings from operations $18,964M / Total revenues $447,567M (Consolidated Statements of Operations).",4.2% (4.237%),YES,2026-09-14T13:59:06Z
+SEC 10-K UnitedHealth Group,FY2025,Net margin (net earnings attributable to common shareholders / total revenues),2.7%,"10-K table 'Net earnings margin (b) | 2.7 | 3.6 | 6.0'; footnote (b) 'Net earnings margin attributable to UnitedHealth Group common shareholders.' Net earnings attributable to UnitedHealth Group common shareholders $12,056M / Total revenues $447,567M. (Also: Earnings before income taxes $14,697M; Ne",2.7% (2.694%),YES,2026-09-14T13:59:06Z
+SEC 10-K Elevance Health,FY2025,Benefit expense ratio (consolidated),90.0%,"MD&A table row: 'Benefit expense ratio 2 | 90.0 % | 88.5 % | 87.0 %'; footnote 2: 'Benefit expense ratio represents benefit expense as a percentage of premium revenue. Premiums for the years ended December 31, 2025, 2024 and 2023 were $164,639, $144,166 and $142,854'. Benefit expense $148,223M.","90.0% (90.029%) = 148,223 / 164,639",YES,2026-09-14T13:59:06Z
+SEC 10-K Elevance Health,FY2025,"Pre-tax margin (income before income tax / total revenues, reported)",3.4%,"MD&A table row: 'Income before income tax expense as a percentage of total revenues | 3.4 % | 4.5 % | 4.5 %'. Income before income tax expense $6,710M / Total revenues $199,125M (Consolidated Statements of Income).",3.4% (3.370%),YES,2026-09-14T13:59:06Z
+SEC 10-K Elevance Health,FY2025,"Net margin (shareholders' net income / total revenues, reported)",2.8%,"MD&A table row: 'Shareholders' net income as a percentage of total revenues | 2.8 % | 3.4 % | 3.5 %'. Shareholders' net income $5,662M / Total revenues $199,125M. (Net income $5,661M; noncontrolling interest loss $1M.)",2.8% (2.843%),YES,2026-09-14T13:59:06Z
+SEC 10-K Humana Inc.,FY2025,Benefit ratio (Insurance segment),90.4%,"Insurance segment table row: 'Benefit ratio | 90.4 % | 90.4 % | — %'; text: 'The Insurance segment benefit ratio was unchanged at 90.4% in the 2024 and 2025 periods'. (Consolidated benefit ratio is 90.2%: 'Benefit ratio (a) | 90.2 % | 89.8 %'; consolidated benefits $110,812M.)","90.4% (reported segment ratio; segment benefits expense not itemized in table, not recomputed)",YES,2026-09-14T13:59:06Z
+SEC 10-K Humana Inc.,FY2025,Operating margin (calculated: consolidated income from operations / total revenues),2.1%,"Consolidated Statements of Income: 'Income from operations | 2,704 | 2,562 | 4,013'; 'Total revenues | 129,664 | 117,761 | 106,374'. Income from operations $2,704M / Total revenues $129,664M. No operating-margin line is reported in the 10-K.",2.1% (2.085%),YES,2026-09-14T13:59:06Z
+SEC 10-K Humana Inc.,FY2025,Net margin (calculated: net income attributable to Humana / total revenues),0.9%,"Consolidated Statements of Income: 'Net income attributable to Humana | $ 1,188 | $ 1,207 | $ 2,489'; 'Income before income taxes and equity in net losses | 1,555'; 'Net income | $ 1,203'. Net income attributable to Humana $1,188M / Total revenues $129,664M. No net-margin line is reported in the 10-",0.9% (0.916%),YES,2026-09-14T13:59:06Z
+SEC 10-K CVS Health / Aetna,FY2025,Medical benefit ratio (Health Care Benefits segment),91.2%,"Health Care Benefits segment table: 'MBR (Health care costs as a % of premium revenues) | 91.2 % | 92.5 % | 86.2%'. Health care costs $122,949M; Premiums $134,749M.","91.2% (91.243%) = 122,949 / 134,749",YES,2026-09-14T13:59:06Z
+SEC 10-K CVS Health / Aetna,FY2025,Operating margin (calculated: consolidated operating income / total revenues),1.2%,"Consolidated Statements of Operations: 'Operating income | 4,660 | 8,516 | 13,743'; 'Total revenues | 402,067 | 372,809 | 357,776'. Operating income $4,660M / Total revenues $402,067M. Consolidated operating margin is not reported as a line in the 10-K (only segment-level 'Operating income as a % of",1.2% (1.159%),YES,2026-09-14T13:59:06Z
+SEC 10-K CVS Health / Aetna,FY2025,Net margin (calculated: net income attributable to CVS Health / total revenues),0.4%,"Consolidated Statements of Operations: 'Net income attributable to CVS Health | $ 1,768 | $ 4,614 | $ 8,344'; 'Income before income tax provision | 2,136'; 'Net income | 1,728'. $1,768M / $402,067M. Not reported as a margin line in the 10-K.",0.4% (0.440%),YES,2026-09-14T13:59:06Z
+Live link check,,https://data.hrsa.gov/Default/GenerateHPSAQuarterlyReport,,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/First%20Medical%20Health%20Plan,%20Inc.pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc.pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Advantage,%20Inc.pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Life%20Insurance%20Company.pdf,,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Healthcare,%20LLC.pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Multi%20Health,%20LLC.pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Plan%20de%20Salud%20Menonita,%20Inc.pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Advantage,%20Inc.pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Salud,%20Inc.pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/First%20Medical%20Health%20Plan,%20Inc..pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc..pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Advantage,%20Inc..pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Life%20Insurance%20Company.pdf,,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Healthcare,%20LLC.pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Multi%20Health,%20LLC.pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Plan%20de%20Salud%20Menonita,%20Inc..pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Advantage,%20Inc..pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,"https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Salud,%20Inc..pdf",,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf,,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf,,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2026/2026.1Q%20-%20Planilla%20de%20Salud.pdf,,200,application/pdf,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://www.cms.gov/files/zip/2026-star-ratings-data-tables.zip,,200,application/zip,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://www.cms.gov/files/zip/2027-ma-rate-book.zip,,200,application/zip,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://www.cms.gov/files/zip/ma-enrollment-state-county-contract-august-2026-full-version.zip,,200,application/zip,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement,,200,text/html;,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://www.sec.gov/Archives/edgar/data/1156039/000115603926000013/elv-20251231.htm,,200,text/html,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/hum-20251231.htm,,200,text/html,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm,,200,text/html,LIVE,2026-09-14T13:52:00Z
+Live link check,,https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm,,200,text/html,LIVE,2026-09-14T13:52:00Z
+CMS MA enrollment Sep 2026,,H5577 enrollment (sum numeric PR rows),"359,424","359,424",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5577 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5577 organization name,"MCS ADVANTAGE, INC.","MCS ADVANTAGE, INC.",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5577 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5774 enrollment (sum numeric PR rows),"119,738","119,738",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5774 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5774 organization name,"TRIPLE S ADVANTAGE, INC.","TRIPLE S ADVANTAGE, INC.",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5774 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4004 enrollment (sum numeric PR rows),"101,337","101,337",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4004 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4004 organization name,"MMM HEALTHCARE, LLC","MMM HEALTHCARE, LLC",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4004 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4003 enrollment (sum numeric PR rows),"94,708","94,708",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4003 numeric counties / PR rows,78/78,78/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4003 organization name,"MMM HEALTHCARE, LLC","MMM HEALTHCARE, LLC",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4003 plan type label,HMO/HMOPOS,HMO/HMOPOS,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4005 enrollment (sum numeric PR rows),"6,438","6,438",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4005 numeric counties / PR rows,62/78,62/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4005 organization name,"TRIPLE S ADVANTAGE, INC.","TRIPLE S ADVANTAGE, INC.",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H4005 plan type label,Local PPO,Local PPO,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H2001 enrollment (sum numeric PR rows),14,14,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H2001 numeric counties / PR rows,1/78,1/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H2001 organization name,"SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.","SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H2001 plan type label,Local PPO,Local PPO,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5522 enrollment (sum numeric PR rows),13,13,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5522 numeric counties / PR rows,1/78,1/78,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5522 organization name,AETNA LIFE INSURANCE COMPANY,AETNA LIFE INSURANCE COMPANY,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,H5522 plan type label,Local PPO,Local PPO,enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:20:16Z
+CMS MA enrollment Sep 2026,,Total reported numeric PR enrollment (all contracts),"681,672","681,672",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:21:02Z
+CMS MA enrollment Sep 2026,,Principal PR orgs (MCS+MMM+Triple-S) enrollment,"681,645","681,645",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),YES,2026-09-14T16:21:02Z
+CMS MA enrollment Sep 2026,,Suppression token for <=10 enrollees,'*','.' (readme text says '* = 10 or less' but every suppressed cell in the file is '.'; zero '*' cells in file),enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),NO,2026-09-14T16:21:02Z
+CMS MA enrollment Sep 2026,,Humana PR contract rows,(not stated),"YES - 11 Humana contracts have PR rows, all suppressed: H2029 HUMANA INSURANCE OF PUERTO RICO, INC. Local PPO (78 rows), H1036, H5216, H6622, H5525, H7284, H3533, H0473, H1468, H4141, X0001 LI NET",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),N/A,2026-09-14T16:21:02Z
+CMS MA enrollment Sep 2026,,Other PR contracts omitted by site,none listed,"192 other contracts appear in PR rows; ALL have zero numeric cells (every row '.'), so their reportable enrollment is 0 (omission does not change totals)",enroll: SCC_Enrollment_MA_2026_09.csv (State=PR),OMISSION (0 enrollment),2026-09-14T16:21:02Z

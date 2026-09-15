@@ -1,0 +1,261 @@
+{
+  "checked_at_utc": "2026-09-14T19:33:58.433960+00:00",
+  "scope": "Targeted independent primary-source verification of retained CMS enrollment, CMS Stars, CMS ratebook, HRSA HPSA, and four SEC 2025 10-K financial comparisons. No site files edited.",
+  "method": "Current source files downloaded directly; CMS SCC CSV aggregated for State=PR with suppressed values excluded, Stars workbook read from current ZIP, 78 PR ratebook rows recomputed, HRSA Puerto Rico rows read on pp5/8/11, SEC reported ratios and margin calculation inputs read from original 10-Ks.",
+  "status": "ALL_TARGETED_NUMERIC_VALUES_MATCH; SUPPRESSION_TEXT_CORRECTED",
+  "counts": {
+    "cms_contract_enrollment_totals_matched": 7,
+    "cms_summary_aggregates_matched": 2,
+    "cms_part_c_and_d_ratings_matched": 14,
+    "cms_rate_summary_fields_matched": 15,
+    "hrsa_numeric_fields_matched": 12,
+    "sec_ratio_and_margin_fields_matched": 12,
+    "targeted_numeric_checks_total": 62,
+    "numeric_mismatches": 0,
+    "text_corrections_required": 1,
+    "text_corrections_applied": 1
+  },
+  "cms_enrollment": {
+    "source_url": "https://www.cms.gov/files/zip/ma-enrollment-state-county-contract-september-2026-full-version.zip",
+    "source_file": "SCC_Enrollment_MA_2026_09/SCC_Enrollment_MA_2026_09.csv",
+    "period": "2026-09",
+    "state": "PR",
+    "reported_numeric_enrollment": 681672,
+    "principal_pr_organizations_enrollment": 681645,
+    "pr_county_contract_rows": 5535,
+    "pr_contracts_in_file": 199,
+    "numeric_contracts": {
+      "H2001": {
+        "enrollment": 14,
+        "numericCounties": 1,
+        "totalCounties": 78,
+        "org": "SIERRA HEALTH AND LIFE INSURANCE COMPANY, INC.",
+        "plan": "Local PPO"
+      },
+      "H4003": {
+        "enrollment": 94708,
+        "numericCounties": 78,
+        "totalCounties": 78,
+        "org": "MMM HEALTHCARE, LLC",
+        "plan": "HMO/HMOPOS"
+      },
+      "H4004": {
+        "enrollment": 101337,
+        "numericCounties": 78,
+        "totalCounties": 78,
+        "org": "MMM HEALTHCARE, LLC",
+        "plan": "HMO/HMOPOS"
+      },
+      "H4005": {
+        "enrollment": 6438,
+        "numericCounties": 62,
+        "totalCounties": 78,
+        "org": "TRIPLE S ADVANTAGE, INC.",
+        "plan": "Local PPO"
+      },
+      "H5522": {
+        "enrollment": 13,
+        "numericCounties": 1,
+        "totalCounties": 78,
+        "org": "AETNA LIFE INSURANCE COMPANY",
+        "plan": "Local PPO"
+      },
+      "H5577": {
+        "enrollment": 359424,
+        "numericCounties": 78,
+        "totalCounties": 78,
+        "org": "MCS ADVANTAGE, INC.",
+        "plan": "HMO/HMOPOS"
+      },
+      "H5774": {
+        "enrollment": 119738,
+        "numericCounties": 78,
+        "totalCounties": 78,
+        "org": "TRIPLE S ADVANTAGE, INC.",
+        "plan": "HMO/HMOPOS"
+      }
+    },
+    "pr_suppressed_cells": 5159,
+    "non_numeric_token": ".",
+    "suppression_readme_definition": "10 or less",
+    "required_correction": {
+      "field": "FEDDATA.cmsSummary.suppression_note",
+      "current": "CMS values of fewer than 10 are suppressed and are not imputed.",
+      "recommended": "CMS suppresses enrollment counts of 10 or less (\u226410). The September 2026 CSV uses a period (.) for suppressed cells; these values are excluded from the reported numeric total and are not imputed.",
+      "resolution": "Applied to FEDDATA.cmsSummary.suppression_note, including CSV export, on 2026-09-14."
+    },
+    "interpretation": "681672 is sum of disclosed numeric cells, not an independently complete enrollment count. Small cells are not zero. Rows report legal county of residence and may include out-of-service-area members; presence of a PR row is not proof of PR plan availability."
+  },
+  "cms_stars": {
+    "source_url": "https://www.cms.gov/files/zip/2026-star-ratings-data-tables.zip",
+    "source_file": "Master Tables Individual Files 8 17 26/2026 Star Ratings Data Table - Summary Ratings (July 22 2026).xlsx",
+    "rating_year": 2026,
+    "verified_contracts": [
+      {
+        "contract": "H2001",
+        "partC": 4.5,
+        "partD": 4.0,
+        "overall": 4.5
+      },
+      {
+        "contract": "H4003",
+        "partC": 5.0,
+        "partD": 5.0,
+        "overall": 5.0
+      },
+      {
+        "contract": "H4004",
+        "partC": 5.0,
+        "partD": 5.0,
+        "overall": 5.0
+      },
+      {
+        "contract": "H4005",
+        "partC": 3.5,
+        "partD": 4.5,
+        "overall": 3.5
+      },
+      {
+        "contract": "H5522",
+        "partC": 4.5,
+        "partD": 4.5,
+        "overall": 4.5
+      },
+      {
+        "contract": "H5577",
+        "partC": 5.0,
+        "partD": 5.0,
+        "overall": 5.0
+      },
+      {
+        "contract": "H5774",
+        "partC": 4.5,
+        "partD": 4.5,
+        "overall": 4.5
+      }
+    ],
+    "notes": "All seven Part C and Part D pairs match current FEDDATA. Overall also read as context but not counted in fourteen current-field checks."
+  },
+  "cms_rates": {
+    "source_url": "https://www.cms.gov/files/zip/2027-ma-rate-book.zip",
+    "source_file": "CSV/CountyRate2027.csv",
+    "year": 2027,
+    "verified_summary": [
+      {
+        "basis": "Parts A&B 0% Bonus 2027 Rate",
+        "count": 78,
+        "min": 685.99,
+        "median": 768.5,
+        "max": 923.46,
+        "unweighted_mean": 777.98
+      },
+      {
+        "basis": "Parts A&B 3.5% Bonus 2027 Rate",
+        "count": 78,
+        "min": 706.86,
+        "median": 806.42,
+        "max": 977.13,
+        "unweighted_mean": 816.9
+      },
+      {
+        "basis": "Parts A&B 5% Bonus 2027 Rate",
+        "count": 78,
+        "min": 715.81,
+        "median": 819.88,
+        "max": 1001.16,
+        "unweighted_mean": 833.56
+      }
+    ],
+    "interpretation": "Published Parts A&B county rates; means are unweighted across 78 PR municipalities. Not risk-adjusted realized plan payments or an enrollment-weighted national comparison."
+  },
+  "hrsa": {
+    "source_url": "https://data.hrsa.gov/Default/GenerateHPSAQuarterlyReport",
+    "report_generated": "September 14, 2026",
+    "data_as_of": "2026-07-01",
+    "report_period": "Third Quarter FY2026, as of June30,2026",
+    "verified_fields": {
+      "primary_care_designations": 42,
+      "primary_care_practitioners_needed": 138,
+      "primary_care_population": 574059,
+      "primary_care_pct_need_met": 28.9,
+      "dental_designations": 99,
+      "dental_practitioners_needed": 297,
+      "dental_population": 2292005,
+      "dental_pct_need_met": 48.02,
+      "mental_health_designations": 74,
+      "mental_health_practitioners_needed": 70,
+      "mental_health_population": 1140925,
+      "mental_health_pct_need_met": 8.31
+    },
+    "table_refs": "Table 3 (primary care, p.5), Table 4 (dental, p.8), Table 5 (mental health, p.11)",
+    "interpretation": "Designation counts, population associated with designations, percent of need met, and practitioners needed to remove HPSA designations. These do not count every healthcare vacancy in Puerto Rico."
+  },
+  "sec": {
+    "period": 2025,
+    "companies": [
+      {
+        "company": "UnitedHealth Group",
+        "filing": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/unh-20251231.htm",
+        "medicalRatio": 89.1,
+        "medicalScope": "Consolidated medical costs/premium revenue; reported",
+        "operatingMargin": 4.2,
+        "netMargin": 2.7,
+        "netScope": "Attributable to UnitedHealth Group common shareholders; reported"
+      },
+      {
+        "company": "Elevance Health",
+        "filing": "https://www.sec.gov/Archives/edgar/data/1156039/000115603926000013/elv-20251231.htm",
+        "medicalRatio": 90.0,
+        "medicalScope": "Benefit expense/premium revenue; reported",
+        "preTaxMargin": 3.4,
+        "netMargin": 2.8,
+        "marginScope": "Consolidated total revenues denominators; reported"
+      },
+      {
+        "company": "Humana Inc.",
+        "filing": "https://www.sec.gov/Archives/edgar/data/49071/000004907126000009/hum-20251231.htm",
+        "medicalRatio": 90.4,
+        "medicalScope": "Insurance segment benefit ratio; reported",
+        "operatingMargin": 2.1,
+        "netMargin": 0.9,
+        "calculations": {
+          "total_revenue_millions": 129664,
+          "operating_income_millions": 2704,
+          "net_income_attributable_millions": 1188,
+          "operating_margin_exact_pct": 2.085389930898322,
+          "net_margin_exact_pct": 0.9162142152023692
+        }
+      },
+      {
+        "company": "CVS Health / Aetna",
+        "filing": "https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm",
+        "medicalRatio": 91.2,
+        "medicalScope": "Health Care Benefits segment insured members; reported",
+        "operatingMargin": 1.2,
+        "netMargin": 0.4,
+        "calculations": {
+          "total_revenue_millions": 402067,
+          "operating_income_millions": 4660,
+          "net_income_attributable_millions": 1768,
+          "operating_margin_exact_pct": 1.1590108116308973,
+          "net_margin_exact_pct": 0.4397277070736966
+        }
+      }
+    ],
+    "interpretation": "Retain labels: scopes mix consolidated and insurance-segment figures; Elevance pre-tax margin is not an operating margin. These are public parent-company comparisons, not Puerto Rico statutory entities."
+  },
+  "gaps": [
+    "This pass does not assert verification of every narrative, formula, legal claim, or page interaction; it verifies the retained key numeric fields listed above.",
+    "Suppressed CMS numeric values cannot be recovered from the public SCC file and are intentionally not imputed."
+  ],
+  "source_sha256": {
+    "cmsEnrollment.zip": "d5501d5dcf7d18bb1014090e6929ff362924e5ec17dabcc73af678d51392123b",
+    "cmsStars.zip": "a72f4f4965239e12b3b264c843a71ea6bbd9c655547be5b1f95b3b0df4d1cde7",
+    "cmsRates.zip": "cc5d946bcf24f14df84b2f7b6cb16ea8647332de514fcd161d58bbfd5f1e087f",
+    "hrsa.pdf": "622704e58962e9f02620e65b2c7e4aa476a32b575a7eeaf3bb85df066b178280",
+    "0_sec.htm": "ac66517766674908c3702dab75f52fc650729cef9dd81dfe04a580a8429c8543",
+    "1_sec.htm": "fe7bffcbc211cbf55e604971ee8424ac41cfb9bf75a90a1655bafc3edeafa5a0",
+    "2_sec.htm": "cf470af14c531f43bab70cba82a0e1e4d21825f15a1da28e2205ba47d1657dfe",
+    "3_sec.htm": "422bac70c4d888c89306c113ee8cdf6b84367bd5917b32ca098b07153f9decec"
+  }
+}
