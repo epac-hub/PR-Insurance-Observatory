@@ -1,162 +1,82 @@
 # Puerto Rico Insurance Observatory
 
-Analytical platform built on the OCS (Oficina del Comisionado de Seguros) Annual Financial Reports of Insurers, NAIC Annual Statements, and CMS public data. Full Year 2025 and 2024 baselines, CMS 2026 and CY2027 context.
+The **Puerto Rico Insurance Observatory** is a public, source-verified dashboard covering Puerto Rico’s health-insurance market. It includes FY2024, FY2025, and quarter-ended 03-31-2026 views, together with statutory insurer filings and federal context from CMS, HRSA, and SEC sources.
 
-Powered by ePAC. Contact: elliotpac@gmail.com
+**Live site:** <https://epac-hub.github.io/PR-Insurance-Observatory/>
 
-## Site architecture (phase 1, 2026-09-14)
+## Current release
 
-Five sections replace the former fifteen tabs. Nothing in the data changed; the same figures are grouped by the question they answer.
+**Release:** `2026-09-16.1`
 
-| Section | Question | Contents |
-| --- | --- | --- |
-| Overview | How is the market doing and where is it heading? | Market at a glance, four trend cards |
-| Insurers | Who is gaining, who is losing, and why? | Executive lede, four KPIs, one sortable table of the nine entities with a per-row drill-down (full statement, balance sheet, NAIC code, source PDFs); detailed analyses folded under expandable panels |
-| Coverage | How is premium distributed by type of coverage? | Executive lede, OCS Planilla coverage-type analysis with year selector; statutory lines of business and derived segments folded |
-| Federal Context | What changes from CMS, HRSA and the national carriers? | CMS enrollment, Star Ratings, CY2027 ratebook, HRSA shortage areas, SEC comparators |
-| Data & Method | Where does each number come from and how do I verify it? | Sources, Methodology, Downloads, Validation |
+**Website updated:** 09-16-2026 05:50 AM AST
 
-Legacy anchors (`go('ratio')`, `go('lobb')`, `go('val')` and the rest) still resolve: they open the section, expand the panel that holds the former tab and scroll to it.
+**Data and source links last verified in the dashboard:** 09-15-2026 04:38 PM AST
 
-## Structure
+The current interface contains 16 sections:
+
+1. Overview
+2. Analysis
+3. Market Performance
+4. Ratios
+5. Segments
+6. Statutory LOB
+7. Profiles
+8. Financial
+9. Claims/MLR
+10. Market Share
+11. Federal Context
+12. Data Verification
+13. Reports
+14. Sources
+15. Methodology
+16. Downloads
+
+## Verified behavior
+
+The dashboard preserves distinct FY2024, FY2025, 2024-vs-2025, and 1Q2026 reporting modes. Areas without verified quarterly source data show an unavailable state rather than substituted, carried-forward, annualized, or inferred values.
+
+Every chart includes reading guidance, CSV and JSON exports, source provenance, clickable official links, exact PDF-page or workbook references where applicable, and source-verification timestamps. The interface also provides fullscreen presentation mode and complete-dashboard PDF preparation.
+
+## Verification status
+
+| Verification area | Result |
+|---|---:|
+| Normalized-data checks | 45 / 45 passed |
+| Published-number and formula checks | 515 / 515 passed |
+| Official-PDF page citations | 81 / 81 passed |
+| Unique live official URLs | 30 / 30 passed |
+| Period-chart export states | 97 |
+| Non-empty CSV/JSON payloads | 246 |
+| Deterministic visual states | 32 / 32 |
+
+The deterministic visual review covered all 16 sections at 1440 × 900 and 390 × 844. TypeScript, generated inline JavaScript, the production build, two-pass generation idempotence, production/portable artifact identity, and clean browser runtime checks passed before this GitHub deployment.
+
+## Source and methodology safeguards
+
+The dashboard separates market-wide OCS Planilla data from the Core 9 statutory insurer universe. It also keeps MCS Life’s NAIC Life-blank Accident & Health fields separate from Health-blank values. Threshold colors and interpretive labels are Observatory analytical cues and are not represented as regulatory standards.
+
+The Data Verification, Sources, and Methodology sections provide detailed provenance, limitations, source conflicts, report definitions, and release history.
+
+## Repository structure
 
 | Path | Purpose |
-| --- | --- |
-| `index.html` | Single-page application: styles, markup, data, and rendering logic. |
-| `assets/chart.umd.min.js` | Chart.js 4.4.4 (UMD build), vendored so the site has no runtime CDN dependency. |
-| `favicon.svg` | Site icon. |
-| `.github/workflows/pages.yml` | Publishes the site to the `gh-pages` branch on every push to `main`; GitHub Pages serves that branch. |
-| `.nojekyll` | Disables Jekyll processing on GitHub Pages. |
-| `validation/validation_log.csv`, `validation/validation_log.json` | Field-level validation log: every published figure, its source value, page or file location, result and UTC timestamp. Regenerated on each validation pass. |
+|---|---|
+| `index.html` | Complete standalone production dashboard |
+| `favicon.svg` | Repository site icon |
+| `.github/workflows/pages.yml` | Publishes the repository root to `gh-pages` |
+| `.nojekyll` | Disables Jekyll processing |
+| `assets/` | Retained historical static assets from earlier releases |
+| `validation/` | Retained historical validation artifacts |
+| `preview/` | Retained historical design and analysis previews |
 
-Typography is loaded from Google Fonts (Inter, Fraunces, Plus Jakarta Sans) with system fallbacks.
-
-## Local preview
-
-The site is static. Open `index.html` directly, or serve the folder:
-
-```bash
-python3 -m http.server 8000
-# then open http://localhost:8000/
-```
+The current production dashboard is self-contained except for Google Fonts and Chart.js 4.4.4 loaded from public CDNs. All insurance data and application logic required for the published interface are embedded in `index.html`.
 
 ## Deployment
 
-Live site: https://epac-hub.github.io/PR-Insurance-Observatory/
+The default branch is `claude/great-ptolemy-slaw15`. A push to that branch triggers `.github/workflows/pages.yml`, which republishes the repository root to the `gh-pages` branch. GitHub Pages serves the `gh-pages` branch with HTTPS enforced.
 
-Pushes to `main` (or, until the default branch is renamed, to `claude/great-ptolemy-slaw15`)
-run the workflow, which copies the repository root (minus `.github`, `README.md`, and
-`.gitignore`) into the `gh-pages` branch. GitHub Pages is configured to deploy from that
-branch, so the site updates within a minute or two of each run. Do not edit `gh-pages` by
-hand; it is overwritten on every deploy.
-
-## Validation and timestamps
-
-The site carries two timestamps, shown in the header badge, the footer and the Validation tab (Data menu):
-
-- **Dataset vintage** (`2026-09-05`): the OCS, CMS, HRSA and SEC vintages the dataset was built from.
-- **Data last updated / validation pass completed**: the UTC moment the last full-source validation finished and its corrections were applied.
-
-The 2026-09-14 pass read every primary document and compared it with the value shown on the site:
-
-| Source | Documents | Method |
-| --- | --- | --- |
-| OCS Planilla de Salud FY2024, FY2025, 1Q2026 | 3 PDFs | PyMuPDF text extraction; every coverage row and total compared with the detail and summary pages |
-| OCS / NAIC-format annual statements, 9 entities | 18 PDFs | Statement of Revenue and Expenses, enrollment exhibit, balance sheet and Analysis of Operations by Lines of Business, field by field |
-| CMS MA enrollment (Aug 2026), 2026 Star Ratings, CY2027 Rate Book | 3 ZIPs | Puerto Rico rows recomputed from the CSV and XLSX tables |
-| HRSA HPSA quarterly summary | 1 PDF | Puerto Rico rows of Tables 3, 4 and 5 |
-| SEC Forms 10-K FY2025 (UNH, ELV, HUM, CVS) and NYSE listings | 4 filings | Cover page, EDGAR index, ratios located and margins recomputed |
-| Official index pages (OCS annual statements, OCS Planillas) | 2 pages | Captured independently with Firecrawl and Apify to confirm every cited PDF is listed |
-
-Every card and every entity row on the site links to its primary document and to the official index page. All cited URLs are checked for a live HTTP response and listed in the Validation tab.
-
-Corrections applied by the 2026-09-14 pass: HRSA Puerto Rico HPSA figures replaced with the source values; FY2024 core-entity comparatives aligned to the FY2024 statements as filed (restated figures disclosed in Methodology); three $1 to $2 source-rounding differences aligned to the Statement of Revenue and Expenses.
-
-To re-run a validation pass, regenerate `validation/validation_log.*` and the `VALIDATION` object embedded in `index.html` from the per-source result files (see the `build_validation.py` approach described in the commit history), then redeploy.
-
-## Provenance
-
-This site was migrated from a Manus-hosted deployment. The migration removed the
-Manus editor runtime, Manus PWA manifest, and Plausible analytics; the application
-markup, data, and logic are unchanged.
+Do not edit `gh-pages` directly; the deployment workflow recreates it from the source branch.
 
 ## Disclaimer
 
 Analytical platform. Not a legal conclusion, audit opinion, actuarial certification, or regulatory finding.
-
-## Visual and calculation revision — September 14, 2026
-
-The overview now opens with four scoped metrics, a shared-scale premium/claims comparison, all nine insurer results, all ten coverage categories, and a paid-claims ratio view. Its year selector switches FY2024/FY2025; the two-year comparison and latest-quarter context retain explicit periods. The insurer section adds simultaneous annual premium comparison and net-income change charts above the exact detail table. Responsive sidebar navigation, larger typography, direct labels, keyboard controls, light/dark support, existing CSV exports and source links remain available.
-
-The independent review in `validation/independent_ocs_recheck.json` records 18 insurer PDFs and 3 Planillas checked, actual Composio/Firecrawl/Apify provenance, index-extraction limitations, and corrected calculations. Statutory totals now include zero-premium lines with financial activity. Benefits/admin ratios use matched eight-filer populations. Share changes are computed before rounding. Paid-claims ratios do not receive financial-health classifications.
-
-`assets/observatory.css` and `assets/observatory.js` extend the original static application. No runtime API credentials or new backend service are needed.
-
-The targeted federal review in `validation/federal_recheck.json` matched 62 retained CMS, HRSA and SEC numeric fields. CMS suppression language now correctly states counts of 10 or less; suppressed cells are not zero and are not imputed. Source hashes and comparison scopes are recorded.
-
-## Interactive visual revision — September 14, 2026
-
-The second design pass adds `assets/explorer.js` and `assets/explorer.css`: a scoped market pulse, premium composition ring (Medicare categories, Vital, other seven coverages), a four-metric insurer explorer, an entity spotlight linked to filings, a net-income-change waterfall, growth/profitability bubbles, and an eight-Health-filer ratio comparison. Year, metric and entity state survive theme changes. Native controls and exact-value tables support keyboard and touch use. The waterfall and growth comparison explicitly retain FY2024/FY2025 periods. Existing detailed analysis, federal context, exports and validation records remain.
-
-All new calculations derive from the existing verified data objects. The nine-entity share denominator excludes the wider Planilla market; NI/premiums is not a revenue net margin; missing Health-blank fields are omitted. Bubble area scales with premiums. Annual and Q1 2026 values stay separate.
-
-Lovable was used to create an editable Visual Lab prototype and explore the editorial-finance palette and interactive ranking/spotlight pattern. Canva was queried for existing Observatory/ePAC assets and brand kits; no relevant reusable asset was found. Wix account context and design-system chart documentation were consulted; the production site remains on GitHub Pages. No unrelated pharmacy data or site was modified.
-
-### Apache ECharts integration and period tabs
-
-The overview, insurer and coverage pages use locally vendored Apache ECharts
-6.0.0 (SVG renderer), with license and notice under `assets/vendor/`.
-English-language period tabs select 2024, 2025 or Q1 2026 consistently across
-these pages. Shareable URLs use `?period=2024`, `?period=2025` or
-`?period=q1-2026`. The same component structure, chart types, colors, controls
-and units serve all periods. Annual charts use matching scales where applicable.
-
-Eight main views cover market premiums/claims, a ten-coverage treemap with a
-three-group ring toggle, coverage premiums/claims, coverage enrollment and paid
-claims ratio, insurer ranking with optional paired-year comparison, a signed
-net-income contribution waterfall, insurer scale and result, and an eight-filer
-medical/administrative cost heatmap. Insurer selection links the ranking,
-spotlight, waterfall, scatter and heatmap. Keyboard entity buttons, period-tab
-arrow navigation, exact-value tables and source links are provided. Reused
-instances animate updates, respecting reduced-motion preferences.
-
-Q1 2026 has the same four market/coverage visualizations using actual quarterly
-Planilla data. The four insurer views show explicit unavailable states because
-verified quarterly insurer statements are not in the dataset. No annual values
-are substituted, extrapolated or annualized. Legacy annual filing comparisons
-remain explicitly labeled; they are hidden on the quarterly insurer page.
-Dollar chart labels use M = millions, explained visibly in English.
-
-Validation with the actual ECharts library checked equal annual structures,
-exact selected-period values, signed waterfall reconciliation, linked selection,
-instance reuse, all period/toggle controls, quarterly coverage totals, explicit
-missing-data states, synchronized navigation, theme state and shareable URLs.
-No inline source data or legacy calculation code was changed.
-
-### Executive landing view
-
-The default landing view has three period tabs, three market KPIs, and two
-horizontal bar charts: insurer premiums and coverage premiums. One Dollars /
-Share switch controls both charts, using their separate statutory-insurer and
-market-wide denominators. Labels show complete reported names and direct values.
-Selecting an insurer opens a dismissible native dialog with profit/loss,
-medical and administrative expense ratios, and its source filing. Keyboard
-users can reach the same insurer choices. The additional visualizations and
-tables live under a closed-by-default View details disclosure and initialize
-only when opened. Q1 2026 explicitly lacks insurer financial statements; its
-market KPIs and coverage chart use actual quarterly values.
-
-## Institutional visual briefing (September 2026)
-
-The English-language opening view now exposes market structure, premium/claims comparisons, insurer rankings, profit/loss contributions, scatter analysis and the expense heatmap. FY2024, FY2025 and Q1 2026 use the same section order. Quarterly insurer charts explicitly report unavailable data. Quarterly amounts are not annualized. The paid claims ratio is not statutory MLR.
-
-### Design and chart system
-- `assets/design-tokens.css`: canvas, foreground, borders and semantic series colors.
-- `assets/briefing.css`: layout, mobile behavior and print brief.
-- `assets/chart-theme.js`: shared `palette`, `base` and `axis` theme functions. `assets/echarts-observatory.js` binds data to real ECharts SVG charts.
-- `assets/briefing.js`: selected-period CSV, chart PNG, print and keyboard navigation (`/`, `Esc`, `j`, `k`).
-
-Art direction: an institutional reading surface with near-black canvas, restrained sea-glass emphasis, neutral comparison series and crimson losses. Large figures establish the question; direct chart labels and nearby source notes supply the evidence. Keep source scope explicit and preserve room for labels. Avoid decorative imagery, multicolor palettes, complex menus and invented time series.
-
-### Replacing the data
-Update the existing `D` and `PLANILLA` source objects in `index.html`, retaining their schemas and source URLs. `PLANILLA.market` and `.coverage` use `FY24`, `FY25`, `Q1_2026`; `D` contains annual insurer fields such as `p24`, `p25`, `ni24`, `ni25`, `tm24`, `a24` and corresponding filing links. Preserve missing observations as missing, not zero. Reconcile coverage totals against market totals and separately reconcile statutory insurer totals. Do not combine the two scopes. Add quarterly insurer support only with matched quarterly filings. The data currently do not support monthly sparklines or a 24-point history; none is fabricated.
