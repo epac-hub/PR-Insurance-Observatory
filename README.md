@@ -6,9 +6,9 @@ The **Puerto Rico Insurance Observatory** is a public, source-verified dashboard
 
 ## Current release
 
-**Release:** `2026-09-16.1`
+**Release:** `2026-09-16.2`
 
-**Website updated:** 09-16-2026 05:50 AM AST
+**Website updated:** 09-16-2026 08:01 PM AST
 
 **Data and source links last verified in the dashboard:** 09-15-2026 04:38 PM AST
 
@@ -36,6 +36,8 @@ The current interface contains 16 sections:
 The dashboard preserves distinct FY2024, FY2025, 2024-vs-2025, and 1Q2026 reporting modes. Areas without verified quarterly source data show an unavailable state rather than substituted, carried-forward, annualized, or inferred values.
 
 Every chart includes reading guidance, CSV and JSON exports, source provenance, clickable official links, exact PDF-page or workbook references where applicable, and source-verification timestamps. The interface also provides fullscreen presentation mode and complete-dashboard PDF preparation.
+
+The Overview premium and covered-lives donuts use compact circular in-ring labels rather than rectangular overlays. The label shows the market denominator by default and the focused category’s exact value and share on hover or keyboard focus. The Overview ratio is labeled **Paid Claims Ratio** and shows the exact claims-paid ÷ premium calculation, a plain-language interpretation, and a 100% claims-versus-arithmetic-remainder composition. The remainder is explicitly not represented as profit.
 
 ## Verification status
 
