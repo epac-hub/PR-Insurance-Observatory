@@ -1,5 +1,7 @@
 # Puerto Rico Insurance Observatory
 
+Live site: https://insurancepr.org/ (GitHub Pages custom domain; the github.io URL redirects there). insurancepr.net forwards to the .org.
+
 The **Puerto Rico Insurance Observatory** is a public, source-verified dashboard covering Puerto Rico’s health-insurance market. It includes FY2024, FY2025, and quarter-ended 03-31-2026 views, together with statutory insurer filings and federal context from CMS, HRSA, and SEC sources.
 
 **Live site:** <https://epac-hub.github.io/PR-Insurance-Observatory/>
