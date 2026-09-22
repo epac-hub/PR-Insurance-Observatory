@@ -5,8 +5,8 @@
   "data_updated": "2026-09-14T14:13:44Z",
   "data_refreshed": "2026-09-05",
   "validation_pass": "2026-09-14 full-source validation",
-  "total_checks": 429,
-  "total_matches": 392,
+  "total_checks": 448,
+  "total_matches": 411,
   "total_mismatches": 26,
   "datasets": [
    {
@@ -5371,6 +5371,196 @@
    "location": "enroll: SCC_Enrollment_MA_2026_09.csv (State=PR)",
    "result": "OMISSION (0 enrollment)",
    "validated_at": "2026-09-14T16:21:02Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2025",
+   "item": "MCS Advantage, Inc. official site link",
+   "website_value": "https://mcsclassicare.com/en/Pages/home.aspx",
+   "source_value": "Live: crawled OK via Apify website-content-crawler run ZS89kPcZ6yd8S64sp (9/9 succeeded) + Firecrawl search; title: MCS Classicare - Home",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2024+FY2025",
+   "item": "MCS Advantage, Inc. OCS Annual Statement PDFs (s24, s25)",
+   "website_value": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Advantage,%20Inc.pdf ; https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Advantage,%20Inc..pdf",
+   "source_value": "Both HTTP 200 at docs.pr.gov",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2025",
+   "item": "MMM Healthcare, LLC official site link",
+   "website_value": "https://mmm-pr.com/en/",
+   "source_value": "Live: crawled OK via Apify website-content-crawler run ZS89kPcZ6yd8S64sp (9/9 succeeded) + Firecrawl search; title: Home | MMM",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2024+FY2025",
+   "item": "MMM Healthcare, LLC OCS Annual Statement PDFs (s24, s25)",
+   "website_value": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Healthcare,%20LLC.pdf ; https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Healthcare,%20LLC.pdf",
+   "source_value": "Both HTTP 200 at docs.pr.gov",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2025",
+   "item": "Triple-S Salud, Inc. official site link",
+   "website_value": "https://salud.grupotriples.com/en/",
+   "source_value": "Live: crawled OK via Apify website-content-crawler run ZS89kPcZ6yd8S64sp (9/9 succeeded) + Firecrawl search; title: Triple-S Salud: Health plans for families, employers and individuals",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2024+FY2025",
+   "item": "Triple-S Salud, Inc. OCS Annual Statement PDFs (s24, s25)",
+   "website_value": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Salud,%20Inc.pdf ; https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Salud,%20Inc..pdf",
+   "source_value": "Both HTTP 200 at docs.pr.gov",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2025",
+   "item": "First Medical Health Plan, Inc. official site link",
+   "website_value": "https://www.firstmedicalpr.com/",
+   "source_value": "Live: crawled OK via Apify website-content-crawler run ZS89kPcZ6yd8S64sp (9/9 succeeded) + Firecrawl search; title: First Medical Health Plan , Inc",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2024+FY2025",
+   "item": "First Medical Health Plan, Inc. OCS Annual Statement PDFs (s24, s25)",
+   "website_value": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/First%20Medical%20Health%20Plan,%20Inc.pdf ; https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/First%20Medical%20Health%20Plan,%20Inc..pdf",
+   "source_value": "Both HTTP 200 at docs.pr.gov",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2025",
+   "item": "Triple-S Advantage, Inc. official site link",
+   "website_value": "https://advantage.grupotriples.com/en/",
+   "source_value": "Live: crawled OK via Apify website-content-crawler run ZS89kPcZ6yd8S64sp (9/9 succeeded) + Firecrawl search; title: Medical plans for seniors - Triple-S Advantage",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2024+FY2025",
+   "item": "Triple-S Advantage, Inc. OCS Annual Statement PDFs (s24, s25)",
+   "website_value": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Advantage,%20Inc.pdf ; https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Advantage,%20Inc..pdf",
+   "source_value": "Both HTTP 200 at docs.pr.gov",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2025",
+   "item": "MMM Multi Health, LLC official site link",
+   "website_value": "https://www.multihealth-vital.com/eng/",
+   "source_value": "Live: crawled OK via Apify website-content-crawler run ZS89kPcZ6yd8S64sp (9/9 succeeded) + Firecrawl search; title: MMM Multi Health",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2024+FY2025",
+   "item": "MMM Multi Health, LLC OCS Annual Statement PDFs (s24, s25)",
+   "website_value": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Multi%20Health,%20LLC.pdf ; https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Multi%20Health,%20LLC.pdf",
+   "source_value": "Both HTTP 200 at docs.pr.gov",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2025",
+   "item": "Plan de Salud Menonita, Inc. official site link",
+   "website_value": "https://planmenonita.org/",
+   "source_value": "Live: crawled OK via Apify website-content-crawler run ZS89kPcZ6yd8S64sp (9/9 succeeded) + Firecrawl search; title: Plan de Salud Menonita: Home",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2024+FY2025",
+   "item": "Plan de Salud Menonita, Inc. OCS Annual Statement PDFs (s24, s25)",
+   "website_value": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Plan%20de%20Salud%20Menonita,%20Inc.pdf ; https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Plan%20de%20Salud%20Menonita,%20Inc..pdf",
+   "source_value": "Both HTTP 200 at docs.pr.gov",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2025",
+   "item": "MCS Life Insurance Company official site link",
+   "website_value": "https://mcs.com.pr/en/Pages/home.aspx",
+   "source_value": "Live: crawled OK via Apify website-content-crawler run ZS89kPcZ6yd8S64sp (9/9 succeeded) + Firecrawl search; title: MCS",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2024+FY2025",
+   "item": "MCS Life Insurance Company OCS Annual Statement PDFs (s24, s25)",
+   "website_value": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Life%20Insurance%20Company.pdf ; https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Life%20Insurance%20Company.pdf",
+   "source_value": "Both HTTP 200 at docs.pr.gov",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2025",
+   "item": "Humana Health Plans of Puerto Rico, Inc. official site link",
+   "website_value": "https://www.humana.com/",
+   "source_value": "Live: crawled OK via Apify website-content-crawler run ZS89kPcZ6yd8S64sp (9/9 succeeded) + Firecrawl search; title: Humana | Find Medicare Plans and Health Insurance Coverage",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2024+FY2025",
+   "item": "Humana Health Plans of Puerto Rico, Inc. OCS Annual Statement PDFs (s24, s25)",
+   "website_value": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc.pdf ; https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc..pdf",
+   "source_value": "Both HTTP 200 at docs.pr.gov",
+   "location": "#prof pcard source links",
+   "result": "YES",
+   "validated_at": "2026-09-22T02:03:20Z"
+  },
+  {
+   "dataset": "Profiles sources",
+   "period": "FY2024+FY2025",
+   "item": "Net income margin rows (all 9 entities)",
+   "website_value": "ni/premium*100, 1 decimal",
+   "source_value": "Derived from already-validated statutory net income and premium written (Annual Statement page 4); e.g. MCS Advantage FY2025 101,374,716/4,730,861,034 = 2.1%",
+   "location": "#prof pcard Net income margin row",
+   "result": "YES (derived)",
+   "validated_at": "2026-09-22T02:03:20Z"
   }
  ]
 }
