@@ -1,0 +1,2 @@
+/* Institutional briefing tokens. Shared by CSS and the ECharts theme reader. */
+:root,[data-theme="dark"],[data-theme="light"]{color-scheme:dark;--bg:#080a0e;--grad-top:#080a0e;--grad-bot:#080a0e;--cd:#0d1218;--cd2:#131b22;--t1:#f1f5f6;--t2:#abb8c1;--t3:#95a6b2;--bs:#ffffff1f;--ac:#65d9c4;--ah:#a1efe0;--vx-teal:#65d9c4;--vx-blue:#b7c8cf;--vx-amber:#e5b765;--vx-loss:#f07687;--vx-ink:#f1f5f6;--vx-wash:#122c2b;--series-claims:#b7c8cf;--series-prior:#73898e;--brief-radius:8px}
