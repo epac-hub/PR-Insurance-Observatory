@@ -1,0 +1,183 @@
+{
+  "scope": "Independent recheck of current repository OCS data; not a complete audit of CMS/HRSA/SEC modules",
+  "checked_at_utc": "2026-09-14T19:20:34.533050+00:00",
+  "method": [
+    "Downloaded 18 individual 2024/2025 OCS insurer annual statement PDFs and 3 Planilla PDFs from embedded original OCS URLs",
+    "Read extracted statement pages and Planilla detail/summary tables; matched 77 FY2025 and 50 FY2024 current numeric fields on expected early filing pages",
+    "Recomputed core premium and net income aggregates; compared original annual-report summary separately to resolve differing universes"
+  ],
+  "core": {
+    "premium_2025": 17052989443,
+    "premium_2024_as_filed": 15319737318,
+    "net_income_2025": -19834178,
+    "net_income_2024_as_filed": 103965434,
+    "entity_count": 9,
+    "health_blank_entities": 8,
+    "life_blank_entities": 1,
+    "exact_field_presence_checks_2025": 77,
+    "exact_field_presence_checks_2024": 50
+  },
+  "planilla": {
+    "FY24": {
+      "prem": 15460881103,
+      "claims": 13715858154,
+      "lives": 2955747,
+      "mlr": 0.8871330205972932
+    },
+    "FY25": {
+      "prem": 17182555169,
+      "claims": 15492767512,
+      "lives": 2999355,
+      "mlr": 0.9016567885055513
+    },
+    "Q1_2026": {
+      "prem": 4525571406,
+      "claims": 3762741555,
+      "lives": 2988792,
+      "mlr": 0.831440102792624
+    }
+  },
+  "source_conflict": {
+    "detailPageTotal": 15492767512,
+    "summaryPageTotal": 15492571266,
+    "difference": 196246,
+    "basisUsed": "Detailed PDF page 2"
+  },
+  "historical_core_reconciliation": {
+    "previous_2024_core": 15326720529,
+    "current_2024_core_as_filed": 15319737318,
+    "difference": 6983211,
+    "reason": "Menonita 2024 premium originally filed 707735210 vs 714718421 shown as prior year in 2025 statement. Current site consistently uses 2024 as filed; prior total used Menonita restated number."
+  },
+  "findings": [
+    "Current 2025 core9 premium $17052989443 is supported by individual statements. It is not an OCS total-market figure.",
+    "Current 2024 as-filed core9 premium is $15319737318; do not restore $15326720529 absent explicit change to restated baseline.",
+    "MCS Advantage 2025 premium $4730861034 and net income $101374716 confirmed on annual statement p4 and OCS annual annex Table2A p10.",
+    "Plan Vital 2025 premium is $4994843984 in current Planilla. Older $4947895588 does not match current source.",
+    "Planilla2025 detailed claims p2 total $15492767512 differs from summary p8 $15492571266 by $196246, entirely Private Individual Plans. Retain current documented detailed-page basis.",
+    "Planilla p8 prints MLR per coverage based on claims PAID divided by premiums WRITTEN. Market ratio 90.16567885055513% is calculated, not an OCS printed total. Avoid interpreting this as regulatory adjusted/incurred MLR.",
+    "MCS Life premium includes life and accident/health (Life blank Summary of Operations line1); exclusion of its medical/admin ratios is appropriate.",
+    "Planilla insured totals are reported coverage counts. Do not claim independently deduplicated unique residents or directly equate to member-month average enrollment.",
+    "2024 vs 2025 Medicare Advantage/Platino coverage-category shifts do not alone demonstrate patient movement; group coverage taxonomy differs from CMS contracts.",
+    "Current validation log has 459 rows including 30 live-link checks; headline429 is correct for non-link rows. 392 matches is historic validation result, not proof that every page number has been independently rechecked in this turn."
+  ],
+  "alternate_ocs_market_scope": {
+    "value": 17633869662,
+    "label": "Authorized Disability & Health insurers plus HMOs written premiums, Table17A annual annex p141",
+    "nine_insurer_written_premium_subtotal": 17051146075,
+    "note": "Different premium basis/universe from Planilla and current core9; preserve separation instead of overwriting current totals.",
+    "source_url": "https://docs.pr.gov/files/OCS/informe-anual/2025/2025%20-%20ANEJOS%20INFORME%20ANUAL%20OCS.pdf#page=141"
+  },
+  "sources": [
+    {
+      "id": "mcsa",
+      "entity": "MCS Advantage",
+      "annual2025": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Advantage,%20Inc..pdf",
+      "annual2024": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Advantage,%20Inc.pdf"
+    },
+    {
+      "id": "mmmhc",
+      "entity": "MMM Healthcare",
+      "annual2025": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Healthcare,%20LLC.pdf",
+      "annual2024": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Healthcare,%20LLC.pdf"
+    },
+    {
+      "id": "tss",
+      "entity": "Triple-S Salud",
+      "annual2025": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Salud,%20Inc..pdf",
+      "annual2024": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Salud,%20Inc.pdf"
+    },
+    {
+      "id": "fmhp",
+      "entity": "First Medical",
+      "annual2025": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/First%20Medical%20Health%20Plan,%20Inc..pdf",
+      "annual2024": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/First%20Medical%20Health%20Plan,%20Inc.pdf"
+    },
+    {
+      "id": "tsa",
+      "entity": "Triple-S Advantage",
+      "annual2025": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Triple-S%20Advantage,%20Inc..pdf",
+      "annual2024": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Triple-S%20Advantage,%20Inc.pdf"
+    },
+    {
+      "id": "mmmm",
+      "entity": "MMM Multi Health",
+      "annual2025": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Multi%20Health,%20LLC.pdf",
+      "annual2024": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Multi%20Health,%20LLC.pdf"
+    },
+    {
+      "id": "meno",
+      "entity": "Menonita",
+      "annual2025": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Plan%20de%20Salud%20Menonita,%20Inc..pdf",
+      "annual2024": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Plan%20de%20Salud%20Menonita,%20Inc.pdf"
+    },
+    {
+      "id": "mcsl",
+      "entity": "MCS Life",
+      "annual2025": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MCS%20Life%20Insurance%20Company.pdf",
+      "annual2024": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MCS%20Life%20Insurance%20Company.pdf"
+    },
+    {
+      "id": "huma",
+      "entity": "Humana HP",
+      "annual2025": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc..pdf",
+      "annual2024": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/Humana%20Health%20Plans%20of%20Puerto%20Rico,%20Inc.pdf"
+    },
+    {
+      "planilla2025": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+      "planilla2024": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+      "planilla_q1_2026": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2026/2026.1Q%20-%20Planilla%20de%20Salud.pdf"
+    }
+  ],
+  "connectors": {
+    "provider": "Composio",
+    "firecrawl": {
+      "planilla_scrape_id": "01a0a15f-789e-738b-8d96-abd88ce3fa51",
+      "annual_index_scrape_id": "01a0a15f-78a8-71ce-a918-cd03f8b97217",
+      "planilla_cited_pdfs_present": 3,
+      "annual_statement_pdf_links_exposed": false
+    },
+    "apify": {
+      "actor": "apify/website-content-crawler",
+      "run_id": "qxmhyc550in3AB6O3",
+      "dataset_id": "daKUdaklfp9wFHzC1",
+      "finished_at": "2026-09-14T19:23:57.580Z",
+      "status": "SUCCEEDED",
+      "pages": 2,
+      "planilla_cited_pdfs_present": 3,
+      "annual_statement_pdf_links_exposed": false
+    },
+    "limitation": "Annual index captures did not expose insurer PDF links; all 18 cited insurer PDFs were directly downloaded and rechecked separately."
+  },
+  "calculation_corrections": [
+    {
+      "item": "Health-blank comparison ratios",
+      "before": "8-filer numerator / 9-entity premium",
+      "after": "same 8 filers in numerator and denominator"
+    },
+    {
+      "item": "2025 LOB administrative total",
+      "before": 1418054136,
+      "after": 1399906825
+    },
+    {
+      "item": "2024 LOB administrative total",
+      "before": 1297974671,
+      "after": 1283753214
+    },
+    {
+      "item": "2025 LOB underwriting result",
+      "before": -142606817,
+      "after": -116720825
+    },
+    {
+      "item": "2024 LOB underwriting result",
+      "before": -19245009,
+      "after": 4843771
+    },
+    {
+      "item": "Share delta",
+      "after": "subtract unrounded shares, then round to 0.1 percentage point"
+    }
+  ]
+}

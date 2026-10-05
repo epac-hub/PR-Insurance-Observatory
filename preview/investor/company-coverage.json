@@ -1,0 +1,3677 @@
+{
+  "scope": "Company rows from OCS Planilla de Salud; reported lives differ from statutory average membership",
+  "entities": {
+    "mcsa": {
+      "entityId": "mcsa",
+      "legalEntity": "MCS Advantage, Inc.",
+      "sourceCompanyName": "MCS Advantage Inc.",
+      "naic": "13022",
+      "sourceCompanyRow": 4,
+      "sourceSection": "Health Maintenance Organizations",
+      "periods": {
+        "FY24": {
+          "year": 2024,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "f6683e0cf27ebdccadfd46bdbec2af9ff4fe3b63ff432637d6570f3b73c4cd37",
+          "sourceCompanyRow": 4,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 3605893822,
+            "claims": 3041848211,
+            "lives": 290855
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": 1160095593,
+              "claims": 850185494,
+              "lives": 109696,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "1,160,095,593",
+                "claims": "850,185,494",
+                "lives": "109,696"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": 2145202767,
+              "claims": 1954011453,
+              "lives": 164181,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "2,145,202,767",
+                "claims": "1,954,011,453",
+                "lives": "164,181"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + - + -",
+                "claims": "- + - + - + -",
+                "lives": "- + - + - + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": 300595462,
+              "claims": 237651264,
+              "lives": 16978,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "- + 300,595,462 + -",
+                "claims": "- + 237,651,264 + -",
+                "lives": "- + 16,978 + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        },
+        "FY25": {
+          "year": 2025,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "6e1b98ea9112ac8297c0342495198968b4b6d5c487fc278cdab4e321a2220149",
+          "sourceCompanyRow": 4,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 4730861034,
+            "claims": 4107025966,
+            "lives": 336963
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": 1533259432,
+              "claims": 1258560594,
+              "lives": 130338,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "1,533,259,432",
+                "claims": "1,258,560,594",
+                "lives": "130,338"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": 2827583327,
+              "claims": 2505425390,
+              "lives": 184899,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "2,827,583,327",
+                "claims": "2,505,425,390",
+                "lives": "184,899"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "blank",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "[blank] + [blank]",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "blank",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "[blank] + [blank]",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "blank",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + - + -",
+                "claims": "[blank] + [blank] + [blank] + [blank]",
+                "lives": "- + - + - + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": 370018275,
+              "claims": 343039982,
+              "lives": 21726,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "- + 370,018,275 + -",
+                "claims": "[blank] + 343,039,982 + -",
+                "lives": "- + 21,726 + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "mmmhc": {
+      "entityId": "mmmhc",
+      "legalEntity": "MMM Healthcare, LLC",
+      "sourceCompanyName": "MMM Healthcare, LLC",
+      "naic": "11157",
+      "sourceCompanyRow": 6,
+      "sourceSection": "Health Maintenance Organizations",
+      "periods": {
+        "FY24": {
+          "year": 2024,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "f6683e0cf27ebdccadfd46bdbec2af9ff4fe3b63ff432637d6570f3b73c4cd37",
+          "sourceCompanyRow": 6,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 3051305347,
+            "claims": 2777594302,
+            "lives": 209914
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": 3051305347,
+              "claims": 2777594302,
+              "lives": 209914,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "3,051,305,347",
+                "claims": "2,777,594,302",
+                "lives": "209,914"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + - + -",
+                "claims": "- + - + - + -",
+                "lives": "- + - + - + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + -",
+                "claims": "- + - + -",
+                "lives": "- + - + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        },
+        "FY25": {
+          "year": 2025,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "6e1b98ea9112ac8297c0342495198968b4b6d5c487fc278cdab4e321a2220149",
+          "sourceCompanyRow": 6,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 3297440566,
+            "claims": 2961819406,
+            "lives": 214291
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": 843486078,
+              "claims": 767753126,
+              "lives": 79080,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "843,486,078",
+                "claims": "767,753,126",
+                "lives": "79,080"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": 1976175346,
+              "claims": 1787691041,
+              "lives": 102005,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "1,976,175,346",
+                "claims": "1,787,691,041",
+                "lives": "102,005"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + - + -",
+                "claims": "- + - + - + -",
+                "lives": "- + - + - + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": 477779142,
+              "claims": 406375239,
+              "lives": 33206,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "- + 477,779,142 + -",
+                "claims": "- + 406,375,239 + -",
+                "lives": "- + 33,206 + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "tss": {
+      "entityId": "tss",
+      "legalEntity": "Triple-S Salud, Inc.",
+      "sourceCompanyName": "Triple-S Salud, Inc.",
+      "naic": "55816",
+      "sourceCompanyRow": 5,
+      "sourceSection": "Domestic Insurers",
+      "periods": {
+        "FY24": {
+          "year": 2024,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "f6683e0cf27ebdccadfd46bdbec2af9ff4fe3b63ff432637d6570f3b73c4cd37",
+          "sourceCompanyRow": 5,
+          "sourceSection": "Domestic Insurers",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 2542413310,
+            "claims": 2303316874,
+            "lives": 799547
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": 1543218401,
+              "claims": 1469259469,
+              "lives": 397463,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "1,543,218,401",
+                "claims": "1,469,259,469",
+                "lives": "397,463"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": 479898010,
+              "claims": 392790708,
+              "lives": 240177,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "469,479,815 + 10,418,195",
+                "claims": "385,169,536 + 7,621,172",
+                "lives": "240,177 + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": 78194667,
+              "claims": 65812929,
+              "lives": 23117,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "52,457,317 + 25,737,350",
+                "claims": "44,522,171 + 21,290,758",
+                "lives": "16,884 + 6,233"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": 149757271,
+              "claims": 118284118,
+              "lives": 63640,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "124,392,408 + 25,364,863",
+                "claims": "95,945,901 + 22,338,217",
+                "lives": "51,988 + 11,652"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": 20951875,
+              "claims": 12340374,
+              "lives": 12276,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "5,838,311 + - + 15,113,564 + -",
+                "claims": "586,673 + - + 11,753,701 + -",
+                "lives": "- + - + 1,809 + 10,467"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": 5948074,
+              "claims": 4545806,
+              "lives": 1311,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "5,948,074 + - + -",
+                "claims": "4,545,806 + - + -",
+                "lives": "1,311 + - + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": 255290809,
+              "claims": 232412777,
+              "lives": 58040,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "255,290,809",
+                "claims": "232,412,777",
+                "lives": "58,040"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": 9154203,
+              "claims": 7870693,
+              "lives": 3523,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "9,154,203",
+                "claims": "7,870,693",
+                "lives": "3,523"
+              }
+            }
+          ]
+        },
+        "FY25": {
+          "year": 2025,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "6e1b98ea9112ac8297c0342495198968b4b6d5c487fc278cdab4e321a2220149",
+          "sourceCompanyRow": 5,
+          "sourceSection": "Domestic Insurers",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 2864293853,
+            "claims": 2655530509,
+            "lives": 816182
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": 1842782474,
+              "claims": 1833551851,
+              "lives": 420312,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "1,842,782,474",
+                "claims": "1,833,551,851",
+                "lives": "420,312"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": 491576684,
+              "claims": 371209849,
+              "lives": 244490,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "491,576,684 + -",
+                "claims": "371,209,849 + -",
+                "lives": "244,490 + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": 77985874,
+              "claims": 58901539,
+              "lives": 20962,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "56,710,141 + 21,275,733",
+                "claims": "44,000,804 + 14,900,735",
+                "lives": "15,480 + 5,482"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": 152091413,
+              "claims": 118703814,
+              "lives": 62248,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "129,211,488 + 22,879,925",
+                "claims": "98,741,795 + 19,962,019",
+                "lives": "52,061 + 10,187"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": 25624180,
+              "claims": 19257816,
+              "lives": 15278,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "2,617,566 + - + 23,006,614 + -",
+                "claims": "2,433,642 + - + 16,824,174 + -",
+                "lives": "11,144 + - + 4,134 + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + -",
+                "claims": "- + - + -",
+                "lives": "- + - + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": 266672631,
+              "claims": 247409775,
+              "lives": 48276,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "266,672,631",
+                "claims": "247,409,775",
+                "lives": "48,276"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": 7560597,
+              "claims": 6495865,
+              "lives": 4616,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "7,560,597",
+                "claims": "6,495,865",
+                "lives": "4,616"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "fmhp": {
+      "entityId": "fmhp",
+      "legalEntity": "First Medical Health Plan, Inc.",
+      "sourceCompanyName": "First Medical Health Plan, Inc.",
+      "naic": "95722",
+      "sourceCompanyRow": 2,
+      "sourceSection": "Health Maintenance Organizations",
+      "periods": {
+        "FY24": {
+          "year": 2024,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "f6683e0cf27ebdccadfd46bdbec2af9ff4fe3b63ff432637d6570f3b73c4cd37",
+          "sourceCompanyRow": 2,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 1681971106,
+            "claims": 1588540476,
+            "lives": 482364
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": 1134008719,
+              "claims": 1093201965,
+              "lives": 267741,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "1,134,008,719",
+                "claims": "1,093,201,965",
+                "lives": "267,741"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": 53888185,
+              "claims": 46457984,
+              "lives": 20234,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "52,807,737 + 1,080,448",
+                "claims": "45,514,291 + 943,693",
+                "lives": "19,766 + 468"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": 68334433,
+              "claims": 55265028,
+              "lives": 29779,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "68,152,934 + 181,499",
+                "claims": "55,135,542 + 129,486",
+                "lives": "29,684 + 95"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": 131959488,
+              "claims": 103777862,
+              "lives": 61968,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "112,767,000 + 19,192,488",
+                "claims": "84,405,885 + 19,371,977",
+                "lives": "46,337 + 15,631"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": 251491165,
+              "claims": 245836800,
+              "lives": 94615,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "33,080,685 + 88,998,654 + 46,461,983 + 82,949,843",
+                "claims": "24,825,861 + 93,894,705 + 43,079,871 + 84,036,363",
+                "lives": "7,217 + 34,162 + 19,940 + 33,296"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": 42289116,
+              "claims": 44000837,
+              "lives": 8027,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "34,502 + - + 42,254,614",
+                "claims": "12,794 + - + 43,988,043",
+                "lives": "2 + - + 8,025"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        },
+        "FY25": {
+          "year": 2025,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "6e1b98ea9112ac8297c0342495198968b4b6d5c487fc278cdab4e321a2220149",
+          "sourceCompanyRow": 2,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 1624549761,
+            "claims": 1494250533,
+            "lives": 418135
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "blank",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "[blank]",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": 1125670969,
+              "claims": 1030735944,
+              "lives": 233795,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "1,125,670,969",
+                "claims": "1,030,735,944",
+                "lives": "233,795"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": 40075240,
+              "claims": 35769499,
+              "lives": 15350,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "39,289,763 + 785,477",
+                "claims": "35,206,615 + 562,884",
+                "lives": "14,857 + 493"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": 62475420,
+              "claims": 51879980,
+              "lives": 25255,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "62,282,913 + 192,507",
+                "claims": "51,744,584 + 135,396",
+                "lives": "25,159 + 96"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": 120279043,
+              "claims": 99072566,
+              "lives": 51489,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "101,896,549 + 18,382,494",
+                "claims": "80,367,482 + 18,705,084",
+                "lives": "37,546 + 13,943"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": 242509648,
+              "claims": 239817925,
+              "lives": 84753,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "27,991,007 + 89,427,908 + 42,116,782 + 82,973,951",
+                "claims": "22,799,749 + 90,781,104 + 42,067,254 + 84,169,818",
+                "lives": "6,701 + 31,346 + 16,454 + 30,252"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": 33539441,
+              "claims": 36974619,
+              "lives": 7493,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "14,664 + - + 33,524,777",
+                "claims": "5,598 + - + 36,969,021",
+                "lives": "- + - + 7,493"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "tsa": {
+      "entityId": "tsa",
+      "legalEntity": "Triple-S Advantage, Inc.",
+      "sourceCompanyName": "Triple-S Advantage, Inc.",
+      "naic": "11152",
+      "sourceCompanyRow": 12,
+      "sourceSection": "Health Maintenance Organizations",
+      "periods": {
+        "FY24": {
+          "year": 2024,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "f6683e0cf27ebdccadfd46bdbec2af9ff4fe3b63ff432637d6570f3b73c4cd37",
+          "sourceCompanyRow": 12,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 1575942912,
+            "claims": 1396040340,
+            "lives": 123429
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": 818454608,
+              "claims": 720243067,
+              "lives": 65553,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "818,454,608",
+                "claims": "720,243,067",
+                "lives": "65,553"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": 687890661,
+              "claims": 615861355,
+              "lives": 37622,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "687,890,661",
+                "claims": "615,861,355",
+                "lives": "37,622"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + - + -",
+                "claims": "- + - + - + -",
+                "lives": "- + - + - + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": 69597643,
+              "claims": 59935918,
+              "lives": 20254,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "- + 69,597,643 + -",
+                "claims": "- + 59,935,918 + -",
+                "lives": "- + 20,254 + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        },
+        "FY25": {
+          "year": 2025,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "6e1b98ea9112ac8297c0342495198968b4b6d5c487fc278cdab4e321a2220149",
+          "sourceCompanyRow": 12,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 1536319683,
+            "claims": 1434713876,
+            "lives": 106639
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": 759913385,
+              "claims": 709655868,
+              "lives": 52562,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "759,913,385",
+                "claims": "709,655,868",
+                "lives": "52,562"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": 696433081,
+              "claims": 650373888,
+              "lives": 35582,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "696,433,081",
+                "claims": "650,373,888",
+                "lives": "35,582"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + - + -",
+                "claims": "- + - + - + -",
+                "lives": "- + - + - + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": 79973217,
+              "claims": 74684120,
+              "lives": 18495,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "- + 79,973,217 + -",
+                "claims": "- + 74,684,120 + -",
+                "lives": "- + 18,495 + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "mmmm": {
+      "entityId": "mmmm",
+      "legalEntity": "MMM Multi Health, LLC",
+      "sourceCompanyName": "MMM Multi Health, LLC",
+      "naic": "12534",
+      "sourceCompanyRow": 7,
+      "sourceSection": "Health Maintenance Organizations",
+      "periods": {
+        "FY24": {
+          "year": 2024,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "f6683e0cf27ebdccadfd46bdbec2af9ff4fe3b63ff432637d6570f3b73c4cd37",
+          "sourceCompanyRow": 7,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 1225696436,
+            "claims": 1110172351,
+            "lives": 277785
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": 1225696436,
+              "claims": 1110172351,
+              "lives": 277785,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "1,225,696,436",
+                "claims": "1,110,172,351",
+                "lives": "277,785"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + - + -",
+                "claims": "- + - + - + -",
+                "lives": "- + - + - + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + -",
+                "claims": "- + - + -",
+                "lives": "- + - + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        },
+        "FY25": {
+          "year": 2025,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "6e1b98ea9112ac8297c0342495198968b4b6d5c487fc278cdab4e321a2220149",
+          "sourceCompanyRow": 7,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 1324108128,
+            "claims": 1250805182,
+            "lives": 282171
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": 1324108128,
+              "claims": 1250805182,
+              "lives": 282171,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "1,324,108,128",
+                "claims": "1,250,805,182",
+                "lives": "282,171"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + - + -",
+                "claims": "- + - + - + -",
+                "lives": "- + - + - + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + -",
+                "claims": "- + - + -",
+                "lives": "- + - + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "meno": {
+      "entityId": "meno",
+      "legalEntity": "Plan de Salud Menonita, Inc.",
+      "sourceCompanyName": "Plan de Salud Menonita, Inc.",
+      "naic": "95730",
+      "sourceCompanyRow": 10,
+      "sourceSection": "Health Maintenance Organizations",
+      "periods": {
+        "FY24": {
+          "year": 2024,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "f6683e0cf27ebdccadfd46bdbec2af9ff4fe3b63ff432637d6570f3b73c4cd37",
+          "sourceCompanyRow": 10,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 713217366,
+            "claims": 638766298,
+            "lives": 189485
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": 639316135,
+              "claims": 580301296,
+              "lives": 150900,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "639,316,135",
+                "claims": "580,301,296",
+                "lives": "150,900"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": 17288761,
+              "claims": 14535962,
+              "lives": 9556,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "16,114,474 + 1,174,287",
+                "claims": "13,536,191 + 999,771",
+                "lives": "8,797 + 759"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": 1420482,
+              "claims": 911881,
+              "lives": 826,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "1,420,482 + -",
+                "claims": "911,881 + -",
+                "lives": "826 + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": 27650872,
+              "claims": 21068315,
+              "lives": 12495,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "27,133,203 + 517,669",
+                "claims": "20,576,426 + 491,889",
+                "lives": "12,217 + 278"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": 27541116,
+              "claims": 21948844,
+              "lives": 15708,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "18,290,374 + - + 9,250,742 + -",
+                "claims": "14,036,363 + - + 7,912,481 + -",
+                "lives": "10,981 + - + 4,727 + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + -",
+                "claims": "- + - + -",
+                "lives": "- + - + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        },
+        "FY25": {
+          "year": 2025,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "6e1b98ea9112ac8297c0342495198968b4b6d5c487fc278cdab4e321a2220149",
+          "sourceCompanyRow": 10,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 775122853,
+            "claims": 739238277,
+            "lives": 193964
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "blank",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "[blank]",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": 688873943,
+              "claims": 660751650,
+              "lives": 152164,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "688,873,943",
+                "claims": "660,751,650",
+                "lives": "152,164"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": 21477253,
+              "claims": 17209694,
+              "lives": 10077,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "21,477,253 + -",
+                "claims": "17,209,694 + -",
+                "lives": "10,077 + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": 1772176,
+              "claims": 1591168,
+              "lives": 908,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "1,772,176 + -",
+                "claims": "1,591,168 + -",
+                "lives": "908 + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": 28732400,
+              "claims": 25239920,
+              "lives": 13883,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "28,310,871 + 421,529",
+                "claims": "24,488,219 + 751,701",
+                "lives": "13,657 + 226"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": 34267081,
+              "claims": 34445845,
+              "lives": 16932,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "24,435,471 + - + 9,831,610 + -",
+                "claims": "25,962,398 + - + 8,483,447 + -",
+                "lives": "11,975 + - + 4,957 + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + -",
+                "claims": "- + - + -",
+                "lives": "- + - + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "mcsl": {
+      "entityId": "mcsl",
+      "legalEntity": "MCS Life Insurance Company",
+      "sourceCompanyName": "MCS Life Insurance Company",
+      "naic": "60030",
+      "sourceCompanyRow": 4,
+      "sourceSection": "Domestic Insurers",
+      "periods": {
+        "FY24": {
+          "year": 2024,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "f6683e0cf27ebdccadfd46bdbec2af9ff4fe3b63ff432637d6570f3b73c4cd37",
+          "sourceCompanyRow": 4,
+          "sourceSection": "Domestic Insurers",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 434494534,
+            "claims": 339046224,
+            "lives": 172766
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": 229242685,
+              "claims": 184492477,
+              "lives": 100530,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "229,242,685 + -",
+                "claims": "184,492,477 + -",
+                "lives": "100,530 + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": 90886870,
+              "claims": 71543735,
+              "lives": 24681,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "42,586,970 + 48,299,900",
+                "claims": "36,475,272 + 35,068,463",
+                "lives": "13,053 + 11,628"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": 45323121,
+              "claims": 31649898,
+              "lives": 22105,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "40,615,687 + 4,707,434",
+                "claims": "28,692,052 + 2,957,846",
+                "lives": "19,892 + 2,213"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": 69041858,
+              "claims": 51360114,
+              "lives": 25450,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "- + 75,656 + - + 68,966,202",
+                "claims": "- + 63,996 + - + 51,296,118",
+                "lives": "- + 32 + - + 25,418"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + -",
+                "claims": "- + - + -",
+                "lives": "- + - + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        },
+        "FY25": {
+          "year": 2025,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "6e1b98ea9112ac8297c0342495198968b4b6d5c487fc278cdab4e321a2220149",
+          "sourceCompanyRow": 4,
+          "sourceSection": "Domestic Insurers",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 505025652,
+            "claims": 383462176,
+            "lives": 190297
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": 269281631,
+              "claims": 224385781,
+              "lives": 111386,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "269,281,631 + -",
+                "claims": "224,385,781 + -",
+                "lives": "111,386 + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": 108673947,
+              "claims": 61211379,
+              "lives": 28667,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "57,402,445 + 51,271,502",
+                "claims": "34,913,270 + 26,298,109",
+                "lives": "16,962 + 11,705"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": 63206285,
+              "claims": 42505678,
+              "lives": 28051,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "58,659,775 + 4,546,510",
+                "claims": "39,678,999 + 2,826,679",
+                "lives": "26,018 + 2,033"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": 63863789,
+              "claims": 55359338,
+              "lives": 22193,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "- + 73,942 + - + 63,789,847",
+                "claims": "- + 66,480 + - + 55,292,858",
+                "lives": "- + 32 + - + 22,161"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + -",
+                "claims": "- + - + -",
+                "lives": "- + - + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "huma": {
+      "entityId": "huma",
+      "legalEntity": "Humana Health Plans of Puerto Rico, Inc.",
+      "sourceCompanyName": "Humana Health Plans of Puerto Rico, Inc.",
+      "naic": "95721",
+      "sourceCompanyRow": 3,
+      "sourceSection": "Health Maintenance Organizations",
+      "periods": {
+        "FY24": {
+          "year": 2024,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "f6683e0cf27ebdccadfd46bdbec2af9ff4fe3b63ff432637d6570f3b73c4cd37",
+          "sourceCompanyRow": 3,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 485594760,
+            "claims": 405097721,
+            "lives": 37993
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": 145857795,
+              "claims": 144571280,
+              "lives": 17254,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "145,857,795",
+                "claims": "144,571,280",
+                "lives": "17,254"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": 312198984,
+              "claims": 231932412,
+              "lives": 18333,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "312,198,984",
+                "claims": "231,932,412",
+                "lives": "18,333"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": 5837,
+              "claims": 561253,
+              "lives": null,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "5,837 + -",
+                "claims": "561,253 + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": 280,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "numeric_sum",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "280 + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + - + -",
+                "claims": "- + - + - + -",
+                "lives": "- + - + - + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": 27259115,
+              "claims": 26423962,
+              "lives": 2406,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "- + 27,259,115 + -",
+                "claims": "- + 26,423,962 + -",
+                "lives": "- + 2,406 + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": 273029,
+              "claims": 1608534,
+              "lives": null,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "273,029",
+                "claims": "1,608,534",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        },
+        "FY25": {
+          "year": 2025,
+          "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+          "sourceFileSha256": "6e1b98ea9112ac8297c0342495198968b4b6d5c487fc278cdab4e321a2220149",
+          "sourceCompanyRow": 3,
+          "sourceSection": "Health Maintenance Organizations",
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "totals": {
+            "prem": 381382991,
+            "claims": 347372834,
+            "lives": 14659
+          },
+          "coverage": [
+            {
+              "t": "Medicare Advantage",
+              "displayName": "Medicare Advantage",
+              "group": "Medicare Advantage",
+              "prem": 126635838,
+              "claims": 121511970,
+              "lives": 7865,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "126,635,838",
+                "claims": "121,511,970",
+                "lives": "7,865"
+              }
+            },
+            {
+              "t": "Medicare Platinum",
+              "displayName": "Medicare Platino",
+              "group": "Medicare Platino",
+              "prem": 226045421,
+              "claims": 194709363,
+              "lives": 4883,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "numeric"
+              },
+              "sourceDisplay": {
+                "prem": "226,045,421",
+                "claims": "194,709,363",
+                "lives": "4,883"
+              }
+            },
+            {
+              "t": "Government Health Plan (Vital)",
+              "displayName": "Government Health Plan (Vital)",
+              "group": "Vital",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Large Private Group Plans",
+              "displayName": "Large Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "- + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Small Private Group Plans",
+              "displayName": "Small Private Group Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": 64771,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "numeric_sum",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "64,771 + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Private Individual Plans",
+              "displayName": "Private Individual Plans",
+              "group": "Commercial",
+              "prem": null,
+              "claims": -15453,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "numeric_sum",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + -",
+                "claims": "(15,453) + -",
+                "lives": "- + -"
+              }
+            },
+            {
+              "t": "Government Employees",
+              "displayName": "Government Employees",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "- + - + - + -",
+                "claims": "- + - + - + -",
+                "lives": "- + - + - + -"
+              }
+            },
+            {
+              "t": "Government Retirees",
+              "displayName": "Government Retirees",
+              "group": "Others",
+              "prem": 28701667,
+              "claims": 30068192,
+              "lives": 1911,
+              "sourceState": {
+                "prem": "numeric_sum",
+                "claims": "numeric_sum",
+                "lives": "numeric_sum"
+              },
+              "sourceDisplay": {
+                "prem": "- + 28,701,667 + -",
+                "claims": "- + 30,068,192 + -",
+                "lives": "- + 1,911 + -"
+              }
+            },
+            {
+              "t": "Federal Government Employees",
+              "displayName": "Federal Government Employees",
+              "group": "Others",
+              "prem": 65,
+              "claims": 1033991,
+              "lives": null,
+              "sourceState": {
+                "prem": "numeric",
+                "claims": "numeric",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "65",
+                "claims": "1,033,991",
+                "lives": "-"
+              }
+            },
+            {
+              "t": "Medicare Supplement Plans",
+              "displayName": "Medicare Supplement Plans",
+              "group": "Others",
+              "prem": null,
+              "claims": null,
+              "lives": null,
+              "sourceState": {
+                "prem": "dash",
+                "claims": "dash",
+                "lives": "dash"
+              },
+              "sourceDisplay": {
+                "prem": "-",
+                "claims": "-",
+                "lives": "-"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

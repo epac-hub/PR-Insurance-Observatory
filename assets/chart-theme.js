@@ -1,0 +1,7 @@
+/* Shared chart theme: semantic colors, axes, grid, tooltips and motion. */
+(function(){
+  function palette(el){var cs=getComputedStyle(el),read=function(k){return cs.getPropertyValue(k).trim();};return {text:read('--t1'),muted:read('--t2'),grid:read('--bs'),card:read('--cd'),teal:read('--vx-teal'),blue:read('--vx-blue'),loss:read('--vx-loss'),amber:read('--vx-amber'),ink:read('--vx-ink')};}
+  function base(c){return {animation:!window.matchMedia('(prefers-reduced-motion: reduce)').matches,animationDuration:650,animationDurationUpdate:0,animationEasing:'cubicOut',animationEasingUpdate:'cubicOut',color:[c.teal,c.blue,c.amber,c.loss],textStyle:{fontFamily:'Inter, system-ui, sans-serif',color:c.text,fontSize:12},aria:{enabled:true},tooltip:{trigger:'item',confine:true,backgroundColor:c.card,borderColor:c.grid,textStyle:{color:c.text,fontSize:12},extraCssText:'max-width:300px;white-space:normal;border-radius:10px;box-shadow:0 8px 30px #0002;padding:12px;'},grid:{left:56,right:22,top:40,bottom:46},xAxis:{axisLine:{lineStyle:{color:c.grid}},axisTick:{show:false},axisLabel:{color:c.muted},splitLine:{lineStyle:{color:c.grid,type:'dashed'}}},yAxis:{axisLine:{show:false},axisTick:{show:false},axisLabel:{color:c.muted},splitLine:{lineStyle:{color:c.grid,type:'dashed'}}}};}
+  function axis(c,type){return {type:type,axisTick:{show:false},axisLine:{show:false},axisLabel:{color:c.muted,fontSize:12},splitLine:{show:type==='value',lineStyle:{color:c.grid,type:'dashed'}}};}
+window.ObservatoryChartTheme={palette:palette,base:base,axis:axis};
+})();
