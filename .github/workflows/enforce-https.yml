@@ -1,0 +1,21 @@
+name: Enforce HTTPS on Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  enforce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable HTTPS enforcement for the custom domain
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api -X PUT "repos/${{ github.repository }}/pages" \
+            -F https_enforced=true
+          gh api "repos/${{ github.repository }}/pages" \
+            --jq '{cname: .cname, https_enforced: .https_enforced, status: .status, protected_domain_state: .protected_domain_state}'
