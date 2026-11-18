@@ -13,6 +13,12 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  # Apply cancellation before validation so an older default-branch run cannot
+  # publish after a newer commit. Keep pull requests isolated from branch runs.
+  group: pages-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
     name: Validate Pages source
@@ -66,9 +72,6 @@ jobs:
       name: github-pages
     permissions:
       contents: write
-    concurrency:
-      group: pages-publish
-      cancel-in-progress: true
     steps:
       - name: Checkout
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
