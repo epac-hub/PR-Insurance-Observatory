@@ -1,0 +1,530 @@
+{
+  "entityId": "mmmhc",
+  "legalEntity": "MMM Healthcare, LLC",
+  "naic": "11157",
+  "reviewedAt": "2026-09-15",
+  "status": "verified_against_pdf_text_and_rendered_columns",
+  "scope": "OCS Planilla company-by-coverage, MMM Healthcare only; not MMM Multi Health; not Elevance consolidated",
+  "periods": {
+    "FY24": {
+      "year": 2024,
+      "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf",
+      "sourceFileSha256": "f6683e0cf27ebdccadfd46bdbec2af9ff4fe3b63ff432637d6570f3b73c4cd37",
+      "sourceCompanyRow": 6,
+      "sourcePages": {
+        "prem": 1,
+        "claims": 2,
+        "lives": 3
+      },
+      "coverage": [
+        {
+          "t": "Medicare Advantage",
+          "displayName": "Medicare Advantage",
+          "group": "Medicare Advantage",
+          "sourceCategory": "Medicare Advantage",
+          "prem": 3051305347,
+          "claims": 2777594302,
+          "lives": 209914,
+          "sourceDisplay": {
+            "prem": "3051305347",
+            "claims": "2777594302",
+            "lives": "209914"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": true,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Medicare Platinum",
+          "displayName": "Medicare Platino",
+          "group": "Medicare Platino",
+          "sourceCategory": "Medicare Platino",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Government Health Plan (Vital)",
+          "displayName": "Government Health Plan (Vital)",
+          "group": "Vital",
+          "sourceCategory": "Government Health Plan (Vital)",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Large Private Group Plans",
+          "displayName": "Large Private Group Plans",
+          "group": "Commercial",
+          "sourceCategory": "Large Private Group Plans",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Small Private Group Plans",
+          "displayName": "Small Private Group Plans",
+          "group": "Commercial",
+          "sourceCategory": "Small Private Group Plans",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Private Individual Plans",
+          "displayName": "Private Individual Plans",
+          "group": "Commercial",
+          "sourceCategory": "Private Individual Plans",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Government Employees",
+          "displayName": "Government Employees",
+          "group": "Others",
+          "sourceCategory": "Government Employees",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Government Retirees",
+          "displayName": "Government Retirees",
+          "group": "Others",
+          "sourceCategory": "Retired Employees of Commonwealth of PR / Advantage",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Federal Government Employees",
+          "displayName": "Federal Government Employees",
+          "group": "Others",
+          "sourceCategory": "Federal Government Employees",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Medicare Supplement Plans",
+          "displayName": "Medicare Supplement Plans",
+          "group": "Others",
+          "sourceCategory": "Medicare Supplement Plans",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2024/2024%20-%20Planilla%20de%20Salud.pdf"
+        }
+      ],
+      "totals": {
+        "prem": 3051305347,
+        "claims": 2777594302,
+        "lives": 209914
+      },
+      "statutoryComparator": {
+        "netPremiumIncome": 3051305347,
+        "totalHospitalAndMedical": 2674745597.0,
+        "memberMonths": 2638673.0,
+        "averageMonthlyMembers": 219889.41666666666,
+        "source": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2024/MMM%20Healthcare,%20LLC.pdf",
+        "sourcePdfPage": 4,
+        "netPremiumIncomeLine": 2,
+        "totalHospitalAndMedicalLine": 18,
+        "memberMonthsLine": 1
+      },
+      "reconciliation": {
+        "sumMatchesAllThreePrintedPlanillaTotals": true,
+        "planillaPremiumMinusStatutoryNetPremium": 0,
+        "premiumComparison": "Numerically matches for this entity/year; premium definitions are still separately identified.",
+        "planillaPaidClaimsMinusStatutoryTotalHospitalAndMedical": 102848705.0,
+        "claimsComparison": "Different measures: Planilla claims paid vs statutory total hospital and medical expense. Difference retained, not treated as an extraction error.",
+        "planillaLivesMinusStatutoryAverageMonthlyMembers": -9975.416666666657,
+        "membershipComparison": "Different measures: Planilla reported number insured vs annual member-months divided by 12. Do not reconcile them by replacing one with the other."
+      }
+    },
+    "FY25": {
+      "year": 2025,
+      "sourceUrl": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf",
+      "sourceFileSha256": "6e1b98ea9112ac8297c0342495198968b4b6d5c487fc278cdab4e321a2220149",
+      "sourceCompanyRow": 6,
+      "sourcePages": {
+        "prem": 1,
+        "claims": 2,
+        "lives": 3
+      },
+      "coverage": [
+        {
+          "t": "Medicare Advantage",
+          "displayName": "Medicare Advantage",
+          "group": "Medicare Advantage",
+          "sourceCategory": "Medicare Advantage",
+          "prem": 843486078,
+          "claims": 767753126,
+          "lives": 79080,
+          "sourceDisplay": {
+            "prem": "843486078",
+            "claims": "767753126",
+            "lives": "79080"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": true,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Medicare Platinum",
+          "displayName": "Medicare Platino",
+          "group": "Medicare Platino",
+          "sourceCategory": "Medicare Platino",
+          "prem": 1976175346,
+          "claims": 1787691041,
+          "lives": 102005,
+          "sourceDisplay": {
+            "prem": "1976175346",
+            "claims": "1787691041",
+            "lives": "102005"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": true,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Government Health Plan (Vital)",
+          "displayName": "Government Health Plan (Vital)",
+          "group": "Vital",
+          "sourceCategory": "Government Health Plan (Vital)",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Large Private Group Plans",
+          "displayName": "Large Private Group Plans",
+          "group": "Commercial",
+          "sourceCategory": "Large Private Group Plans",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Small Private Group Plans",
+          "displayName": "Small Private Group Plans",
+          "group": "Commercial",
+          "sourceCategory": "Small Private Group Plans",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Private Individual Plans",
+          "displayName": "Private Individual Plans",
+          "group": "Commercial",
+          "sourceCategory": "Private Individual Plans",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Government Employees",
+          "displayName": "Government Employees",
+          "group": "Others",
+          "sourceCategory": "Government Employees",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Government Retirees",
+          "displayName": "Government Retirees",
+          "group": "Others",
+          "sourceCategory": "Retired Employees of Commonwealth of PR / Advantage",
+          "prem": 477779142,
+          "claims": 406375239,
+          "lives": 33206,
+          "sourceDisplay": {
+            "prem": "477779142",
+            "claims": "406375239",
+            "lives": "33206"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": true,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Federal Government Employees",
+          "displayName": "Federal Government Employees",
+          "group": "Others",
+          "sourceCategory": "Federal Government Employees",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf"
+        },
+        {
+          "t": "Medicare Supplement Plans",
+          "displayName": "Medicare Supplement Plans",
+          "group": "Others",
+          "sourceCategory": "Medicare Supplement Plans",
+          "prem": 0,
+          "claims": 0,
+          "lives": 0,
+          "sourceDisplay": {
+            "prem": "-",
+            "claims": "-",
+            "lives": "-"
+          },
+          "sourcePages": {
+            "prem": 1,
+            "claims": 2,
+            "lives": 3
+          },
+          "separatelyReportedNonzero": false,
+          "src": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Planillas%20de%20Salud/2025/2025.Y%20-%20Planilla%20de%20Salud.pdf"
+        }
+      ],
+      "totals": {
+        "prem": 3297440566,
+        "claims": 2961819406,
+        "lives": 214291
+      },
+      "statutoryComparator": {
+        "netPremiumIncome": 3297440566,
+        "totalHospitalAndMedical": 2920533113.0,
+        "memberMonths": 2579628.0,
+        "averageMonthlyMembers": 214969.0,
+        "source": "https://docs.pr.gov/files/OCS/Regulados/Informes%20Anuales/2025/MMM%20Healthcare,%20LLC.pdf",
+        "sourcePdfPage": 4,
+        "netPremiumIncomeLine": 2,
+        "totalHospitalAndMedicalLine": 18,
+        "memberMonthsLine": 1
+      },
+      "reconciliation": {
+        "sumMatchesAllThreePrintedPlanillaTotals": true,
+        "planillaPremiumMinusStatutoryNetPremium": 0,
+        "premiumComparison": "Numerically matches for this entity/year; premium definitions are still separately identified.",
+        "planillaPaidClaimsMinusStatutoryTotalHospitalAndMedical": 41286293.0,
+        "claimsComparison": "Different measures: Planilla claims paid vs statutory total hospital and medical expense. Difference retained, not treated as an extraction error.",
+        "planillaLivesMinusStatutoryAverageMonthlyMembers": -678.0,
+        "membershipComparison": "Different measures: Planilla reported number insured vs annual member-months divided by 12. Do not reconcile them by replacing one with the other."
+      }
+    }
+  },
+  "methodology": {
+    "prem": "Premiums written, USD; OCS Planilla PDF page 1",
+    "claims": "Claims paid, USD; OCS Planilla PDF page 2; not incurred medical expenses",
+    "lives": "Reported number of insured, OCS Planilla PDF page 3; not statutory member-months / 12; do not label as unique annual persons or average membership",
+    "dashTreatment": "A dash is retained in sourceDisplay and contributes zero to the reported row sum. It is not evidence that a coverage did not exist or that members were not included under another category.",
+    "groupTreatment": "Commercial and Others are Observatory UI aggregates. Source-specific Retired Employees of Commonwealth of PR / Advantage belongs under Government Retirees, then Others. Medicare Platino is displayed with the original detailed-page label, while the existing dataset calls it Medicare Platinum.",
+    "expenseRatio": "claims / prem is paid claims ratio. Premium minus paid claims is not net income.",
+    "classificationWarning": "MMM reported all premium, claims, and lives under Medicare Advantage in 2024; in 2025 it reported Medicare Advantage, Medicare Platino, and Government Retirees / Advantage separately. This is an observed reporting-distribution difference; it does not by itself establish migration, organic segment growth, or a change in products offered.",
+    "comparisonBasis": "Retain FY2024 as filed in the FY2024 statutory document; FY2025 prior-year comparative medical expense is restated and is not used."
+  },
+  "annualChanges": {
+    "prem": {
+      "absolute": 246135219,
+      "pct": 8.066554835031404
+    },
+    "claims": {
+      "absolute": 184225104,
+      "pct": 6.6325418318776475
+    },
+    "lives": {
+      "absolute": 4377,
+      "pct": 2.085139628609811
+    }
+  }
+}
