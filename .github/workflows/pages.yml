@@ -46,8 +46,9 @@ jobs:
             exit 1
           fi
 
-          cname="$(tr -d '\r\n' < CNAME)"
-          if (( "$(wc -l < CNAME)" > 1 )) ||
+          mapfile -t cname_lines < <(tr -d '\r' < CNAME)
+          cname="${cname_lines[0]:-}"
+          if (( "${#cname_lines[@]}" != 1 )) ||
              [[ ! "$cname" =~ ^([A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z]{2,63}$ ]]; then
             echo "::error file=CNAME::CNAME must contain one valid hostname"
             exit 1
@@ -68,8 +69,6 @@ jobs:
       github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    environment:
-      name: github-pages
     permissions:
       contents: write
     steps:

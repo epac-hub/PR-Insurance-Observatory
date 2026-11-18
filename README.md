@@ -77,11 +77,11 @@ The current production dashboard is self-contained except for Google Fonts and C
 
 ## Deployment
 
-Pushes and pull requests run read-only validation in `.github/workflows/pages.yml`. After validation succeeds, only a push or manual dispatch from the repository's configured default branch can republish the repository root to `gh-pages`. GitHub Pages serves the `gh-pages` branch with HTTPS enforced.
+Pushes and pull requests run read-only validation in `.github/workflows/pages.yml`. After validation succeeds, only a push or manual dispatch from the repository's configured default branch can republish the repository root to `gh-pages`. GitHub Pages serves the `gh-pages` branch.
 
 Do not edit `gh-pages` directly; the deployment workflow recreates it from the source branch.
 
-Repository administrators should rename the current development-style default branch to `main`, protect the default branch with a ruleset, restrict the `github-pages` environment to that protected branch, and keep the Pages source set to `gh-pages` at `/ (root)`. The ruleset should require pull requests, an independent approval, resolved conversations, and the **Validate Pages source** check, while blocking force pushes and branch deletion. Under Actions settings, keep the default `GITHUB_TOKEN` permission read-only and disable permission for Actions to create or approve pull requests.
+Repository administrators should rename the current development-style default branch to `main`, protect the default branch with a ruleset, keep the Pages source set to `gh-pages` at `/ (root)`, and enable **Enforce HTTPS** for the custom domain. The ruleset should require pull requests, an independent approval, resolved conversations, and the **Validate Pages source** check, while blocking force pushes and branch deletion. Under Actions settings, keep the default `GITHUB_TOKEN` permission read-only and disable permission for Actions to create or approve pull requests.
 
 ## Disclaimer
 
