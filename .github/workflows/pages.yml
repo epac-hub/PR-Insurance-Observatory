@@ -2,27 +2,80 @@ name: Deploy to GitHub Pages
 
 # Publishes the repository root to the gh-pages branch, which GitHub Pages
 # serves (Settings, Pages, Source: "Deploy from a branch", branch gh-pages).
+# The publishing job is restricted to the repository's configured default
+# branch so a future branch rename cannot accidentally add a second source.
 
 on:
   push:
-    branches: [main, claude/great-ptolemy-slaw15]
+  pull_request:
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+  contents: read
 
 jobs:
-  deploy:
+  validate:
+    name: Validate Pages source
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Validate static site
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          for path in index.html CNAME .nojekyll; do
+            if [[ ! -f "$path" || -L "$path" ]]; then
+              echo "::error file=$path::$path must be a regular, non-symlink file"
+              exit 1
+            fi
+          done
+
+          if [[ ! -s index.html ]] || ! grep -qi '<!doctype html' index.html; then
+            echo "::error file=index.html::index.html must be non-empty HTML"
+            exit 1
+          fi
+
+          cname="$(tr -d '\r\n' < CNAME)"
+          if (( "$(wc -l < CNAME)" > 1 )) ||
+             [[ ! "$cname" =~ ^([A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z]{2,63}$ ]]; then
+            echo "::error file=CNAME::CNAME must contain one valid hostname"
+            exit 1
+          fi
+
+          symlink="$(find . -path ./.git -prune -o -type l -print -quit)"
+          if [[ -n "$symlink" ]]; then
+            echo "::error file=$symlink::Pages source must not contain symlinks"
+            exit 1
+          fi
+
+  deploy:
+    name: Publish default branch
+    needs: validate
+    if: >-
+      github.event_name != 'pull_request' &&
+      github.ref_type == 'branch' &&
+      github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+    permissions:
+      contents: write
+    concurrency:
+      group: pages-publish
+      cancel-in-progress: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
       - name: Publish to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
